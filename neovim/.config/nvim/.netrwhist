@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/sgorblex/.dotfiles/bash'
+let g:netrw_dirhist_5='/home/sgorblex/.dotfiles'
+let g:netrw_dirhist_4='/home/sgorblex/.dotfiles/bash'
+let g:netrw_dirhist_3='/home/sgorblex/.config/i3'
+let g:netrw_dirhist_2='/home/sgorblex/.config/i3/layouts'
+let g:netrw_dirhist_1='/home/sgorblex/.config/i3'
+let g:netrw_dirhist_0='/home/sgorblex/.tmux'
+let g:netrw_dirhist_9='/home/sgorblex/.config/i3'
+let g:netrw_dirhist_8='/home/sgorblex/.gnupg'
+let g:netrw_dirhist_7='/home/sgorblex/.tmux'
