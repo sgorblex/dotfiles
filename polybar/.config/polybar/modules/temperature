@@ -1,0 +1,22 @@
+[module/temperature]
+type = internal/temperature
+
+base-temperature = 20
+warn-temperature = 70
+
+units = false
+
+format = <ramp> <label>
+label = "%temperature-c% 糖 "
+
+format-warn = <ramp> <label-warn>
+label-warn = %temperature-c%
+label-warn-foreground = #f00
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
+; vim:ft=dosini

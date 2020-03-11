@@ -24,7 +24,8 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
-
+# Setting go path
+export GOPATH=~/.local/go
 
 # fuzzy finder for bash (integration with fzf for vim)
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

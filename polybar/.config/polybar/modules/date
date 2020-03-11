@@ -1,0 +1,11 @@
+[module/date]
+type = internal/date
+
+date =  %d/%m/%y%
+date-alt =  %A, %d %B %Y
+
+format = <label>
+
+label = %date%
+
+; vim:ft=dosini

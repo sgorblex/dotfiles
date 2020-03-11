@@ -1,0 +1,10 @@
+[module/time]
+type = internal/date
+
+time =  %H:%M:%S
+
+format = <label>
+
+label = %time%
+
+; vim:ft=dosini

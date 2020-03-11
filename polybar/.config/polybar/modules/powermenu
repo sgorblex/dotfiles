@@ -1,0 +1,18 @@
+[module/powermenu]
+type = custom/menu
+
+menu-0-0 =   
+menu-0-0-exec = poweroff
+menu-0-1 = 菱  
+menu-0-1-exec = reboot
+menu-0-2 =   
+menu-0-2-exec = i3-msg exit
+
+expand-right = true
+
+label-open =   
+label-close =   
+
+label-separator = " | "
+
+; vim:ft=dosini

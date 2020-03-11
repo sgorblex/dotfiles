@@ -112,16 +112,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws1 "1:   "
+set $ws2 "2:   "
+set $ws3 "3: 3 "
+set $ws4 "4: 4 "
+set $ws5 "5: 5 "
+set $ws6 "6: 6 "
+set $ws7 "7: 7 "
+set $ws8 "8: 8 "
+set $ws9 "9:   "
+set $ws10 "10:   "
 
 # 
 
@@ -201,7 +201,6 @@ bindsym $mod+r mode "resize"
 ####################
 
 
-# WIP
 # new stuff
 
 # gaps configuration (i3-gaps only)
@@ -218,23 +217,18 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink +5
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle # mute sound
 
-# Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-
-# Touchpad controls
-bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
-
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Notification controls
+exec deadd-notification-center
+bindsym $mod+n kill -s USR1 $(pidof deadd-notification-center)
 
-# Music Player controls
 
 
-
+# MONITOR SETUP {{{
 # dual monitor setup environment variables:
 # (set them equals if there's only one monitor)
 set $monr DP-1
@@ -252,22 +246,34 @@ workspace 1 output $monl
 workspace 3 output $monl
 workspace 5 output $monl
 workspace 7 output $monl
-workspace 9 output $monl
+workspace 9 output $monl#
+# }}}
 
 
-# initial layout
-exec ~/.config/i3/scripts/load_initial_layouts.sh
+
+# INITIAL LAYOUT {{{
+
+# workspace 1 (term 1) {{{
+exec i3-msg "workspace $ws1; append_layout ~/.config/i3/layouts/alacritty.json"
+exec alacritty
+# }}}
+
+# workspace 2 (term 2) {{{
+exec i3-msg "workspace $ws2; append_layout ~/.config/i3/layouts/alacritty.json"
+exec alacritty
+# }}}
+
+# workspace 10 (browser) {{{
+exec i3-msg "workspace $ws2; append_layout ~/.config/i3/layouts/firefox.json"
 exec firefox
-exec alacritty
-exec alacritty
-exec nextcloud --background
+# }}}
+
+exec nextcloud --background#
+# }}}
 
 
 
-
-
-
-# {{{ SCRATCHPADS
+# SCRATCHPADS {{{
 
 # Telegram {{{
 # (requires telegram-desktop)
@@ -306,15 +312,21 @@ bindsym $mod+m [class="Spotify"] scratchpad show
 
 
 
+# POLYBAR {{{
+exec polybar sgorblexL
+exec polybar sgorblexR#
+# }}}
 
-exec polybar example
+
 
 # if this is uncommented, mouse doesn't warp when switching workspaces
 # mouse_warping none
 
+# note: this will be translated into a polybar menu (full screen, full screens, current window, select, ...)
+bindsym --release Print exec scrot -sf
 
 
-
+assign [class="discord"] workspace $ws9
 
 # old stuff
 

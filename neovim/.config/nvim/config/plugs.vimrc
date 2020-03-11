@@ -32,10 +32,13 @@ Plug 'lervag/vimtex'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Signify "
-" Plug 'mhinz/vim-signify'
+Plug 'mhinz/vim-signify'
 
 " DevIcons (requires nerd font[s]) "
 Plug 'ryanoasis/vim-devicons'
+
+" Floobits
+Plug 'floobits/floobits-neovim'
 
 
 " Themes "
