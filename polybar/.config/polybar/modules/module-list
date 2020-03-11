@@ -1,6 +1,6 @@
 ; Sgorblex's Polybar config
 ; ~/.config/polybar/modules/module-list
-; modules file inclusions
+; module file inclusions
 
 include-file = ~/.config/polybar/modules/cpu
 include-file = ~/.config/polybar/modules/date

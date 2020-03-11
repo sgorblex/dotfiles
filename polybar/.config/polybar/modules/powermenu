@@ -1,3 +1,6 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/modules/powermenu
+
 [module/powermenu]
 type = custom/menu
 
