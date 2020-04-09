@@ -18,8 +18,8 @@
 
 
 [monitors]
-left = ${env:MONITOR:DVI-I-1}
-right = ${env:MONITOR:DP-1}
+left = ${env:MONITORL:DVI-I-1}
+right = ${env:MONITORR:DP-1}
 
 
 [colors]
@@ -59,7 +59,7 @@ inherit = common-settings
 
 monitor = ${monitors.right}
 
-modules-left = i3 time cpu temperature memory
+modules-left = i3 powermenu cpu temperature memory
 modules-center = xwindow
 modules-right = network filesystem-SSD filesystem-HDD
 
@@ -72,7 +72,7 @@ height = 3%:-5
 monitor = ${monitors.left}
 
 ; modules-left = gmail pulseaudio spotify
-modules-left = powermenu pulseaudio
+modules-left = scrot pulseaudio spotify
 modules-center = xwindow
 modules-right = date time i3
 

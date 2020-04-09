@@ -1,5 +1,5 @@
 " Sgorblex's NeoVim config "
-" ~/.config/nvim/config/plugins.conf.d/nerdcommenter.conf.vimrc "
+" ~/.config/nvim/plugins.conf.d/nerdcommenter.conf.vimrc "
 " NerdCommenter config "
 
 

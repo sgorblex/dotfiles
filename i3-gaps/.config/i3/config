@@ -85,7 +85,7 @@ bindsym $mod+Shift+Right move right
 # Adapted for Sgorblex i3 to vim
 
 # split in horizontal orientation (modified)
-bindsym $mod+o split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -181,7 +181,7 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
+# bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -205,8 +205,19 @@ bindsym $mod+r mode "resize"
 
 # gaps configuration (i3-gaps only)
 for_window [class=".*"] border pixel 0
-gaps inner 10
-gaps outer 5
+gaps inner 5
+gaps outer 0
+
+bindsym $mod+Shift+u 	gaps inner current minus 5
+bindsym $mod+Shift+i 	gaps inner current plus 5
+bindsym $mod+Shift+y 	gaps outer current minus 5
+bindsym $mod+Shift+o 	gaps outer current plus 5
+
+bindsym $mod+y		exec --no-startup-id i3resize left
+bindsym $mod+u		exec --no-startup-id i3resize down
+bindsym $mod+i		exec --no-startup-id i3resize up
+bindsym $mod+o		exec --no-startup-id i3resize right
+
 
 
 
@@ -224,7 +235,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Notification controls
 exec deadd-notification-center
-bindsym $mod+n kill -s USR1 $(pidof deadd-notification-center)
+bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
 
 
 
@@ -236,17 +247,17 @@ set $monl DVI-I-1
 
 # default monitor per workspace:
 # right monitor (primary)
-workspace 2 output $monr
-workspace 4 output $monr
-workspace 6 output $monr
-workspace 8 output $monr
-workspace 10 output $monr
+workspace $ws2 output $monr
+workspace $ws4 output $monr
+workspace $ws6 output $monr
+workspace $ws8 output $monr
+workspace $ws10 output $monr
 # left monitor:
-workspace 1 output $monl
-workspace 3 output $monl
-workspace 5 output $monl
-workspace 7 output $monl
-workspace 9 output $monl#
+workspace $ws1 output $monl
+workspace $ws3 output $monl
+workspace $ws5 output $monl
+workspace $ws7 output $monl
+workspace $ws9 output $monl
 # }}}
 
 
@@ -268,7 +279,7 @@ exec i3-msg "workspace $ws2; append_layout ~/.config/i3/layouts/firefox.json"
 exec firefox
 # }}}
 
-exec nextcloud --background#
+exec nextcloud --background
 # }}}
 
 
@@ -314,7 +325,7 @@ bindsym $mod+m [class="Spotify"] scratchpad show
 
 # POLYBAR {{{
 exec polybar sgorblexL
-exec polybar sgorblexR#
+exec polybar sgorblexR
 # }}}
 
 
@@ -323,7 +334,7 @@ exec polybar sgorblexR#
 # mouse_warping none
 
 # note: this will be translated into a polybar menu (full screen, full screens, current window, select, ...)
-bindsym --release Print exec scrot -sf
+bindsym --release Print exec scrot -fs ~/media/screenshots/$(date +"%F_%H-%M-%S").jpg
 
 
 assign [class="discord"] workspace $ws9
@@ -332,11 +343,11 @@ assign [class="discord"] workspace $ws9
 
 #	configuration
 # exec xrandr --output DP-1 --mode 1920x1080 --pos 1360x0 --rate 144.00 --primary --output DVI-I-1  --mode 1360x768 --pos 0x392 # moved in lightdm configuration
-exec setxkbmap us -variant alt-intl
+# exec setxkbmap us -variant alt-intl
 
 # personalization
 # wallpaper
-exec_always feh --bg-scale ~/nextcloud/pictures/wallpapers/PC/paris1.JPG
+exec_always feh --bg-scale ~/nextcloud/pictures/wallpapers/PC/ori1.jpg
 bindsym $mod+d exec dmenu_run -nb '#000000' -sb '#800000' -fn "CaskaydiaCove Nerd Font"
 
 # apps
@@ -346,8 +357,7 @@ exec compton -b
 
 # bindings
 bindsym $mod+Shift+x exec i3lock -c 000000
-bindsym $mod+Shift+p exec poweroff
-bindsym $mod+Shift+o exec windows
+# bindsym $mod+Shift+p exec poweroff
 
 
 

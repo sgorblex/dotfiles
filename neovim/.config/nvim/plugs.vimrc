@@ -1,5 +1,5 @@
 " Sgorblex's NeoVim config "
-" ~/.config/nvim/config/plugs.vimrc "
+" ~/.config/nvim/plugs.vimrc "
 " Vim-Plug plugins "
 
 
@@ -14,7 +14,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " also install coc plugins: :CocInstall coc-go coc-snippets coc-vimtex
 
 " Honza's snippets (using coc-snippets)
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " NerdTree "
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -37,8 +37,19 @@ Plug 'mhinz/vim-signify'
 " DevIcons (requires nerd font[s]) "
 Plug 'ryanoasis/vim-devicons'
 
-" Floobits
+" Floobits "
 Plug 'floobits/floobits-neovim'
+
+
+
+" Languages support
+
+" toml "
+Plug 'cespare/vim-toml'
+
+" fish shell "
+Plug 'dag/vim-fish'
+
 
 
 " Themes "

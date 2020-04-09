@@ -14,5 +14,7 @@ include-file = ~/.config/polybar/modules/network
 include-file = ~/.config/polybar/modules/pulseaudio
 include-file = ~/.config/polybar/modules/temperature
 include-file = ~/.config/polybar/modules/xwindow
+include-file = ~/.config/polybar/modules/spotify
+include-file = ~/.config/polybar/modules/scrot
 
 ; vim:ft=dosini

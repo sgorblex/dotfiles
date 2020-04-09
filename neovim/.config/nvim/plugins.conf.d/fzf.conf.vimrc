@@ -1,5 +1,5 @@
 " Sgorblex's NeoVim config "
-" ~/.config/nvim/config/plugins.conf.d/fzf.conf.vimrc "
+" ~/.config/nvim/plugins.conf.d/fzf.conf.vimrc "
 " Fuzzy Finder config "
 
 

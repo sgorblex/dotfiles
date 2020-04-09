@@ -295,7 +295,7 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.5
+background_opacity: 0.7
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
@@ -331,8 +331,9 @@ background_opacity: 0.5
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-shell:
- program: /usr/bin/tmux
+# shell:
+ # program: /usr/bin/tmux
+ # program: /usr/bin/fish
 #  args:
 #    - --login
 
