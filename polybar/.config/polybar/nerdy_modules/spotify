@@ -1,0 +1,20 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/spotify
+; bar: nerdy
+; module: spotify
+; requires polybar-spotify (AUR package polybar-spotify-git)
+
+
+[module/spotify]
+type = custom/script
+
+interval = 1
+
+format-prefix = " "
+format = <label>
+
+; exec = python /usr/share/polybar/scripts/spotify_status.py -f '{artist}: {song}'
+exec = python /usr/share/polybar/scripts/spotify_status.py -f '{song}'
+
+
+; vim:ft=dosini

@@ -8,3 +8,6 @@
 
 map <M-n> :NERDTreeFocus<CR>
 map <C-n> :NERDTreeToggle<CR>
+
+" Show hidden files "
+" let NERDTreeShowHidden=1

@@ -16,7 +16,7 @@ env:
   # available, otherwise `xterm-256color` is used.
   TERM: xterm-256color
 
-# window:
+window:
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -37,9 +37,11 @@ env:
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-  #  x: 0
-  #  y: 0
+  padding:
+   # x: 20
+   x: 30
+   # y: 20
+   y: 30
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -53,7 +55,7 @@ env:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  #decorations: full
+  # decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -114,7 +116,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: CaskaydiaCove Nerd Font 
+    family: CaskaydiaCove Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -295,7 +297,7 @@ font:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.7
+background_opacity: 0.75
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
@@ -331,9 +333,9 @@ background_opacity: 0.7
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-# shell:
+shell:
  # program: /usr/bin/tmux
- # program: /usr/bin/fish
+ program: /usr/bin/fish
 #  args:
 #    - --login
 

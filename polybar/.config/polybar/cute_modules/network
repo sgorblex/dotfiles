@@ -1,0 +1,21 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/network
+; bar: cute
+; module: network
+
+
+[module/network]
+type = internal/network
+
+interface = enp0s25
+ping-interval = 3
+
+label-connected = ﯲ %downspeed% ﯴ %upspeed%
+label-disconnected = 
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-connected-underline = #d70
+
+
+; vim:ft=dosini

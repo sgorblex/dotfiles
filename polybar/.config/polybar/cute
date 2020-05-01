@@ -1,0 +1,111 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute
+; bar: cute
+; main config
+
+;=============================================================;
+;                                                             ;
+;                                                             ;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗    ;
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗   ;
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝   ;
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗   ;
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║   ;
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ;
+;                                                             ;
+;                                                             ;
+;=============================================================;
+
+
+[io]
+leftmon = ${env:MONITOR_L:DVI-I-1}
+rightmon = ${env:MONITOR_R:DP-1}
+sink = ${env:SINK:alsa_output.pci-0000_00_1b.0.analog-stereo}
+
+
+[colors]
+background = #60000000
+background-alt = #c8000000
+foreground = #dfdfdf
+accent-fg = $a50000
+accent-bg = $88550000
+
+
+[common-settings]
+height = 2.7%
+line-size = 3
+radius = 5.0
+
+border-size = 3
+border-color = #00000000
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = "Noto Mono Nerd Font:size=10;2"
+font-1 = "Noto Mono Nerd Font:style=Bold:size=10;2"
+
+
+
+
+[file-inclusion]
+
+; Modules inclusion
+include-file = ~/.config/polybar/cute_modules/cpu
+include-file = ~/.config/polybar/cute_modules/date
+include-file = ~/.config/polybar/cute_modules/fs-HDD
+include-file = ~/.config/polybar/cute_modules/fs-SSD
+include-file = ~/.config/polybar/cute_modules/i3-mode
+include-file = ~/.config/polybar/cute_modules/i3-state
+include-file = ~/.config/polybar/cute_modules/memory
+include-file = ~/.config/polybar/cute_modules/network
+include-file = ~/.config/polybar/cute_modules/powermenu
+include-file = ~/.config/polybar/cute_modules/pulseaudio
+include-file = ~/.config/polybar/cute_modules/spotify
+include-file = ~/.config/polybar/cute_modules/temperature
+include-file = ~/.config/polybar/cute_modules/time
+include-file = ~/.config/polybar/cute_modules/xwindow
+
+
+
+
+[bar/cute_R]
+
+inherit = common-settings
+
+monitor = ${io.rightmon}
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 1
+padding-right = 2
+
+modules-left = i3-state pulseaudio spotify
+modules-center = xwindow
+modules-right = cpu memory date time i3-mode powermenu
+
+
+
+
+[bar/cute_L]
+
+inherit = common-settings
+
+monitor = ${io.leftmon}
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 2
+padding-right = 1
+
+modules-left = temperature HDD SSD
+modules-center = xwindow
+modules-right = network time i3-state
+
+tray-position = left
+tray-offset-x = 1
+
+
+; vim:ft=dosini

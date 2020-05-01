@@ -1,0 +1,16 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/memory
+; bar: cute
+; module: memory
+
+
+[module/memory]
+type = internal/memory
+
+format = <label>
+format-underline = #e80
+
+label =  %gb_used%
+
+
+; vim:ft=dosini

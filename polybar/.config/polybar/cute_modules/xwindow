@@ -1,0 +1,21 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/xwindow
+; bar: cute
+; module: xwindow
+
+
+[module/xwindow]
+type = internal/xwindow
+
+format = <label>
+format-underline = #eee
+format-padding = 2
+
+label = %title%
+label-maxlen = 50
+
+label-empty =    
+label-empty-foreground = #707880
+
+
+; vim:ft=dosini

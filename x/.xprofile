@@ -1,0 +1,10 @@
+#!/bin/sh
+# Sgorblex's x config
+# ~/.xprofile
+
+if [ -d ~/.config/xprofile.d ]; then
+	for f in ~/.config/xprofile.d/*
+	do
+		source $f
+	done
+fi

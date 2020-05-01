@@ -1,0 +1,22 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/memory
+; bar: nerdy
+; module: memory
+
+
+[module/memory]
+type = internal/memory
+
+format = <label> <bar-used>
+
+label =  %gb_used%/%gb_total%
+
+bar-used-indicator =
+bar-used-width = 16
+bar-used-foreground-0 = #55aa55
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = #444444
+
+
+; vim:ft=dosini

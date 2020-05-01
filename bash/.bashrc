@@ -1,5 +1,6 @@
-# Sgorblex's bash config
+# Sgorblex's Bash config
 # ~/.bashrc
+
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -15,3 +16,5 @@ if [ -d ~/.config/bash ]; then
 		source $f
 	done
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

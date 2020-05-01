@@ -38,7 +38,7 @@ Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
 
 " Floobits "
-Plug 'floobits/floobits-neovim'
+" Plug 'floobits/floobits-neovim'
 
 
 

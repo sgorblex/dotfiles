@@ -1,0 +1,16 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/cpu
+; bar: cute
+; module: cpu
+
+
+[module/cpu]
+type = internal/cpu
+
+format = <label>
+format-underline = #00e
+
+label =  %percentage%%
+
+
+; vim:ft=dosini

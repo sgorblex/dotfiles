@@ -1,0 +1,24 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/powermenu
+; bar: nerdy
+; module: powermenu
+
+
+[module/powermenu]
+type = custom/menu
+
+menu-0-0 =   
+menu-0-0-exec = poweroff
+menu-0-1 = 菱  
+menu-0-1-exec = reboot
+menu-0-2 =    
+menu-0-2-exec = windows
+menu-0-3 =    
+menu-0-3-exec = i3-msg exit
+
+label-open = 
+label-close =   
+label-separator = " | "
+
+
+; vim:ft=dosini

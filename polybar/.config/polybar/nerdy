@@ -1,0 +1,103 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/nerdy
+; bar: nerdy
+; main config
+
+;=============================================================;
+;                                                             ;
+;                                                             ;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗    ;
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗   ;
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝   ;
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗   ;
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║   ;
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ;
+;                                                             ;
+;                                                             ;
+;=============================================================;
+
+
+[io]
+leftmon = ${env:MONITORL:DVI-I-1}
+rightmon  = ${env:MONITORR:DP-1}
+sink = ${env:SINK:alsa_output.pci-0000_00_1b.0.analog-stereo}
+
+
+[colors]
+background = #111
+foreground = #dfdfdf
+accent-fg = $770000
+accent-bg = $550000
+
+
+[common-settings]
+
+line-size = 2
+
+padding = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = "Caskaydia Cove Nerd Font:size=10;2"
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+
+
+
+[file-inclusion]
+
+; Modules inclusion
+include-file = ~/.config/polybar/nerdy_modules/cpu
+include-file = ~/.config/polybar/nerdy_modules/date
+include-file = ~/.config/polybar/nerdy_modules/time
+include-file = ~/.config/polybar/nerdy_modules/fs-HDD
+include-file = ~/.config/polybar/nerdy_modules/fs-SSD
+include-file = ~/.config/polybar/nerdy_modules/i3
+include-file = ~/.config/polybar/nerdy_modules/memory
+include-file = ~/.config/polybar/nerdy_modules/network
+include-file = ~/.config/polybar/nerdy_modules/pulseaudio
+include-file = ~/.config/polybar/nerdy_modules/temperature
+include-file = ~/.config/polybar/nerdy_modules/xwindow
+include-file = ~/.config/polybar/nerdy_modules/spotify
+include-file = ~/.config/polybar/nerdy_modules/powermenu
+include-file = ~/.config/polybar/nerdy_modules/scrot
+
+
+
+
+[bar/nerdy_R]
+
+inherit = common-settings
+
+monitor = ${io.rightmon}
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+height = 2%
+
+modules-left = i3 powermenu cpu temperature memory
+modules-center = xwindow
+modules-right = network SSD HDD
+
+
+
+[bar/nerdy_L]
+
+inherit = common-settings
+
+monitor = ${io.leftmon}
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+height = 3%:-5
+
+modules-left = scrot pulseaudio spotify
+modules-center = xwindow
+modules-right = date time i3
+
+tray-position = left
+
+
+; vim:ft=dosini

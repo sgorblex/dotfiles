@@ -1,0 +1,38 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/i3
+; bar: nerdy
+; module: i3
+
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+
+strip-wsnumbers = true
+
+; Wrap around when reaching the first/last workspace
+wrapping-scroll = false
+
+format = <label-state> <label-mode>
+
+label-focused = %name%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = ${colors.accent-fg}
+label-focused-padding = 1
+
+label-unfocused = %name%
+label-unfocused-padding = 1
+
+label-visible = %name%
+label-visible-underline = #555555
+label-visible-padding = 1
+
+label-urgent = %name%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = 1
+
+
+; vim:ft=dosini

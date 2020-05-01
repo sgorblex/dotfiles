@@ -1,0 +1,22 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/scrot
+; bar: nerdy
+; module: scrot
+
+
+[module/scrot]
+type = custom/menu
+
+menu-0-0 =   
+menu-0-0-exec = scrot $SCROT_PATH/$(date +"%F_%H-%M-%S").jpg
+menu-0-1 =   
+menu-0-1-exec = scrot -fs $SCROT_PATH/$(date +"%F_%H-%M-%S").jpg
+
+expand-right = true
+
+label-open =   
+label-close =   
+label-separator = " | "
+
+
+; vim:ft=dosini

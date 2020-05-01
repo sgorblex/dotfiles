@@ -1,4 +1,4 @@
-# Sgorblex's bash config
+# Sgorblex's Bash config
 # ~/.config/bash/aliases.bashrc
 
 # ls aliases

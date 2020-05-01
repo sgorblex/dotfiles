@@ -1,0 +1,26 @@
+#!/bin/sh
+# Sgorblex's x config
+# ~/.config/xprofile.d/env_variables.xrc
+
+# CUSTOM ENV VARIABLES
+
+# scrot path (do not end with a /)
+export SCROT_PATH=~/media/screenshots
+
+export TERMINAL=alacritty
+
+# multi monitor setup (if using only one, set them equals)
+export MONITOR_L=DVI-I-1
+export MONITOR_R=DP-1
+
+# default sound output (sink)
+export SINK="alsa_output.pci-0000_00_1b.0.analog-stereo"
+
+# polybar bar names
+export POLYBAR_L=cute_L
+export POLYBAR_R=cute_R
+
+
+# making some env variables also accessible from x resources database
+echo -e "x.Monitor.left:\t$MONITOR_L" | xrdb -merge
+echo -e "x.Monitor.right:\t$MONITOR_R" | xrdb -merge

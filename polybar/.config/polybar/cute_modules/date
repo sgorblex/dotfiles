@@ -1,0 +1,18 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/date
+; bar: cute
+; module: date
+
+
+[module/date]
+type = internal/date
+
+date = %d/%m/%y%
+date-alt = %A, %d %B %Y
+
+format-underline = #c00
+
+label =  %date%
+
+
+; vim:ft=dosini

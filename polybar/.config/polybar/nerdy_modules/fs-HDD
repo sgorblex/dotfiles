@@ -1,0 +1,29 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/fs-HDD
+; bar: nerdy
+; module: fs-HDD
+
+
+[module/HDD]
+type = internal/fs
+
+mount-0 = /home
+
+format-mounted =  﫭 <label-mounted> <bar-used>
+
+format-unmounted = <label-unmounted>
+
+label-mounted = HDD: %used%/%free%
+
+label-unmounted = %mountpoint% 
+label-unmounted-foreground = #55
+
+bar-used-indicator =
+bar-used-width = 15
+bar-used-foreground-0 = #000099
+bar-used-fill = ▐
+bar-used-empty = ▐
+bar-used-empty-foreground = #444444
+
+
+; vim:ft=dosini

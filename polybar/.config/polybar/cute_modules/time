@@ -1,0 +1,19 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/time
+; bar: cute
+; module: time
+
+
+[module/time]
+type = internal/date
+
+; time = %H:%M
+time = %H:%M:%S
+time-alt = %H:%M:%S
+
+format-underline = #c00
+
+label =  %time%
+
+
+; vim:ft=dosini

@@ -1,0 +1,16 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/i3-mode
+; bar: cute
+; module: i3-mode
+
+
+[module/i3-mode]
+type = internal/i3
+
+format = <label-mode>
+
+label-mode = %mode%
+; label-mode-font = 1
+
+
+; vim:ft=dosini

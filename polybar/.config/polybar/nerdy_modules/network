@@ -1,0 +1,20 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/network
+; bar: nerdy
+; module: network
+
+
+[module/network]
+type = internal/network
+
+interface = enp0s25
+ping-interval = 3
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected =  %downspeed% %upspeed%
+label-disconnected = 
+
+
+; vim:ft=dosini

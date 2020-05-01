@@ -1,4 +1,4 @@
-# Sgorblex's bash config
+# Sgorblex's Bash config
 # ~/.config/bash/starship.bashrc
 
 # Starship prompt (requires Starship)

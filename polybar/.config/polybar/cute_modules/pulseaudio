@@ -1,0 +1,29 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/pulseaudio
+; bar: cute
+; module: pulseaudio
+
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+sink = ${io.sink}
+
+format-volume = <ramp-volume> <label-volume>
+format-volume-underline = #1db954
+label-volume = %percentage%%
+
+format-muted-underline = #1db954
+label-muted = 婢
+label-muted-foreground = #666
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+; Right and Middle click (unreleased)
+; click-right = pavucontrol &
+; click-middle =
+
+
+; vim:ft=dosini

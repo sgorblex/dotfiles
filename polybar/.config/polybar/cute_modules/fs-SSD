@@ -1,0 +1,23 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/fs-SSD
+; bar: cute
+; module: fs-SSD
+
+
+[module/SSD]
+type = internal/fs
+
+mount-0 = /
+
+format-mounted =  <label-mounted>
+format-mounted-underline = #c00
+
+format-unmounted = <label-unmounted>
+
+label-mounted = %free%
+
+label-unmounted = %mountpoint% 
+label-unmounted-foreground = #55
+
+
+; vim:ft=dosini

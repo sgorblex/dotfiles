@@ -1,4 +1,4 @@
-# Sgorblex's bash config
+# Sgorblex's Bash config
 # ~/.bash_profile
 
 # note: tmux sources this instead of .bashrc

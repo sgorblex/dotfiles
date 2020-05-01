@@ -1,0 +1,38 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/i3-state
+; bar: cute
+; module: i3-state
+
+
+[module/i3-state]
+type = internal/i3
+
+pin-workspaces = true
+
+; strip-wsnumbers = true
+wrapping-scroll = false
+
+padding = 2
+
+format = <label-state>
+
+label-focused = %name%
+label-focused-foreground = #ffffff
+label-focused-background = ${colors.background-alt}
+label-focused-underline = #dd0
+label-focused-padding = ${self.padding}
+
+label-unfocused = %name%
+label-unfocused-padding = ${self.padding}
+
+label-visible = %name%
+label-visible-underline = #999
+label-visible-padding = ${self.padding}
+
+label-urgent = %name%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-padding = ${self.padding}
+
+
+; vim:ft=dosini

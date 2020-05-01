@@ -1,0 +1,17 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/time
+; bar: nerdy
+; module: time
+
+
+[module/time]
+type = internal/date
+
+time =  %H:%M:%S
+
+format = <label>
+
+label = %time%
+
+
+; vim:ft=dosini
