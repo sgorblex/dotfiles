@@ -139,6 +139,7 @@ for_window [class=".*"] border pixel 4
 # terminals have no borders
 for_window [class="Alacritty"] border pixel 0
 for_window [class="konsole"] border pixel 0
+for_window [class="Zathura"] border pixel 0
 gaps inner 5
 gaps outer 0
 

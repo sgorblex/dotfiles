@@ -1,0 +1,12 @@
+# Sgorblex's Zathura config
+# ~/.config/zathura/zathurarc
+
+# theming
+set default-bg 			rgba(0,0,0,0.5)
+set recolor-darkcolor 		white
+set recolor-lightcolor 		rgba(255,255,255,0)
+set recolor-keephue 		true
+set recolor 			true
+
+# selection goes to clipboard
+set selection-clipboard clipboard

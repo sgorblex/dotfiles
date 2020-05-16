@@ -333,9 +333,9 @@ background_opacity: 0.75
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-shell:
+# shell:
  # program: /usr/bin/tmux
- program: /usr/bin/fish
+ # program: /usr/bin/fish
 #  args:
 #    - --login
 

@@ -31,6 +31,9 @@ set cursorline
 " Mappings "
 imap <C-Space> <esc>
 
+" Better splitting "
+set splitbelow splitright
+
 " Load per directory configs "
 if filereadable("local.vimrc")
     so local.vimrc
@@ -38,6 +41,3 @@ endif
 if filereadable(".local.vimrc")
     so .local.vimrc
 endif
-
-" Better splitting "
-set splitbelow splitright
