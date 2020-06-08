@@ -3,7 +3,5 @@
 " Fuzzy Finder config "
 
 
-
 " Bindings "
-
 map <C-p> :FZF<CR>

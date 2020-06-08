@@ -1,4 +1,16 @@
 {
+	// explorer
+	"explorer.icon.enableNerdfont": true,
+
+	// autoformat
+	"coc.preferences.formatOnSaveFiletypes": [
+		"go"
+	],
+
+	// snippets
+	"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+
+	// LSP
 	"languageserver": {
 		"ccls": {
 			"command": "ccls",
@@ -26,9 +38,6 @@
 			],
 			"filetypes": [
 				"sh"
-			],
-			"ignoredRootPaths": [
-				"~"
 			]
 		}
 	}

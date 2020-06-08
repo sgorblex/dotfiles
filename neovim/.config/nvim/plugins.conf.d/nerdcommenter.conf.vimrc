@@ -3,9 +3,7 @@
 " NerdCommenter config "
 
 
-
 " Bindings "
-
 map <C-c> <plug>NERDCommenterToggle
 
 

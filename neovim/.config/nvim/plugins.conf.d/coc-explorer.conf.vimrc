@@ -3,8 +3,5 @@
 " Coc Explorer config "
 
 
-
 " Bindings "
-
-" :nmap <space>e :CocCommand explorer<CR>
 map <C-n> :CocCommand explorer<CR>

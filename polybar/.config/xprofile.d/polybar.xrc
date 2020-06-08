@@ -1,1 +1,8 @@
-SINK=alsa_output.pci-0000_00_1b.0.analog-stereo
+#!/bin/sh
+# Sgorblex's x config
+# ~/.config/xprofile.d/polybar.xrc
+
+# POLYBAR ENVIRONMENT VARIABLES
+
+export POLYBAR_L=cute_L
+export POLYBAR_R=cute_R

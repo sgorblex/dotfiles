@@ -1,0 +1,8 @@
+#!/bin/sh
+# Sgorblex's x config
+# ~/.config/xprofile.d/defaults.xrc
+
+# DEFAULT APPLICATIONS DEFINITIONS
+
+export TERMINAL=st
+export EDITOR=nvim
