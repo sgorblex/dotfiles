@@ -4,4 +4,4 @@
 
 
 " Bindings "
-nmap <leader>p :RainbowToggle<CR>
+nmap <silent> <leader>p :RainbowToggle<CR>

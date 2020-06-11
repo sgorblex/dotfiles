@@ -4,4 +4,4 @@
 
 
 " Bindings "
-map <C-n> :CocCommand explorer<CR>
+map <silent> <C-n> :CocCommand explorer<CR>

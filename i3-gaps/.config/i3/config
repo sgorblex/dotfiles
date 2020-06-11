@@ -215,6 +215,9 @@ exec compton -b
 # nextcloud
 exec nextcloud --background
 
+# workspace initial layout
+exec ~/.config/i3/scripts/layout.sh
+
 # }}}
 
 

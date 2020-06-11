@@ -4,7 +4,8 @@
 
 	// autoformat
 	"coc.preferences.formatOnSaveFiletypes": [
-		"go"
+		"go",
+		"c"
 	],
 
 	// snippets

@@ -11,3 +11,4 @@ source ~/.config/nvim/plugins.conf.d/airline.conf.vimrc 			" Airline
 source ~/.config/nvim/plugins.conf.d/rainbow.conf.vimrc 			" Rainbow
 source ~/.config/nvim/plugins.conf.d/quick-scope.conf.vimrc 			" Quick-scope
 source ~/.config/nvim/plugins.conf.d/rnvimr.conf.vimrc 				" RnvimR
+source ~/.config/nvim/plugins.conf.d/context.conf.vimrc 			" Context.vim

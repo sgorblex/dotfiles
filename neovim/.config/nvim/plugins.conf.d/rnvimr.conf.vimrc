@@ -4,4 +4,4 @@
 
 
 " Bindings "
-nmap <leader>r :RnvimrToggle<CR>
+nmap <silent> <leader>r :RnvimrToggle<CR>

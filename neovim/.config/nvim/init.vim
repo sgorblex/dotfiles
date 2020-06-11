@@ -27,6 +27,7 @@ set mouse=a 				" Mouse active for all modes "
 set splitbelow splitright 		" Better splitting "
 set iskeyword+=-                      	" Treat dash separated words as a word text object"
 set clipboard=unnamedplus 		" Use main X clipboard "
+set timeoutlen=300 			" Multiple key mappings' timeout
 
 
 " Mappings "

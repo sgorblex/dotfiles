@@ -4,7 +4,8 @@
 
 
 " Bindings "
-map <C-c> <plug>NERDCommenterToggle
+" note: it's actually <c-/> but for some reason this works instead
+map <C-_> <plug>NERDCommenterToggle
 
 
 
@@ -18,3 +19,6 @@ let g:NERDTrimTrailingWhitespace = 1
 
 " Enable NERDCommenterToggle to check all selected lines is commented or not
 let g:NERDToggleCheckAllLines = 1
+
+" Custom formats
+let g:NERDCustomDelimiters = { 'asm': { 'left': '#' } }

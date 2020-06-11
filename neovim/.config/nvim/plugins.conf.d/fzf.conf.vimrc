@@ -4,4 +4,4 @@
 
 
 " Bindings "
-map <C-p> :FZF<CR>
+map <C-p> :Files<CR>
