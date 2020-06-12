@@ -38,6 +38,8 @@ Plug 'mhinz/vim-signify' 					" Signify 				Git wrapper
 Plug 'markonm/traces.vim' 					" Traces 				Substitute and range previews
 Plug 'wellle/context.vim' 					" Context 				Show buffer's context
 Plug 'glacambre/firenvim', { 'do': { -> firenvim#install(0) } } " Firenvim 				Embeds nvim in web browsers
+Plug 'liuchengxu/vista.vim' 					" Vista 				LSP object navigation (requires ctags)
+Plug 'tpope/vim-obsession' 					" Obsession 				Better mksession feature
 
 " (Non) Languages support "
 Plug 'lervag/vimtex' 						" VimTex 				LaTeX integration
