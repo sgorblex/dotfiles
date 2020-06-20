@@ -3,5 +3,5 @@
 " Fuzzy Finder config "
 
 
-" Bindings "
+" Mappings "
 map <C-p> :Files<CR>

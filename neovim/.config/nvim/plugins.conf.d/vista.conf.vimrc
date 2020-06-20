@@ -3,4 +3,5 @@
 " Vista config "
 
 
+" Mappings "
 nmap <silent> <leader>v :Vista!!<CR>

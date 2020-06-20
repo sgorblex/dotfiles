@@ -3,7 +3,7 @@
 " NerdTree config "
 
 
-" Bindings "
+" Mappings "
 map <M-n> :NERDTreeFocus<CR>
 map <C-n> :NERDTreeToggle<CR>
 

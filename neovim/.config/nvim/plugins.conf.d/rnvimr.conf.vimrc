@@ -3,5 +3,5 @@
 " RnvimR config "
 
 
-" Bindings "
+" Mappings "
 nmap <silent> <leader>r :RnvimrToggle<CR>

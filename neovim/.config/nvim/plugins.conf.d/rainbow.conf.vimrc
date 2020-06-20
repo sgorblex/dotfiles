@@ -3,5 +3,5 @@
 " Rainbow config "
 
 
-" Bindings "
+" Mappings "
 nmap <silent> <leader>p :RainbowToggle<CR>

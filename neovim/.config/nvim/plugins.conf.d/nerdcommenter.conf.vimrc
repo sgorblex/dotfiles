@@ -3,7 +3,7 @@
 " NerdCommenter config "
 
 
-" Bindings "
+" Mappings "
 " note: it's actually <c-/> but for some reason this works instead
 map <C-_> <plug>NERDCommenterToggle
 

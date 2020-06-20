@@ -3,5 +3,5 @@
 " Coc Explorer config "
 
 
-" Bindings "
+" Mappings "
 map <silent> <C-n> :CocCommand explorer<CR>

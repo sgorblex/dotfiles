@@ -3,5 +3,5 @@
 " Context.vim config "
 
 
-" Bindings "
+" Mappings "
 nmap <leader>c :ContextToggle<CR>

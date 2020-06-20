@@ -31,11 +31,11 @@ set timeoutlen=300 			" Multiple key mappings' timeout
 
 
 " Mappings "
-imap <C-Space> <esc>
-nnoremap <M-j>    :resize -2<CR>
-nnoremap <M-k>    :resize +2<CR>
-nnoremap <M-h>    :vert resize -2<CR>
-nnoremap <M-l>    :vert resize +2<CR>
+nmap Y y$
+nnoremap <silent> <M-j> :resize -2<CR>
+nnoremap <silent> <M-k> :resize +2<CR>
+nnoremap <silent> <M-h> :vert resize -2<CR>
+nnoremap <silent> <M-l> :vert resize +2<CR>
 
 
 " Load per directory configs "
