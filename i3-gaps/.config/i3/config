@@ -154,10 +154,10 @@ bindsym $mod+Shift+y 	gaps outer current plus 5
 # SPECIFIC KEYBINDINGS {{{
 
 # better resize keybindings (requires the script) (you can also use mod+right-mouse for that)
-bindsym $mod+y		exec --no-startup-id "~/.scripts/bin/i3resize left"
-bindsym $mod+u		exec --no-startup-id "~/.scripts/bin/i3resize down"
-bindsym $mod+i		exec --no-startup-id "~/.scripts/bin/i3resize up"
-bindsym $mod+o		exec --no-startup-id "~/.scripts/bin/i3resize right"
+bindsym $mod+y		exec --no-startup-id "~/.config/i3/scripts/i3resize.sh left"
+bindsym $mod+u		exec --no-startup-id "~/.config/i3/scripts/i3resize.sh down"
+bindsym $mod+i		exec --no-startup-id "~/.config/i3/scripts/i3resize.sh up"
+bindsym $mod+o		exec --no-startup-id "~/.config/i3/scripts/i3resize.sh right"
 
 # Pulse Audio controls
 # set this variable to the index of your default Pulse Audio sink (see: pactl list short sinks)
@@ -174,7 +174,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
 
 # Scrot
-# will be probably changed
+bindsym $mod+Shift+b exec $BROWSER
 bindsym --release Print exec scrot -fs $SCROT_PATH/$(date +"%F_%H-%M-%S").jpg
 
 # }}}
