@@ -3,6 +3,7 @@
 " Startify config "
 
 
+" Custom header "
 let g:startify_custom_header = [
 	\ ' 	   X0W      XX                                ',
 	\ ' 	 XOxk0W     KdkX                              ',
@@ -16,8 +17,6 @@ let g:startify_custom_header = [
 	\ ' 	   NX       OK                                ',
 	\]
 
-
-
-
-
-
+" Custom colors "
+highlight StartifyHeader ctermfg=46
+highlight StartifySection ctermfg=40

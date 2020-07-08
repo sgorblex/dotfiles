@@ -35,7 +35,6 @@ Plug 'luochen1990/rainbow' 					" Rainbow 				Parenthesis highlighter
 Plug 'unblevable/quick-scope' 					" Quick scope 				Highlight when using f and t
 Plug 'mhinz/vim-startify' 					" Startify 				Start screen
 Plug 'mhinz/vim-signify' 					" Signify 				Git wrapper
-Plug 'markonm/traces.vim' 					" Traces 				Substitute and range previews
 Plug 'wellle/context.vim' 					" Context 				Show buffer's context
 Plug 'liuchengxu/vista.vim' 					" Vista 				LSP object navigation (requires ctags)
 Plug 'tpope/vim-obsession' 					" Obsession 				Better mksession feature
@@ -48,7 +47,7 @@ Plug 'cespare/vim-toml' 					" Vim-Toml 				Tom Language support
 
 " Themes "
 Plug 'morhetz/gruvbox' 						" Gruvbox 				Theme
-"
+
 " Plug 'yuki-ycino/fzf-preview.vim' 				" FZF Preview 				Floating window FZF preview
 " Plug 'dikiaap/minimalist' 					" Minimalist 				Theme
 " Plug 'voldikss/vim-floaterm' 					" Floaterm 				Floating terminal
