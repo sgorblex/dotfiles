@@ -1,0 +1,16 @@
+/* Sgorblex's rofi config */
+/* modified from adi1090x's themes */
+
+configuration {
+	modi: "drun,window,run";
+	window-format: " {c}\t\t{t}";
+	drun-display-format: " {name}";
+	icon-theme: "Papirus";
+	show-icons: true;
+	display-window: "  ";
+	/* display-drun: "  "; */
+	display-drun: "  ";
+	theme: "blur_white.rasi";
+}
+
+// vim:ft=css

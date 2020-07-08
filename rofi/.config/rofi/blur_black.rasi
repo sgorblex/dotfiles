@@ -1,0 +1,74 @@
+/* Sgorblex's rofi config */
+/* modified from adi1090x's themes */
+
+configuration {
+	modi: "drun,window,run";
+	window-format: " {c}\t\t{t}";
+	drun-display-format: " {name}";
+	icon-theme: "Papirus";
+	show-icons: true;
+	display-window: "  ";
+	/* display-drun: "  "; */
+	display-drun: "  ";
+}
+
+* {
+	bg: #00000077;
+	bg-sel: #00000099;
+	acc: #000000dd;
+	fg: #ffffff;
+}
+
+* {
+	background-color: #00000000;
+	font: "Iosevka 12";
+}
+
+window {
+	height: 45%;
+	width: 45%;
+	transparency: "real";
+}
+
+mainbox {
+	background-color: @bg;
+	border-radius: 8;
+}
+
+listview {
+	scrollbar: true;
+}
+
+scrollbar {
+	color: @acc;
+	background-color: @bg-sel;
+}
+
+element {
+	text-color: @fg;
+	padding: 12 12 12 12;
+}
+
+element selected {
+	background-color: @bg-sel;
+	text-color: @fg;
+}
+
+inputbar {
+	padding: 4 4 4 4;
+	background-color: @acc;
+}
+
+prompt {
+	enabled: true;
+	padding: 8 0 8 12;
+	text-color: @fg;
+}
+
+entry {
+	padding: 8 12 8 8;
+	text-color: @fg;
+}
+
+
+// vim:ft=css
