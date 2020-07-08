@@ -126,6 +126,7 @@ bindsym $mod+Shift+r restart
 
 # will be probably changed
 bindsym $mod+Shift+x exec i3lock -c 000000
+exec xautolock -time 5 -locker "~/.config/i3/scripts/lock.sh" &
 
 # }}}
 
@@ -175,7 +176,8 @@ bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
 
 # Scrot
 bindsym $mod+Shift+b exec $BROWSER
-bindsym --release Print exec scrot -fs $SCROT_PATH/$(date +"%F_%H-%M-%S").jpg
+bindsym --release Print exec scrot -fs $SCROT_PATH/%F_%H-%M-%S.png
+bindsym shift+Print exec flameshot gui
 
 # }}}
 
@@ -292,7 +294,9 @@ bindsym $mod+Shift+p mode "[P]oweroff - [R]eboot - reboot to [W]indows - [E]xit 
 
 # looking for a wallpaper in ~/.config/wallpaper.* (any file extension that feh can open)
 exec_always feh --bg-scale ~/.config/wallpaper.*
-bindsym $mod+d exec dmenu_run -nb '#000000' -sb '#800000' -fn "CaskaydiaCove Nerd Font"
+# bindsym $mod+d exec dmenu_run -nb '#000000' -sb '#800000' -fn "CaskaydiaCove Nerd Font"
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+shift+d exec rofi -show window
 
 set $bg-color 			#dddddd
 # set $bg-color 		#800000
