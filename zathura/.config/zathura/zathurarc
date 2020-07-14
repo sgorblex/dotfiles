@@ -2,7 +2,7 @@
 # ~/.config/zathura/zathurarc
 
 # colors
-set default-bg 			rgba(0,0,0,0.5)
+set default-bg 			rgba(0,0,0,0.75)
 set recolor-darkcolor 		white
 set recolor-lightcolor 		rgba(0,0,0,0)
 set recolor-keephue 		true
@@ -32,5 +32,5 @@ set statusbar-h-padding  20
 set guioptions ""
 
 # mappings
-map J zoom in 	# these two are swapped for some reason
-map K zoom out
+map U zoom in 	# these two are swapped for some reason
+map I zoom out

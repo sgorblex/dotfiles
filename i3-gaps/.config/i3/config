@@ -124,9 +124,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# will be probably changed
-bindsym $mod+Shift+x exec i3lock -c 000000
-exec xautolock -time 5 -locker "~/.config/i3/scripts/lock.sh" &
+bindsym $mod+Shift+x exec "~/.config/i3/scripts/lock.sh"
+exec xidlehook --not-when-audio --not-when-fullscreen --timer 300 "~/.config/i3/scripts/lock.sh" ""
+# exec xautolock -time 5 -locker "~/.config/i3/scripts/lock.sh"
 
 # }}}
 

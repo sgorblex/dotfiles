@@ -16,7 +16,7 @@ configuration {
 	bg: #ffffff44;
 	bg-sel: #ffffff50;
 	acc: #ffffff99;
-	fg: #ffffff;
+	fg: #000000;
 }
 
 * {

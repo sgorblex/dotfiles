@@ -9,9 +9,10 @@ alias la='ls -A'
 
 # other
 alias cls='clear'
-alias po='poweroff'
-alias pw='lpass show -c --password' # requires lastpass-cli
-alias xc='xclip -sel clip' # requires xclip
-alias clk='tty-clock -scC 4' # requires tty-clock
-alias r='ranger' # requires ranger
-alias :q='exit'
+alias pw='lpass show -c --password' 	# requires lastpass-cli
+alias xc='xclip -sel clip' 		# requires xclip
+alias clk='tty-clock -scC 4' 		# requires tty-clock
+alias r='ranger' 			# requires ranger
+alias :q='exit' 			# too much vim lol
+alias pu='pushd .'
+alias po='popd'
