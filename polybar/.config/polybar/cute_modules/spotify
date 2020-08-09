@@ -14,7 +14,8 @@ format-prefix = " "
 format = <label>
 format-underline = #1db954
 
-exec = python /usr/share/polybar/scripts/spotify_status.py -f '{artist}: {song}'
+; exec = python /usr/share/polybar/scripts/spotify_status.py -f '{artist}: {song}'
+exec = python /usr/share/polybar/scripts/spotify_status.py -t 35 -f '{artist}: {song}'
 ; exec = python /usr/share/polybar/scripts/spotify_status.py -f '{song}'
 
 

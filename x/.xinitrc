@@ -4,6 +4,11 @@
 
 source ~/.xprofile
 
+
+echo sleeping for testing purposes
+sleep 10
+
+
 # this assumes you have the selected WM installed
 case $WM in
 	"i3" )

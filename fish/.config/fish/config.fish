@@ -1,4 +1,4 @@
-# Sgorblex's Fish shell config
+# Sgorblex's Fish Shell config
 # ~/.config/fish/config.fish
 
 # Importing aliases
@@ -15,9 +15,6 @@ end
 
 # Deactivate welcome message
 set fish_greeting
-
-# Starship shell prompt
-starship init fish | source
 
 # Emulates vim style command line editing
 fish_vi_key_bindings

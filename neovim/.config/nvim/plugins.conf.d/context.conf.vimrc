@@ -3,5 +3,8 @@
 " Context.vim config "
 
 
+" Options "
+let g:context_enabled = 0
+
 " Mappings "
 nmap <leader>c :ContextToggle<CR>
