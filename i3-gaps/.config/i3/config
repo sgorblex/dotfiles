@@ -257,7 +257,7 @@ bindsym $mod+c [title="Qalc"] scratchpad show
 
 # Spotify {{{
 # (only when opened)
-exec --no-startup-id qalculate-gtk --title=Qalc
+exec --no-startup-id spotify
 for_window [class="Spotify"] move scratchpad
 for_window [class="Spotify"] resize set 1250 700
 for_window [class="Spotify"] sticky enable

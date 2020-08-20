@@ -29,7 +29,7 @@ set font "Cozette 10"
 set statusbar-basename          true
 set statusbar-v-padding  10
 set statusbar-h-padding  20
-set guioptions ""
+# set guioptions "" 					# full immersion
 
 # mappings
 map U zoom in 	# these two are swapped for some reason
