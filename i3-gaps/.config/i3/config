@@ -174,8 +174,13 @@ bindsym XF86AudioPrev exec playerctl previous
 # Notification controls
 bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
 
-# Scrot
+
+# START SOFTWARE
+
+# default browser (assumes $BROWSER variable set)
 bindsym $mod+Shift+b exec $BROWSER
+
+# screenshot software
 bindsym --release Print exec scrot -fs $SCROT_PATH/%F_%H-%M-%S.png
 bindsym shift+Print exec flameshot gui
 
@@ -233,34 +238,28 @@ exec polybar $POLYBAR_R
 # Telegram {{{
 # (requires telegram-desktop)
 exec --no-startup-id telegram-desktop
-for_window [class="TelegramDesktop" title="Telegram"] move scratchpad
-for_window [class="TelegramDesktop" title="Telegram"] sticky enable
+for_window [class="TelegramDesktop" title="Telegram"] move scratchpad, scratchpad show, resize set 1100 730, move position center, scratchpad show, sticky enable
 bindsym $mod+g [class="TelegramDesktop" title="Telegram"] scratchpad show
 # }}}
 
 # Terminal {{{
 # sleeping 2 to avoid race condition issues; only works with terminals whose windows can be titled with the -t option (substitute -c with -t and class with title) or whose class can be chosen with the -c option
 exec --no-startup-id sleep 2 && $TERMINAL -c dropdown
-for_window [class="dropdown"] move scratchpad
-for_window [class="dropdown"] sticky enable
+for_window [class="dropdown"] move scratchpad, scratchpad show, resize set 1100 730, move position center, scratchpad show, sticky enable
 bindsym $mod+t [class="dropdown"] scratchpad show
 # }}}
 
 # Calculator {{{
 # (requires qalculate-gtk)
 exec --no-startup-id qalculate-gtk --title=Qalc
-for_window [title="Qalc"] move scratchpad
-for_window [title="Qalc"] resize set 300 200
-for_window [title="Qalc"] sticky enable
+for_window [title="Qalc"] move scratchpad, scratchpad show, resize set 300 200, move position center, scratchpad show, sticky enable
 bindsym $mod+c [title="Qalc"] scratchpad show
 # }}}
 
 # Spotify {{{
 # (only when opened)
 exec --no-startup-id spotify
-for_window [class="Spotify"] move scratchpad
-for_window [class="Spotify"] resize set 1250 700
-for_window [class="Spotify"] sticky enable
+for_window [class="Spotify"] move scratchpad, scratchpad show, resize set 1300 750, move position center, scratchpad show, sticky enable
 bindsym $mod+m [class="Spotify"] scratchpad show
 # }}}
 
