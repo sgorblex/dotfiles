@@ -5,7 +5,7 @@
 
 
 " Install plugin manager if not present "
-if ! filereadable(system('echo -n "$HOME/.local/share/nvim/site/autoload/plug.vim"'))
+if ! filereadable(expand("~/.local/share/nvim/site/autoload/plug.vim"))
 	echo "Installing vim-plug..."
 	silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	echo "Installing plugins..."
@@ -25,7 +25,7 @@ Plug 'preservim/nerdcommenter' 					" Nerd Commenter 			Auto line commenter
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 		" Fuzzy Finder 				Quickly find files
 Plug 'junegunn/fzf.vim' 					" Fuzzy Finder 				Default FZF integration
 Plug 'christoomey/vim-tmux-navigator' 				" Tmux Navigator 			Fast tmux bindings
-Plug 'danmann/vim-razer' 					" Vim Razer 				Razer keyboards interactive RGB lightning
+" Plug 'danmann/vim-razer' 					" Vim Razer 				Razer keyboards interactive RGB lightning
 Plug 'lilydjwg/colorizer' 					" Colorizer 				Colorize RGB hex codes
 Plug 'tpope/vim-surround' 					" Surround 				Fast handling of quotes & similar
 Plug 'vim-airline/vim-airline' 					" Airline 				Status bar
@@ -48,7 +48,6 @@ Plug 'cespare/vim-toml' 					" Vim-Toml 				Tom Language support
 " Themes "
 Plug 'morhetz/gruvbox' 						" Gruvbox 				Theme
 
-" Plug 'yuki-ycino/fzf-preview.vim' 				" FZF Preview 				Floating window FZF preview
 " Plug 'dikiaap/minimalist' 					" Minimalist 				Theme
 " Plug 'voldikss/vim-floaterm' 					" Floaterm 				Floating terminal
 " Plug 'floobits/floobits-neovim' 				" Floobits 				Real time co-editing

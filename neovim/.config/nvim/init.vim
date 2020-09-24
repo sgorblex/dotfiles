@@ -22,12 +22,12 @@ set foldmethod=marker 			" Fold method uses {{{ and }}} "
 set nu 					" Line numbers "
 set cursorline 				" Cursor line gets highlighted "
 set mouse=a 				" Mouse active for all modes "
-set splitbelow splitright 		" Better splitting "
+set splitbelow splitright 		" Better window splitting "
 set timeoutlen=500 			" Multiple key mappings' timeout
 set inccommand=split 			" Substitute real time preview "
 
 " Optional options (lul)
-" set iskeyword+=-                      	" Treat dash separated words as a word text object"
+" set iskeyword+=- 			" Treat dash separated words as a word text object"
 " set clipboard=unnamedplus 		" Use main X clipboard "
 
 
