@@ -6,13 +6,6 @@ if [ -f ~/.config/fish/aliases.fish ]
 	. ~/.config/fish/aliases.fish
 end
 
-# sourcing various configuration files
-if [ -d ~/.config/fish/config.fish.d ]
-	for f in ~/.config/fish/config.fish.d/*
-		. $f
-	end
-end
-
 # Deactivate welcome message
 set fish_greeting
 
@@ -27,3 +20,10 @@ set fish_cursor_default block
 set fish_cursor_insert line
 # Set the replace mode cursor to an underscore
 set fish_cursor_replace_one underscore
+
+# sourcing various configuration files
+if [ -d ~/.config/fish/config.fish.d ]
+	for f in ~/.config/fish/config.fish.d/*
+		. $f
+	end
+end

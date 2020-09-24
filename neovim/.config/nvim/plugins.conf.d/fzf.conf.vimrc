@@ -4,4 +4,5 @@
 
 
 " Mappings "
-map <C-p> :Files<CR>
+map <C-P> :Files<CR>
+map <M-p> :Rg<CR>

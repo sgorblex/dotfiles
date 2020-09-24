@@ -5,5 +5,4 @@
 # DEFAULT APPLICATIONS DEFINITIONS
 
 export TERMINAL=st
-export EDITOR=nvim
 export BROWSER=firefox
