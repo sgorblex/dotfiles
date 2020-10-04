@@ -4,4 +4,4 @@
 
 
 " Mappings "
-map <silent> <C-n> :CocCommand explorer<CR>
+nnoremap <silent> <C-n> :CocCommand explorer<CR>

@@ -4,4 +4,4 @@
 
 
 " Mappings "
-nmap <silent> <leader>v :Vista!!<CR>
+nnoremap <silent> <leader>v :Vista!!<CR>

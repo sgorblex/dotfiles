@@ -20,7 +20,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Vim Plug entry 						Plugin Name 				Description
 
 " General "
-Plug 'neoclide/coc.nvim', {'branch': 'release'} 		" Conquer of Completion  		Completion engine (extensions: coc-go coc-snippets coc-vimtex coc-explorer coc-calc coc-json)
+Plug 'neoclide/coc.nvim', {'branch': 'release'} 		" Conquer of Completion  		Completion engine (extensions: coc-go coc-snippets coc-vimtex coc-explorer coc-calc coc-json coc-java coc-sh)
 Plug 'preservim/nerdcommenter' 					" Nerd Commenter 			Auto line commenter
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 		" Fuzzy Finder 				Quickly find files
 Plug 'junegunn/fzf.vim' 					" Fuzzy Finder 				Default FZF integration

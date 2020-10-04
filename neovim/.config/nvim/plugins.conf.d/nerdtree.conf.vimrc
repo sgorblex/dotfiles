@@ -4,8 +4,8 @@
 
 
 " Mappings "
-map <M-n> :NERDTreeFocus<CR>
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <M-n> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Show hidden files "
 " let NERDTreeShowHidden=1

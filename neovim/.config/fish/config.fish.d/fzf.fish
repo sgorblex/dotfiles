@@ -2,7 +2,7 @@
 # ~/.config/fish/config.fish.d/fzf.fish
 
 # Default fzf command
-set -x FZF_DEFAULT_COMMAND "rg -L --files" 		# requires ripgrep (rg)
+set -x FZF_DEFAULT_COMMAND "rg -L --files" 			# requires ripgrep (rg)
 
 # Search in hidden files
 function hfzf
@@ -10,5 +10,5 @@ function hfzf
 end
 
 # Edit found files with neovim
-alias nzim	'fzf > /tmp/fzfound && nvim (cat /tmp/fzfound)' 			# open fuzzy found file in nvim - requires nvim and fzf
-alias hnzim	'hfzf > /tmp/fzfound && nvim (cat /tmp/fzfound)' 			# open fuzzy found file in nvim - requires nvim and fzf
+alias nzim	'set fzfound (fzf) && nvim $fzfound'
+alias hnzim	'set fzfound (hfzf) && nvim $fzfound'

@@ -4,4 +4,4 @@
 
 
 " Mappings "
-nmap <silent> <leader>r :RnvimrToggle<CR>
+nnoremap <silent> <leader>r :RnvimrToggle<CR>

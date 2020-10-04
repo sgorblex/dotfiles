@@ -10,7 +10,7 @@ source ~/.config/nvim/plugs.vimrc
 colorscheme gruvbox
 "
 " removing background (better look with transparent terminals) "
-hi Normal guibg=NONE ctermbg=NONE
+highlight Normal guibg=NONE ctermbg=NONE
 
 " Plugins' configs "
 source ~/.config/nvim/plugins.conf.vimrc
@@ -18,21 +18,18 @@ source ~/.config/nvim/plugins.conf.vimrc
 
 
 " Settings "
-set foldmethod=marker 			" Fold method uses {{{ and }}} "
-set nu 					" Line numbers "
-set cursorline 				" Cursor line gets highlighted "
-set mouse=a 				" Mouse active for all modes "
-set splitbelow splitright 		" Better window splitting "
-set timeoutlen=500 			" Multiple key mappings' timeout
-set inccommand=split 			" Substitute real time preview "
-
-" Optional options (lul)
-" set iskeyword+=- 			" Treat dash separated words as a word text object"
-" set clipboard=unnamedplus 		" Use main X clipboard "
+set foldmethod=marker			" Fold method uses {{{ and }}} "
+set number				" Line numbers "
+set cursorline				" Cursor line gets highlighted "
+set mouse=a				" Mouse active for all modes "
+set splitbelow splitright		" Better window splitting "
+set timeoutlen=500			" Multiple key mappings' timeout
+set inccommand=split			" Substitute real time preview "
 
 
 " Mappings "
-nmap Y y$
+nnoremap Y y$
+inoremap <M-Return> <Esc>o
 nnoremap <silent> <M-j> :resize -2<CR>
 nnoremap <silent> <M-k> :resize +2<CR>
 nnoremap <silent> <M-h> :vert resize -2<CR>

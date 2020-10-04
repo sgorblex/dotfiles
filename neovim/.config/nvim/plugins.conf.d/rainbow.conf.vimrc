@@ -4,4 +4,4 @@
 
 
 " Mappings "
-nmap <silent> <leader>p :RainbowToggle<CR>
+nnoremap <silent> <leader>p :RainbowToggle<CR>

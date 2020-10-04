@@ -1,16 +1,14 @@
 {
 	// explorer
 	"explorer.icon.enableNerdfont": true,
-
 	// autoformat
 	"coc.preferences.formatOnSaveFiletypes": [
 		"go",
-		"c"
+		"c",
+		"java"
 	],
-
 	// snippets
 	"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
-
 	// LSP
 	"languageserver": {
 		"ccls": {
@@ -28,19 +26,10 @@
 			],
 			"initializationOptions": {
 				"cache": {
-					"directory": ".ccls-cache"
+					"directory": "/tmp/.ccls-cache"
 				}
 			}
-		},
-		"bash": {
-			"command": "bash-language-server",
-			"args": [
-				"start"
-			],
-			"filetypes": [
-				"sh"
-			]
 		}
-  },
-  "coc.preferences.extensionUpdateCheck": "never"
+	},
+	"coc.preferences.extensionUpdateCheck": "never"
 }

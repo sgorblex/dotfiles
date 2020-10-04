@@ -5,7 +5,7 @@
 
 " Mappings "
 " note: it's actually <c-/> but for some reason this works instead
-map <C-_> <plug>NERDCommenterToggle
+nmap <C-_> <plug>NERDCommenterToggle
 
 
 
