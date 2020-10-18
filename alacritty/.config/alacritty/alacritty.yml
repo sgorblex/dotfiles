@@ -38,9 +38,7 @@ window:
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
   padding:
-   # x: 20
    x: 30
-   # y: 20
    y: 30
 
   # Spread additional padding evenly around the terminal content.
@@ -190,10 +188,10 @@ font:
 #draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night Bright)
-#colors:
+colors:
   # Default colors
-  #primary:
-  #  background: '0x000000'
+  primary:
+   background: '0x000000'
   #  foreground: '0xeaeaea'
 
     # Bright and dim foreground colors
