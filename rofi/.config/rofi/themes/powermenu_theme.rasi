@@ -1,0 +1,87 @@
+/* Sgorblex's rofi config */
+/* modified from adi1090x's and SwiftyChicken's themes */
+
+
+* {
+  accent:           #999999;
+  background:       #444444;
+  background-light: #333333;
+  foreground:       #888888;
+  foreground-alt:   #ffffff;
+}
+
+
+
+* {
+  /* General */
+  text-font:                            "Material Design Icons Desktop 20";
+  icon-font:                            "BreezeSans 0";
+  
+  option-6-listview-spacing:            6px;
+  menu-window-padding:                  10px 5px;
+  menu-element-padding:                 1.1% 0.0% 5px -0.75%;
+}
+
+#window {
+  width: 3.1%;
+  height: 46.3%;
+  anchor: east;
+  location: east;
+  x-offset: -10px;
+  y-offset: 0%;
+  border: 0px;
+  border-radius: 10%;
+}
+
+* {
+  background-color: @background;
+  text-color: @foreground;
+  font: @icon-font;
+}
+
+#horibox {
+  children: [ listview ];
+}
+
+#listview {
+  cycle: false;
+  spacing: 2.5%;
+  dynamic: true;
+  layout: vertical;
+}
+
+#element {
+  orientation: horizontal;
+  border: 0px;
+  border-radius: 100%;
+  background-color: @background-light;
+}
+
+#element.selected {
+  background-color: @accent;
+  text-color: @foreground-alt;
+}
+
+* {
+  font: @text-font;
+}
+
+#window {
+  padding: @menu-window-padding;
+  children: [ horibox ];
+}
+
+#listview {
+  spacing: @option-6-listview-spacing;
+  lines: 6;
+}
+
+#element {
+  font: @icon-font;
+  border: @menu-element-border;
+  padding: @menu-element-padding;
+  border-color: @background-light;
+}
+
+
+// vim:ft=css

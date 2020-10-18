@@ -1,16 +1,6 @@
 /* Sgorblex's rofi config */
 /* modified from adi1090x's themes */
 
-configuration {
-	modi: "drun,window,run";
-	window-format: " {c}\t\t{t}";
-	drun-display-format: " {name}";
-	icon-theme: "Papirus";
-	show-icons: true;
-	display-window: "  ";
-	/* display-drun: "  "; */
-	display-drun: "  ";
-}
 
 * {
 	bg: #ffffff44;
@@ -47,6 +37,10 @@ scrollbar {
 element {
 	text-color: @fg;
 	padding: 12 12 12 12;
+}
+
+element-icon {
+	size: 1.2em;
 }
 
 element selected {
