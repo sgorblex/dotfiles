@@ -3,19 +3,18 @@
 " Startify config "
 
 
-" Custom header "
-let g:startify_custom_header = [
-	\ ' 	   X0W      XX                                ',
-	\ ' 	 XOxk0W     KdkX                              ',
-	\ ' 	OxddkOOX    Kooox       __      ___           ',
-	\ ' 	kxxdxkkk0W  Klllo       \ \    / (_)          ',
-	\ ' 	xxxxK0kkkkK Kllll ___  __\ \  / / _ _ __ ___  ',
-	\ ' 	xdddK XkxxkOOcccl/ _ \/ _ \ \/ / | | `_ ` _ \ ',
-	\ ' 	xdddK  W0xxxdcccc  __/ (_) \  /  | | | | | | |',
-	\ ' 	OdddK    Xxxdcc:o\___|\___/ \/   |_|_| |_| |_|',
-	\ ' 	 NOoK     WOocxX                              ',
-	\ ' 	   NX       OK                                ',
-	\]
+" Custom header by u/wellingtonthehurf "
+let g:startify_custom_header =	[
+	\'     _           _                      _             ',
+	\'             ▕                                 ',
+	\'  ▕ ███       ▕│█     ___   ___                 ',
+	\'  ▕││███     ▕│███▕│         █   ██      ',
+	\'  ▕││  ███   ▕│███▕│▕│ ▁ ▕│    ▕│██          ',
+	\'  ▕││  ▕│███ ▕│███▕│▕│   ▕│    ▕│██  ◢◣  ◢  ',
+	\'  ▕││  ▕│  ███│███▕│  ▁▁  ▁   ██   ▜█ ██  ',
+	\'     ▕│    ████      ‾‾    ‾                 ',
+	\'     ▕│                                        ',
+	\'                 ‾                      ‾             ']
 
 " Custom colors "
 highlight StartifyHeader ctermfg=46

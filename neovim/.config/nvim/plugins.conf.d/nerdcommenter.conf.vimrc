@@ -5,7 +5,7 @@
 
 " Mappings "
 " note: it's actually <c-/> but for some reason this works instead
-nmap <C-_> <plug>NERDCommenterToggle
+map <C-_> <plug>NERDCommenterToggle
 
 
 
@@ -21,4 +21,5 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 
 " Custom formats
-let g:NERDCustomDelimiters = { 'asm': { 'left': '#' } }
+let g:NERDAltDelims_c = 1
+let g:NERDAltDelims_asm = 1

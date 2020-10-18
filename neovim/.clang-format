@@ -1,2 +1,4 @@
 IndentWidth: 8
 UseTab: Always
+ColumnLimit: 0
+IndentCaseLabels: true

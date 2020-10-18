@@ -9,27 +9,5 @@
 	],
 	// snippets
 	"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
-	// LSP
-	"languageserver": {
-		"ccls": {
-			"command": "ccls",
-			"filetypes": [
-				"c",
-				"cpp",
-				"cuda",
-				"objc",
-				"objcpp"
-			],
-			"rootPatterns": [
-				".ccls-root",
-				"compile_commands.json"
-			],
-			"initializationOptions": {
-				"cache": {
-					"directory": "/tmp/.ccls-cache"
-				}
-			}
-		}
-	},
 	"coc.preferences.extensionUpdateCheck": "never"
 }
