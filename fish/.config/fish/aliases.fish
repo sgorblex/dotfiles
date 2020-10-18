@@ -16,3 +16,9 @@ alias r		"ranger" 			# requires ranger
 alias :q	"exit" 				# too much vim lol
 alias pu	"pushd ."
 alias po	"popd"
+
+# cd+ls
+function cl
+	cd $1
+	ls
+end

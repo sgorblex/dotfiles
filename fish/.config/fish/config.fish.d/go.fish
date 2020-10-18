@@ -3,5 +3,6 @@
 
 # exporting default GOPATH
 set -x GOPATH ~/.local/go
+
 # adding go binaries to PATH
 set -x PATH $PATH ~/.local/go/bin
