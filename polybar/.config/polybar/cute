@@ -55,7 +55,6 @@ include-file = ~/.config/polybar/cute_modules/cpu
 include-file = ~/.config/polybar/cute_modules/date
 include-file = ~/.config/polybar/cute_modules/fs-HDD
 include-file = ~/.config/polybar/cute_modules/fs-SSD
-include-file = ~/.config/polybar/cute_modules/i3-mode
 include-file = ~/.config/polybar/cute_modules/i3-state
 include-file = ~/.config/polybar/cute_modules/memory
 include-file = ~/.config/polybar/cute_modules/network
@@ -83,7 +82,7 @@ padding-right = 2
 
 modules-left = i3-state pulseaudio spotify
 modules-center = xwindow
-modules-right = cpu memory date time i3-mode powermenu
+modules-right = cpu memory date time powermenu
 
 
 

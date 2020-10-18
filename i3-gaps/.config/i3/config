@@ -135,13 +135,13 @@ exec xidlehook --not-when-audio --not-when-fullscreen --timer 300 "~/.config/i3/
 
 # Gaps configuration (i3-gaps only) {{{
 
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
 
 # terminals have no borders
 for_window [class="Alacritty"] border pixel 0
 for_window [class="st-256color"] border pixel 0
 for_window [class="konsole"] border pixel 0
-gaps inner 5
+gaps inner 10
 gaps outer 0
 
 bindsym $mod+Shift+i 	gaps inner current minus 5
@@ -170,9 +170,6 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $SINK toggle # mu
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
-
-# Notification controls
-bindsym $mod+n exec kill -s USR1 $(pidof deadd-notification-center)
 
 
 # START SOFTWARE
@@ -213,10 +210,11 @@ workspace $ws9 output $monl
 # start applications at startup {{{
 
 # notification center
-exec deadd-notification-center
+exec dunst
 
 # compositor
-exec compton -b
+# experimental backends until dual-kawase blur is fully implemented
+exec picom -b --experimental-backends
 
 # nextcloud
 exec nextcloud --background
@@ -244,7 +242,7 @@ bindsym $mod+g [class="TelegramDesktop" title="Telegram"] scratchpad show
 
 # Terminal {{{
 # sleeping 2 to avoid race condition issues; only works with terminals whose windows can be titled with the -t option (substitute -c with -t and class with title) or whose class can be chosen with the -c option
-exec --no-startup-id sleep 2 && $TERMINAL -c dropdown
+exec --no-startup-id sleep 2 && $TERMINAL -c dropdown -e tmux new -s dropdown
 for_window [class="dropdown"] move scratchpad, scratchpad show, resize set 1100 730, move position center, scratchpad show, sticky enable
 bindsym $mod+t [class="dropdown"] scratchpad show
 # }}}
@@ -257,10 +255,17 @@ bindsym $mod+c [title="Qalc"] scratchpad show
 # }}}
 
 # Spotify {{{
-# (only when opened)
+# (requires spotify)
 exec --no-startup-id spotify
 for_window [class="Spotify"] move scratchpad, scratchpad show, resize set 1300 750, move position center, scratchpad show, sticky enable
 bindsym $mod+m [class="Spotify"] scratchpad show
+# }}}
+
+# Todoist {{{
+# (requires todoist-electron)
+exec --no-startup-id todoist
+for_window [class="Todoist"] move scratchpad, scratchpad show, resize set 1000 700, move position center, scratchpad show, sticky enable
+bindsym $mod+x [class="Todoist"] scratchpad show
 # }}}
 
 # }}}
@@ -270,21 +275,8 @@ bindsym $mod+m [class="Spotify"] scratchpad show
 assign [class="discord"] workspace $ws9
 
 
-# POWER MENU {{{
-
-mode "[P]oweroff - [R]eboot - reboot to [W]indows - [E]xit i3 - [C]ancel" {
-	bindsym p exec poweroff
-	bindsym r exec reboot
-	bindsym w exec windows
-	bindsym e exec i3-msg exit
-
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym c mode "default"
-}
-
-bindsym $mod+Shift+p mode "[P]oweroff - [R]eboot - reboot to [W]indows - [E]xit i3 - [C]ancel"
+# Power menu
+bindsym $mod+Shift+p exec "~/.config/rofi/scripts/powermenu.sh"
 
 # }}}
 
