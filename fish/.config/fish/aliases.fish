@@ -18,7 +18,6 @@ alias pu	"pushd ."
 alias po	"popd"
 
 # cd+ls
-function cl
-	cd $1
-	ls
+function cl --wraps cd
+	cd $argv && ls
 end

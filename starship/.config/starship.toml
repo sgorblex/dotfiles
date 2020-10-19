@@ -2,7 +2,7 @@
 # ~/.config/starship.toml
 
 # the following module order is the default
-prompt_order = [
+format = [
     "username",
     "hostname",
     "kubernetes",

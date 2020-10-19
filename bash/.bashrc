@@ -16,5 +16,3 @@ if [ -d ~/.config/bash ]; then
 		source $f
 	done
 fi
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
