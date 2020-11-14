@@ -38,12 +38,14 @@ nnoremap <silent> <M-j> :resize -2<CR>
 nnoremap <silent> <M-k> :resize +2<CR>
 nnoremap <silent> <M-h> :vertical resize -2<CR>
 nnoremap <silent> <M-l> :vertical resize +2<CR>
+vnoremap <c-c> "+y
+nnoremap <c-c> "+yy
 
 
 " Persistent undo "
 if has('persistent_undo')
 	let &undodir = expand("~/.local/share/nvim/undo")
-	if has('unix')
+	if !isdirectory(&undodir) && has('unix')
 		:silent call system('mkdir -p ' . &undodir)
 	endif
 	set undofile
