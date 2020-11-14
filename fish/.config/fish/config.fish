@@ -23,7 +23,7 @@ set fish_cursor_replace_one underscore
 
 # sourcing various configuration files
 if [ -d ~/.config/fish/config.fish.d ]
-	for f in ~/.config/fish/config.fish.d/*
+	for f in ~/.config/fish/config.fish.d/*.fish
 		. $f
 	end
 end
