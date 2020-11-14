@@ -40,7 +40,6 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Caskaydia Cove Nerd Font:size=10;2"
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 
 
 

@@ -43,7 +43,6 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Noto Mono Nerd Font:size=10;2"
-font-1 = "Noto Mono Nerd Font:style=Bold:size=10;2"
 
 
 
