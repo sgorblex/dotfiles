@@ -3,9 +3,19 @@
 " Conquer of Completion config "
 
 
+" My additions:
+let g:coc_global_extensions = [
+	\'coc-clangd',
+	\'coc-explorer',
+	\'coc-git',
+	\'coc-go',
+	\'coc-java',
+	\'coc-sh',
+	\'coc-snippets',
+	\'coc-vimtex']
+
+
 " Imported from the default coc config:
-
-
 
 
 " if hidden is not set, TextEdit might fail.
@@ -74,7 +84,7 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
-" nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>rn <Plug>(coc-rename)
 
 " Remap for format selected region
 xmap <leader>f  <Plug>(coc-format-selected)

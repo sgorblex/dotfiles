@@ -5,6 +5,7 @@
 	"coc.preferences.formatOnSaveFiletypes": [
 		"go",
 		"c",
+		"h",
 		"java"
 	],
 	// snippets
