@@ -40,7 +40,8 @@ font pango:DejaVu Sans Mono 8
 # BASIC KEYBINDINGS {{{
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal -e ~/.scripts/bin/autotmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -240,9 +241,16 @@ for_window [class="TelegramDesktop" title="Telegram"] move scratchpad, scratchpa
 bindsym $mod+g [class="TelegramDesktop" title="Telegram"] scratchpad show
 # }}}
 
+# Discord {{{
+# (requires discord)
+exec --no-startup-id discord
+for_window [class="discord"] move scratchpad, scratchpad show, resize set 1600 900, move position center, scratchpad show, sticky enable
+bindsym $mod+z [class="discord"] scratchpad show
+# }}}
+
 # Terminal {{{
 # sleeping 2 to avoid race condition issues; only works with terminals whose windows can be titled with the -t option (substitute -c with -t and class with title) or whose class can be chosen with the -c option
-exec --no-startup-id sleep 2 && $TERMINAL -c dropdown -e tmux new -s dropdown
+exec --no-startup-id sleep 2 && $TERMINAL -c dropdown -e ~/.scripts/bin/autotmux
 for_window [class="dropdown"] move scratchpad, scratchpad show, resize set 1100 730, move position center, scratchpad show, sticky enable
 bindsym $mod+t [class="dropdown"] scratchpad show
 # }}}
