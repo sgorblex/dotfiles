@@ -3,6 +3,39 @@
 # note: some features are only available on i3-gaps
 
 
+# MAP OF USED KEYS {{{
+
+# Map of used keys for the $mod+<key> keybind:
+# ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+# │   │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │   │   │       │
+# ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+# │     │   │ W │ E │   │ T │ Y │ U │ I │ O │   │   │   │     │
+# ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
+# │      │ A │ S │ D │ F │ G │ H │ J │ K │ L │   │   │ Enter  │
+# ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
+# │        │ Z │ X │ C │ V │ B │   │ M │   │   │   │          │
+# ├──────┬─┴───┴┬──┴──┬┴───┴───┴───┴───┴───┴─┬─┴───┴┬──┬──────┤
+# │      │ mod4 │     │                      │      │  │      │
+# └──────┴──────┴─────┴──────────────────────┴──────┴──┴──────┘
+
+
+# Map of used keys for the $mod+Shift+<key> keybind:
+# ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+# │   │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │   │   │       │
+# ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+# │     │ Q │   │ E │ R │   │ Y │ U │ I │ O │ P │   │   │     │
+# ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
+# │      │   │   │ D │   │   │ H │ J │ K │ L │   │   │ Enter  │
+# ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
+# │        │   │   │ C │   │   │   │   │   │   │   │          │
+# ├──────┬─┴───┴┬──┴──┬┴───┴───┴───┴───┴───┴─┬─┴───┴┬──┬──────┤
+# │      │ mod4 │     │                      │      │  │      │
+# └──────┴──────┴─────┴──────────────────────┴──────┴──┴──────┘
+
+
+# }}}
+
+
 # VARIABLE DEFINITIONS {{{
 
 # Mod key (Windows key)
@@ -210,7 +243,7 @@ workspace $ws9 output $monl
 
 # start applications at startup {{{
 
-# notification center
+# notifications
 exec dunst
 
 # compositor
@@ -279,23 +312,17 @@ bindsym $mod+x [class="Todoist"] scratchpad show
 # }}}
 
 
-# Default workspace per application
-assign [class="discord"] workspace $ws9
-
-
-# Power menu
-bindsym $mod+Shift+p exec "~/.config/rofi/scripts/powermenu.sh"
-
-# }}}
-
-
 # VISUALS {{{
 
 # looking for a wallpaper in ~/.config/wallpaper.* (any file extension that feh can open)
 exec_always feh --bg-scale ~/.config/wallpaper.*
-# bindsym $mod+d exec dmenu_run -nb '#000000' -sb '#800000' -fn "CaskaydiaCove Nerd Font"
+
+# Application menu
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+shift+d exec rofi -show window
+
+# Power menu
+bindsym $mod+Shift+p exec "~/.config/rofi/scripts/powermenu.sh"
 
 set $bg-color 			#dddddd
 # set $bg-color 		#800000
