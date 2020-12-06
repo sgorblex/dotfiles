@@ -4,15 +4,8 @@
 
 
 " Inline and display math "
-highlight def link markdownInlineMath markdownCode
-highlight def link markdownDisplayMath markdownCodeBlock
-" syntax match markdownInlineMath /\$.\+\$/
-" syntax match markdownInlineMath /\$(.*?)\$/
-" syntax match markdownInlineMath /\$([^\$]*)\$/
-" syntax region markdownDisplayMath start=/\$\$/ end=/\$\$/
-
-
-
+highlight def link markdownInlineMath Statement
+highlight def link markdownDisplayMath Statement
 
 syntax region markdownInlineMath	 start="\$"	skip="\%(\\\\\)*\\\$"	end="\$"
 syntax region markdownDisplayMath	 start="\$\$" 				end="\$\$"
