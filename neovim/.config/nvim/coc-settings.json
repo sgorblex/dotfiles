@@ -5,10 +5,11 @@
 	"coc.preferences.formatOnSaveFiletypes": [
 		"go",
 		"c",
-		"h",
+		"cpp",
 		"java"
 	],
 	// snippets
 	"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
-	"coc.preferences.extensionUpdateCheck": "never"
+	"coc.preferences.extensionUpdateCheck": "never",
+	"git.enableGutters": true
 }

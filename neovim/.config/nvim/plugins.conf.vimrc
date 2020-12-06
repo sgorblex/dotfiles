@@ -8,7 +8,7 @@ source ~/.config/nvim/plugins.conf.d/coc-explorer.conf.vimrc			" Coc-explorer
 source ~/.config/nvim/plugins.conf.d/coc.conf.vimrc				" Coc
 source ~/.config/nvim/plugins.conf.d/colorizer.conf.vimrc 			" Colorizer
 source ~/.config/nvim/plugins.conf.d/fzf.conf.vimrc				" Fuzzy Finder 
-source ~/.config/nvim/plugins.conf.d/instant-markdown.conf.vimrc		" Instant Markdown
+source ~/.config/nvim/plugins.conf.d/markdown-preview.conf.vimrc		" Markdown Preview
 source ~/.config/nvim/plugins.conf.d/nerdcommenter.conf.vimrc			" NerdCommenter
 source ~/.config/nvim/plugins.conf.d/startify.conf.vimrc			" Startify
 source ~/.config/nvim/plugins.conf.d/vimtex.conf.vimrc				" VimTex

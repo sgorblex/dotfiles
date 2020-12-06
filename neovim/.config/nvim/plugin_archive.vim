@@ -17,6 +17,8 @@ Plug 'danmann/vim-razer'					" Vim Razer				Razer keyboards interactive RGB ligh
 Plug 'dikiaap/minimalist'					" Minimalist				Theme
 Plug 'floobits/floobits-neovim'					" Floobits				Real time co-editing
 Plug 'honza/vim-snippets'					" Honza's snippets			Collection of snippets
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+								" Markdown				Markdown in-browser preview
 Plug 'junegunn/fzf',						" Fuzzy Finder				Quickly find files
 Plug 'junegunn/fzf.vim'						" Fuzzy Finder				Default FZF integration
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}			" Ranger on nvim			TUI file manager directly in vim
