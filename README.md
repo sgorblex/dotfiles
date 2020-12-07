@@ -47,7 +47,7 @@ The parameter `-t $HOME` can be omitted if the repository was cloned in `$HOME`.
 ### Upgrade a module
 In the repository's directory, use the command:
 ```
-git pull && stow -R <modules' names>
+git pull && stow -t $HOME -R <modules' names>
 ```
 
 You might not need to use `stow` if there are no new or deleted files.
@@ -56,7 +56,7 @@ You might not need to use `stow` if there are no new or deleted files.
 ### Remove a module
 In the repository's directory, use the command:
 ```
-stow -D <module's name>
+stow -t $HOME -D <module's name>
 ```
 
 
