@@ -21,6 +21,7 @@
 leftmon = ${env:MONITOR_L:DVI-I-1}
 rightmon = ${env:MONITOR_R:DP-1}
 sink = ${env:SINK:alsa_output.pci-0000_00_1b.0.analog-stereo}
+nic = ${env:NETWORK_INTERFACE:enp0s25}
 
 
 [colors]

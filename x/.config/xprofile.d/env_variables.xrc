@@ -14,6 +14,8 @@ export MONITOR_R=DP-1
 # default sound output (sink)
 export SINK="alsa_output.pci-0000_00_1b.0.analog-stereo"
 
+# default network interface card (nic)
+export NETWORK_INTERFACE=enp0s25
 
 # making some env variables also accessible from x resources database
 echo -e "x.Monitor.left:\t$MONITOR_L" | xrdb -merge
