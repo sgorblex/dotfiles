@@ -3,10 +3,12 @@
 	"explorer.icon.enableNerdfont": true,
 	// autoformat
 	"coc.preferences.formatOnSaveFiletypes": [
-		"go",
 		"c",
 		"cpp",
-		"java"
+		"go",
+		"html",
+		"java",
+		"php"
 	],
 	// snippets
 	"snippets.userSnippetsDirectory": "~/.config/nvim/snips",

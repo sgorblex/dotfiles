@@ -3,7 +3,7 @@
 
 # Importing aliases
 if [ -f ~/.config/fish/aliases.fish ]
-	. ~/.config/fish/aliases.fish
+	source ~/.config/fish/aliases.fish
 end
 
 # Deactivate welcome message
@@ -24,6 +24,6 @@ set fish_cursor_replace_one underscore
 # sourcing various configuration files
 if [ -d ~/.config/fish/config.fish.d ]
 	for f in ~/.config/fish/config.fish.d/*.fish
-		. $f
+		source $f
 	end
 end

@@ -8,8 +8,12 @@
 export SCROT_PATH=~/media/screenshots
 
 # multi monitor setup (if using only one, set them equals)
-export MONITOR_L=DVI-I-1
-export MONITOR_R=DP-1
+# export MONITOR_L=DVI-I-1
+# export MONITOR_R=DP-1
+export MONITOR_L=DVI-D-0
+export MONITOR_R=DP-0
+# export MONITOR_L=HDMI2
+# export MONITOR_R=HDMI2
 
 # default sound output (sink)
 export SINK="alsa_output.pci-0000_00_1b.0.analog-stereo"

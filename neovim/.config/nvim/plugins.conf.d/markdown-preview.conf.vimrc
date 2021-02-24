@@ -5,6 +5,8 @@
 
 " Open in new firefox window "
 let g:mkdp_browser = expand("~/.scripts/bin/nfirefox")
+" let g:mkdp_browser = 'firefox'
 
-" Auto start " - seems to cause lag for some reason
+" Auto start/close "
 " let g:mkdp_auto_start = 1
+let g:mkdp_auto_close = 0

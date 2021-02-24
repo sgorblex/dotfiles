@@ -106,5 +106,7 @@ modules-right = network time i3-state
 tray-position = left
 tray-offset-x = 1
 
+; bottom = true
+
 
 ; vim:ft=dosini

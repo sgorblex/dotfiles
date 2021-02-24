@@ -16,6 +16,7 @@ alias r		"ranger" 			# requires ranger
 alias :q	"exit" 				# too much vim lol
 alias pu	"pushd ."
 alias po	"popd"
+alias gs	"git status"
 
 # cd+ls
 function cl --wraps cd

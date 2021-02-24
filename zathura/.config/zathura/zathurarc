@@ -7,7 +7,7 @@ set recolor-darkcolor 		white
 set recolor-lightcolor 		rgba(0,0,0,0)
 set recolor-keephue 		true
 set recolor 			true
-# set statusbar-bg 		rgba(3,3,3,0.8) 	# not supported yet
+# set statusbar-bg 		rgba(3,3,3,0.2)		# not supported yet
 set statusbar-bg                "#111"
 set statusbar-fg                "#ccc"
 set inputbar-bg                 "#111"
@@ -25,12 +25,12 @@ set highlight-active-color      "#f20"
 set selection-clipboard clipboard
 
 # status bar
-set font "Cozette 10"
+set font			"Cozette 10"
 set statusbar-basename          true
-set statusbar-v-padding  10
-set statusbar-h-padding  20
-# set guioptions "" 					# full immersion
+set statusbar-v-padding  	10
+set statusbar-h-padding  	20
+set guioptions			""
 
 # mappings
-map U zoom in 	# these two are swapped for some reason
+map U zoom in 			# these two are swapped for some reason
 map I zoom out
