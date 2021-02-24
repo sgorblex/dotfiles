@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Sgorblex's i3 config
+# ~/.config/i3/scripts/layout.sh
+
 browser() {
 	i3-msg "workspace 10"
 	i3-msg "workspace 10; append_layout ~/.config/i3/layouts/firefox.json"
@@ -19,7 +22,7 @@ terminals () {
 	tmux new -ds default-2 -t default
 	i3-msg "workspace 1"
 	termL &
-	sleep 0.6
+	sleep 1
 	i3-msg "workspace 2"
 	termR &
 }

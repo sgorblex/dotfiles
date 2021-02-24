@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Sgorblex's i3 config
+# ~/.config/i3/scripts/lock.sh
+
 i3lock \
 	-B 6 \
 	--indicator \

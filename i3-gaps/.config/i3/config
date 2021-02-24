@@ -266,26 +266,29 @@ exec polybar $POLYBAR_R
 
 
 # SCRATCHPADS {{{
+# script for showing scratchpads
+set $scr_show ~/.config/i3/scripts/scratchpad_show.py
 
 # Telegram {{{
 # (requires telegram-desktop)
 exec --no-startup-id telegram-desktop
-for_window [class="TelegramDesktop" title="Telegram"] move scratchpad, scratchpad show, resize set 1100 730, move position center, scratchpad show, sticky enable
-bindsym $mod+g [class="TelegramDesktop" title="Telegram"] scratchpad show
+for_window [class="TelegramDesktop" title="Telegram"] move scratchpad, sticky enable
+bindsym $mod+g exec $scr_show TelegramDesktop 60 70
 # }}}
 
 # Discord {{{
 # (requires discord)
-exec --no-startup-id discord
-for_window [class="discord"] move scratchpad, scratchpad show, resize set 1600 900, move position center, scratchpad show, sticky enable
-bindsym $mod+z [class="discord"] scratchpad show
+set $discord discord
+exec --no-startup-id $discord
+for_window [class="$discord"] move scratchpad, sticky enable
+bindsym $mod+z exec $scr_show $discord 85 85
 # }}}
 
 # Terminal {{{
 # sleeping 2 to avoid race condition issues; only works with terminals whose windows can be titled with the -t option (substitute -c with -t and class with title) or whose class can be chosen with the -c option
 exec --no-startup-id sleep 2 && $TERMINAL -c dropdown -e ~/.scripts/bin/autotmux
-for_window [class="dropdown"] move scratchpad, scratchpad show, resize set 1100 730, move position center, scratchpad show, sticky enable
-bindsym $mod+t [class="dropdown"] scratchpad show
+for_window [class="dropdown"] move scratchpad, sticky enable
+bindsym $mod+t exec $scr_show dropdown 85 70
 # }}}
 
 # Calculator {{{
@@ -298,8 +301,8 @@ bindsym $mod+c [title="Qalc"] scratchpad show
 # Spotify {{{
 # (requires spotify)
 exec --no-startup-id spotify
-for_window [class="Spotify"] move scratchpad, scratchpad show, resize set 1300 750, move position center, scratchpad show, sticky enable
-bindsym $mod+m [class="Spotify"] scratchpad show
+for_window [class="Spotify"] move scratchpad, sticky enable
+bindsym $mod+m exec $scr_show Spotify 85 80
 # }}}
 
 # Todoist {{{
