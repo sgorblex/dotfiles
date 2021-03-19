@@ -38,7 +38,7 @@ i3 = i3ipc.Connection()
 
 wclass = sys.argv[1]
 if wclass == active_window().window_class:
-    i3.command('[class="' + wclass + '"] scratchpad show')
+    i3.command('[class="' + wclass + '" floating] scratchpad show')
 else:
     output = active_output()
     w = output.rect.width
@@ -49,5 +49,5 @@ else:
     x = w/100*xperc
     y = h/100*yperc
 
-    i3.command('[class="' + wclass + '"] resize set ' +
+    i3.command('[class="' + wclass + '" floating] resize set ' +
                str(int(x)) + " " + str(int(y)) + ", scratchpad show, move position center")
