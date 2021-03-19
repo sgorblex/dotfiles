@@ -19,16 +19,16 @@
   
   option-6-listview-spacing:            6px;
   menu-window-padding:                  10px 5px;
-  menu-element-padding:                 1.1% 0.0% 5px -0.75%;
+  menu-element-padding:                 11px 0.0% 5px -13px;
 }
 
 #window {
-  width: 3.1%;
-  height: 46.3%;
+  width: 60px;
+  height: 500px;
   anchor: east;
   location: east;
   x-offset: -10px;
-  y-offset: 0%;
+  y-offset: 0px;
   border: 0px;
   border-radius: 10%;
 }
