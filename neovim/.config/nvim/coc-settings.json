@@ -8,7 +8,8 @@
 		"go",
 		"html",
 		"java",
-		"php"
+		"php",
+		"python"
 	],
 	// snippets
 	"snippets.userSnippetsDirectory": "~/.config/nvim/snips",

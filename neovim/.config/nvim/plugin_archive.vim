@@ -21,6 +21,7 @@ Plug 'iamcco/markdown-preview.nvim'			" Markdown			Markdown in-browser preview
 Plug 'junegunn/fzf',					" Fuzzy Finder			Quickly find files
 Plug 'junegunn/fzf.vim'					" Fuzzy Finder			Default FZF integration
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}		" Ranger on nvim		TUI file manager directly in vim
+Plug 'lambdalisue/suda.vim'				" Suda				Edit as root
 Plug 'lervag/vimtex'					" VimTex			LaTeX integration
 Plug 'lilydjwg/colorizer'				" Colorizer			Colorize RGB hex codes					Watch out, it scans every entire file
 Plug 'liuchengxu/vista.vim'				" Vista				LSP object navigation (requires ctags)
@@ -31,9 +32,11 @@ Plug 'mhinz/vim-startify'				" Startify			Start screen
 Plug 'morhetz/gruvbox'					" Gruvbox			Theme
 Plug 'neoclide/coc.nvim', {'branch': 'release'}		" Conquer of Completion		Completion engine
 Plug 'preservim/nerdcommenter'				" Nerd Commenter		Auto line commenter
+Plug 'sheerun/vim-polyglot'				" Polyglot			Format and syntax support
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}	" Markdown			Markdown in-browser preview
 Plug 'tpope/vim-fugitive'				" Fugitive			Git wrapper
 Plug 'tpope/vim-obsession'				" Obsession			Automatic session updater
+Plug 'tpope/vim-repeat'					" Repeat 			. command fix for vim-surround
 Plug 'tpope/vim-surround'				" Surround			Fast handling of quotes & similar
 Plug 'unblevable/quick-scope'				" Quick scope			Highlight when using f and t
 Plug 'vim-airline/vim-airline'				" Airline			Status bar
