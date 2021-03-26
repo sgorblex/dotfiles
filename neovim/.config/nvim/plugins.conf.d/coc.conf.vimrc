@@ -12,7 +12,9 @@ let g:coc_global_extensions = [
 	\'coc-java',
 	\'coc-sh',
 	\'coc-snippets',
-	\'coc-vimtex']
+	\'coc-vimtex',
+	\'coc-json',
+	\'coc-pyright']
 
 
 " Imported from the default coc config:

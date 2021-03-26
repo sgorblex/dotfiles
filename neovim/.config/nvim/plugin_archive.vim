@@ -20,6 +20,7 @@ Plug 'honza/vim-snippets'				" Honza's snippets		Collection of snippets
 Plug 'iamcco/markdown-preview.nvim'			" Markdown			Markdown in-browser preview
 Plug 'junegunn/fzf',					" Fuzzy Finder			Quickly find files
 Plug 'junegunn/fzf.vim'					" Fuzzy Finder			Default FZF integration
+Plug 'junegunn/goyo.vim'
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}		" Ranger on nvim		TUI file manager directly in vim
 Plug 'lambdalisue/suda.vim'				" Suda				Edit as root
 Plug 'lervag/vimtex'					" VimTex			LaTeX integration

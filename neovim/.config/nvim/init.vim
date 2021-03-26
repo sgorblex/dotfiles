@@ -29,6 +29,7 @@ set mouse=a				" Mouse active for all modes
 set splitbelow splitright		" Better window splitting
 set timeoutlen=500			" Multiple key mappings' timeout
 set inccommand=split			" Substitute real time preview
+set scrolloff=5				" Rows above/below cursor
 
 
 " Mappings "

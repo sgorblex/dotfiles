@@ -12,3 +12,4 @@ source ~/.config/nvim/plugins.conf.d/markdown-preview.conf.vimrc		" Markdown Pre
 source ~/.config/nvim/plugins.conf.d/nerdcommenter.conf.vimrc			" NerdCommenter
 source ~/.config/nvim/plugins.conf.d/startify.conf.vimrc			" Startify
 source ~/.config/nvim/plugins.conf.d/vimtex.conf.vimrc				" VimTex
+source ~/.config/nvim/plugins.conf.d/goyo.conf.vimrc				" Goyo

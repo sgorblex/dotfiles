@@ -19,7 +19,7 @@ autocmd VimEnter *
   \| endif
 
 " Settings to call before loading plugins "
-let g:polyglot_disabled = ['markdown', 'sensible']
+let g:polyglot_disabled = ['markdown', 'sensible', 'autoindent']
 
 " Vim-Plug Plugins
 call plug#begin(expand('~/.local/share/nvim/plugged'))
@@ -50,6 +50,7 @@ Plug 'lervag/vimtex'					" VimTex			LaTeX integration
 Plug 'sheerun/vim-polyglot'				" Polyglot			Format and syntax support
 
 " Themes "
+Plug 'junegunn/goyo.vim'
 Plug 'morhetz/gruvbox'					" Gruvbox			Theme
 
 " Plug 'chrisbra/unicode.vim'				" Unicode.vim			Get Unicode characters' information
