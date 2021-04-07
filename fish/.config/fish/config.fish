@@ -11,7 +11,7 @@ set fish_greeting
 
 # Emulates vim style command line editing
 fish_vi_key_bindings
-bind -M insert \cf accept-autosuggestion
+bind -M insert \cx accept-autosuggestion
 
 # Emulates vim's cursor shape behavior
 # Set the normal and visual mode cursors to a block

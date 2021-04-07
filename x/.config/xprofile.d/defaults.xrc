@@ -6,3 +6,6 @@
 
 export TERMINAL=st
 export BROWSER=firefox
+
+# theming
+export QT_STYLE_OVERRIDE=kvantum
