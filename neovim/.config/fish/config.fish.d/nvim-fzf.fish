@@ -3,7 +3,4 @@
 # FZF config
 
 # Edit found files with neovim
-# alias nzim	'set fzfound (fzf) && nvim $fzfound'
-alias hnzim	'set fzfound (hfzf) && nvim $fzfound'
-
 alias nzim 'set fzfound (FZF_DEFAULT_COMMAND="rg --files -L --hidden" fzf --preview="__fzf_preview_file $expanded_token{}") && nvim $fzfound'

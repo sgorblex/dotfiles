@@ -14,4 +14,4 @@ end
 
 # enter fzfound directory
 # alias fzcd	"cd (dirname (fzf))"
-alias fzcd 'FZF_DEFAULT_COMMAND="find -type d" set fzfound (fzf --preview="__fzf_preview_file $expanded_token{}") && cd $fzfound'
+alias fzcd 'FZF_DEFAULT_COMMAND="find . -type d | cut -d/ -f 2-" set fzfound (fzf --preview="__fzf_preview_file $expanded_token{}") && cd $fzfound'
