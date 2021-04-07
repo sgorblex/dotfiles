@@ -20,6 +20,7 @@ This file shows the dependencies to make this module of my dotfiles work on any 
 
 ### Scratchpads
 - a TERMINAL env variable + software
+- python 3 and the i3ipc pypi package
 - discord
 - qalculate-gtk
 - spotify

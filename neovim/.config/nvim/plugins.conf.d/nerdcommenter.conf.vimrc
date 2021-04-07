@@ -23,3 +23,4 @@ let g:NERDToggleCheckAllLines = 1
 " Custom formats
 let g:NERDAltDelims_c = 1
 let g:NERDAltDelims_asm = 1
+let g:NERDAltDelims_fsharp = 1
