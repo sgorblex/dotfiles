@@ -1,9 +1,8 @@
 #!/bin/sh
 
 ranger_devicons() {
-		echo "Installing plugin: devicons"
 		mkdir -p ~/.config/ranger/plugins
-		git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+		git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons > /dev/null
 }
 
 

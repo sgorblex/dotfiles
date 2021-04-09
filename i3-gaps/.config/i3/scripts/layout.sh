@@ -4,22 +4,19 @@
 # ~/.config/i3/scripts/layout.sh
 
 browser() {
-	i3-msg "workspace 10"
 	i3-msg "workspace 10; append_layout ~/.config/i3/layouts/firefox.json"
-	(firefox > ~/.local/share/firefox.log) &
+	firefox &
 }
 
 termL () {
-	i3-sensible-terminal -e tmux attach -t default-2
+	i3-sensible-terminal -e tmuxinator def2
 }
 
 termR () {
-	i3-sensible-terminal -e tmux attach -t default
+	i3-sensible-terminal
 }
 
 terminals () {
-	tmux new -ds default
-	tmux new -ds default-2 -t default
 	i3-msg "workspace 1"
 	termL &
 	sleep 1

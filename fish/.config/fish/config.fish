@@ -10,7 +10,7 @@ end
 set fish_greeting
 
 # Emulates vim style command line editing
-fish_vi_key_bindings
+fish_vi_key_bindings --no-erase
 bind -M insert \cx accept-autosuggestion
 
 # Emulates vim's cursor shape behavior
@@ -22,8 +22,12 @@ set fish_cursor_insert line
 set fish_cursor_replace_one underscore
 
 # sourcing various configuration files
-if [ -d ~/.config/fish/config.fish.d ]
+if test -d ~/.config/fish/config.fish.d 
 	for f in ~/.config/fish/config.fish.d/*.fish
 		source $f
 	end
+end
+
+if test -z "$TMUX" && test -z $SSH_CONNECTION
+	exec tmuxinator def
 end

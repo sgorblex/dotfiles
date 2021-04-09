@@ -22,6 +22,11 @@ logout="󰿅" 	# \UF0FC5 󰿅
 # Menu entries setup
 menu_entries="$suspend\n$hibernate\n$reboot\n$poweroff\n$cancel\n$windows\n$macos\n$lock\n$logout"
 
+before_exiting() {
+	pkill -2 firefox
+	pkill st
+}
+
 
 # custom mapping
 xmodmap -e "keycode 44 = Down"
@@ -47,9 +52,11 @@ case $chosen in
 		systemctl hibernate
 		;;
 	$reboot)
+		before_exiting
 		reboot
 		;;
 	$poweroff)
+		before_exiting
 		poweroff
 		;;
 	$cancel)
@@ -57,16 +64,19 @@ case $chosen in
 		;;
 	$windows)
 		sudo grub-reboot "Windows"
+		before_exiting
 		reboot
 		;;
 	$macos)
 		sudo grub-reboot "MacOS X"
+		before_exiting
 		reboot
 		;;
 	$lock)
 		~/.config/i3/scripts/lock.sh
 		;;
 	$logout)
+		before_exiting
 		i3-msg exit
 		;;
 esac

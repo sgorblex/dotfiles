@@ -2,16 +2,17 @@
 # ~/.config/fish/config.fish.d/fzf.fish
 # FZF config
 
-# Default fzf command
-if command -v rg > /dev/null
-	set -x FZF_DEFAULT_COMMAND "rg -L --files" 			# requires ripgrep (rg)
+
+alias fzf 'fzf --preview="__fzf_preview_file $expanded_token{}"'
+
+# fzf configuration with fd (requires fd)
+if command -v fd > /dev/null
+	# default command
+	set -x FZF_DEFAULT_COMMAND "fd -Lt f"
 
 	# Search in hidden files
-	function hfzf
-		FZF_DEFAULT_COMMAND="rg -L --files --hidden" fzf
-	end
-end
+	alias hfzf 'FZF_DEFAULT_COMMAND="fd -HLt f" fzf'
 
-# enter fzfound directory
-# alias fzcd	"cd (dirname (fzf))"
-alias fzcd 'FZF_DEFAULT_COMMAND="find . -type d | cut -d/ -f 2-" set fzfound (fzf --preview="__fzf_preview_file $expanded_token{}") && cd $fzfound'
+	# enter fzfound directory
+	alias fzcd 'FZF_DEFAULT_COMMAND="fd -LHt d" set fzfound (fzf) && cd $fzfound'
+end
