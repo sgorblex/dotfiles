@@ -1,6 +1,12 @@
 # Sgorblex's Fish Shell config
 # ~/.config/fish/config.fish
 
+# If not running interactively, don't do anything
+if not status is-interactive
+        exit
+end
+
+
 # Importing aliases
 if [ -f ~/.config/fish/aliases.fish ]
 	source ~/.config/fish/aliases.fish
@@ -21,7 +27,16 @@ set fish_cursor_insert line
 # Set the replace mode cursor to an underscore
 set fish_cursor_replace_one underscore
 
-# sourcing various configuration files
+# Installing Fisher plugin manager if not present
+if not functions --query fisher
+	if command -v curl > /dev/null
+		curl --silent --location https://git.io/fisher | source && fisher update
+	end
+else if test (fisher list | wc -l) -ne (cat ~/.config/fish/fish_plugins | wc -l)
+	fisher update
+end
+
+# Sourcing various configuration files
 if test -d ~/.config/fish/config.fish.d 
 	for f in ~/.config/fish/config.fish.d/*.fish
 		source $f
