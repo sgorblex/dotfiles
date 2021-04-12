@@ -32,7 +32,7 @@ if not functions --query fisher
 	if command -v curl > /dev/null
 		curl --silent --location https://git.io/fisher | source && fisher update
 	end
-else if test (fisher list | wc -l) -ne (cat ~/.config/fish/fish_plugins | wc -l)
+else if test -f ~/.config/fish/fish_plugins -a (fisher list | wc -l) -ne (cat ~/.config/fish/fish_plugins | wc -l)
 	fisher update
 end
 
