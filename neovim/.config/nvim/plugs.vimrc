@@ -42,7 +42,7 @@ Plug 'tpope/vim-repeat'					" Repeat 			. command fix for vim-surround
 Plug 'tpope/vim-surround'				" Surround			Fast handling of quotes & similar
 Plug 'vim-airline/vim-airline'				" Airline			Status bar
 Plug 'vim-airline/vim-airline-themes'			" Airline themes		Themes for Airline bar
-Plug '~/code/vim/vim-poggers'
+" Plug '~/code/vim/vim-poggers'
 
 " Languages support "
 Plug 'iamcco/markdown-preview.nvim'			" Markdown			Markdown in-browser preview
