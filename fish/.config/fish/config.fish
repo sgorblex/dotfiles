@@ -43,6 +43,6 @@ if test -d ~/.config/fish/config.fish.d
 	end
 end
 
-if test -z "$TMUX" && test -z $SSH_CONNECTION
+if command -v tmuxinator > /dev/null && test -z "$TMUX" && test -z $SSH_CONNECTION
 	exec tmuxinator def
 end
