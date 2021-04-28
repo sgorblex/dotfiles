@@ -30,6 +30,7 @@ set splitbelow splitright		" Better window splitting
 set timeoutlen=500			" Multiple key mappings' timeout
 set inccommand=split			" Substitute real time preview
 set scrolloff=5				" Rows above/below cursor
+set termguicolors			" Use truecolor
 
 
 " Mappings "
@@ -41,6 +42,7 @@ nnoremap <silent> <M-h> :vertical resize -2<CR>
 nnoremap <silent> <M-l> :vertical resize +2<CR>
 vnoremap <c-c> "+y
 nnoremap <c-c> "+yy
+nnoremap <leader><space> xi  <esc>P
 
 
 " Persistent undo "

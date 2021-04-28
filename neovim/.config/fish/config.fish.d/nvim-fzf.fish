@@ -3,4 +3,4 @@
 # FZF config
 
 # Edit found files with neovim
-alias nzim 'set fzfound (FZF_DEFAULT_COMMAND="fd -HLt f" fzf --preview="__fzf_preview_file $expanded_token{}") && nvim $fzfound'
+alias nzim 'set fzfound (FZF_DEFAULT_COMMAND="fd -HLt f -c always" fzf --ansi --preview="__fzf_preview_file $expanded_token{}") && nvim $fzfound'
