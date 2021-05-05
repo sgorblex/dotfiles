@@ -97,7 +97,7 @@ bindsym $mod+b split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -250,6 +250,7 @@ exec ~/.config/i3/scripts/layout.sh
 # POLYBAR {{{
 exec polybar $POLYBAR_L
 exec polybar $POLYBAR_R
+bindsym $mod+f exec polybar-msg cmd toggle && i3-msg gaps inner all set 1
 # }}}
 
 
