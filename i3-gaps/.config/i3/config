@@ -250,7 +250,7 @@ exec ~/.config/i3/scripts/layout.sh
 # POLYBAR {{{
 exec polybar $POLYBAR_L
 exec polybar $POLYBAR_R
-bindsym $mod+f exec polybar-msg cmd toggle && i3-msg gaps inner all set 1
+bindsym $mod+f exec ~/.config/i3/scripts/immersive.sh
 # }}}
 
 
