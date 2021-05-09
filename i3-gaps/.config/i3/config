@@ -73,7 +73,7 @@ font pango:DejaVu Sans Mono 8
 # BASIC KEYBINDINGS {{{
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal -e ~/.scripts/bin/customshell
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -248,8 +248,8 @@ exec ~/.config/i3/scripts/layout.sh
 
 
 # POLYBAR {{{
-exec polybar $POLYBAR_L
-exec polybar $POLYBAR_R
+exec polybar $POLYBAR_1
+exec polybar $POLYBAR_2
 bindsym $mod+f exec ~/.config/i3/scripts/immersive.sh
 # }}}
 
@@ -275,7 +275,7 @@ bindsym $mod+z exec $scr_show $discord 85 85
 
 # Terminal {{{
 # sleeping 2 to avoid race condition issues; only works with terminals whose windows can be titled with the -t option (substitute -c with -t and class with title) or whose class can be chosen with the -c option
-exec --no-startup-id sleep 2 && i3-sensible-terminal -c dropdown
+exec --no-startup-id sleep 2 && i3-sensible-terminal -c dropdown -e ~/.scripts/bin/customshell
 for_window [class="dropdown"] move scratchpad, sticky enable
 bindsym $mod+t exec $scr_show dropdown 85 70
 # }}}

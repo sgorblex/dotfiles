@@ -2,20 +2,30 @@
 # Sgorblex's x config
 # ~/.config/xprofile.d/env_variables.xrc
 
+
 # CUSTOM ENV VARIABLES
 
 # scrot path (do not end with a '/')
-export SCROT_PATH=~/media/screenshots
+[ -z $SCROT_PATH ] && SCROT_PATH=~/media/screenshots
+export SCROT_PATH
 
 # multi monitor setup (if using only one, set them equals)
-export MONITOR_L=DVI-D-0
-export MONITOR_R=DP-0
+[ -z $MONITOR_L ] && MONITOR_L=eDP1
+[ -z $MONITOR_R ] && MONITOR_R=eDP1
+[ -z $BAR1_MONITOR ] && BAR1_MONITOR=$MONITOR_R
+[ -z $BAR2_MONITOR ] && BAR2_MONITOR=$MONITOR_L
+export MONITOR_L
+export MONITOR_R
+export BAR1_MONITOR
+export BAR2_MONITOR
 
 # default sound output (sink)
-export SINK="alsa_output.pci-0000_00_1b.0.analog-stereo"
+[ -z $SINK ] && SINK="alsa_output.pci-0000_00_1b.0.analog-stereo"
+export SINK
 
 # default network interface card (nic)
-export NETWORK_INTERFACE=enp0s25
+[ -z $NETWORK_INTERFACE ] && NETWORK_INTERFACE=enp0s25
+export NETWORK_INTERFACE
 
 # making some env variables also accessible from x resources database
 echo -e "x.Monitor.left:\t$MONITOR_L" | xrdb -merge

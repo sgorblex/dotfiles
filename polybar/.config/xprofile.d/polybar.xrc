@@ -4,5 +4,5 @@
 
 # POLYBAR ENVIRONMENT VARIABLES
 
-export POLYBAR_L=cute_L
-export POLYBAR_R=cute_R
+export POLYBAR_1=cute_1
+export POLYBAR_2=cute_2
