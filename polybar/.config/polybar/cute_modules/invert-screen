@@ -1,0 +1,14 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/invert-screen
+; bar: cute
+; module: invert-screen
+
+
+[module/invert-screen]
+type = custom/text
+content =  
+
+click-left = ~/.scripts/bin/invert-screen
+
+
+; vim:ft=dosini
