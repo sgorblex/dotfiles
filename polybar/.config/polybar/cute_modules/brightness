@@ -1,0 +1,19 @@
+[module/brightness]
+type = internal/xbacklight
+
+output = ${env:MONITOR_L:eDP1}
+
+format = <ramp> <label> 
+format-underline = #bbbb00
+
+label = %percentage%%
+
+;         
+ramp-0 =  
+ramp-1 =  
+ramp-2 =  
+ramp-3 =  
+ramp-4 =  
+
+
+; vim:ft=dosini
