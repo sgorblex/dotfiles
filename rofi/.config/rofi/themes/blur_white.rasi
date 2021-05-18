@@ -1,23 +1,21 @@
 /* Sgorblex's rofi config */
+/* ~/.config/rofi/themes/blur_white.rasi */
 /* modified from adi1090x's themes */
 
 
 * {
-	bg: #ffffff44;
-	bg-sel: #ffffff50;
-	acc: #ffffff99;
-	fg: #000000;
-}
-
-* {
-	background-color: #00000000;
-	font: "Iosevka 12";
+	bg:			#ffffff44;
+	bg-sel:			#ffffff50;
+	acc:			#ffffff99;
+	fg:			#000000;
+	background-color:	#00000000;
+	font:			"Iosevka 12";
 }
 
 window {
-	height: 45%;
-	width: 45%;
-	transparency: "real";
+	height:			45%;
+	width:			45%;
+	transparency:		"real";
 }
 
 mainbox {
@@ -56,11 +54,12 @@ inputbar {
 prompt {
 	enabled: true;
 	padding: 8 0 8 12;
+	text-color: @fg;
 }
 
 entry {
-	text-color: @white;
 	padding: 8 12 8 8;
+	text-color: @fg;
 }
 
 

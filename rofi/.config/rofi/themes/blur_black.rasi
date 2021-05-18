@@ -1,23 +1,21 @@
 /* Sgorblex's rofi config */
+/* ~/.config/rofi/themes/blur_black.rasi */
 /* modified from adi1090x's themes */
 
 
 * {
-	bg: #00000077;
-	bg-sel: #00000099;
-	acc: #000000dd;
-	fg: #ffffff;
-}
-
-* {
-	background-color: #00000000;
-	font: "Iosevka 12";
+	bg:			#00000077;
+	bg-sel:			#00000099;
+	acc:			#000000dd;
+	fg:			#ffffff;
+	background-color:	#00000000;
+	font:			"Iosevka 12";
 }
 
 window {
-	height: 45%;
-	width: 45%;
-	transparency: "real";
+	height:			45%;
+	width:			45%;
+	transparency:		"real";
 }
 
 mainbox {
@@ -37,6 +35,10 @@ scrollbar {
 element {
 	text-color: @fg;
 	padding: 12 12 12 12;
+}
+
+element-icon {
+	size: 1.2em;
 }
 
 element selected {
