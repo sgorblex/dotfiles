@@ -1,10 +1,16 @@
 #!/bin/sh
-
 # Sgorblex's i3 config
 # ~/.config/i3/scripts/lock.sh
 
+
+if [ -f ~/.config/lockscreen.* ]; then
+	BACKGROUND=~/.config/lockscreen.*
+else
+	BACKGROUND=~/.config/wallpaper.*
+fi
+
 i3lock \
-	-B 6 \
+	-i $BACKGROUND \
 	--indicator \
 	-k \
 	--pass-media-keys \
@@ -27,12 +33,21 @@ i3lock \
 	--timesize=42 \
 	--date-font="Noto Mono Nerd Font" \
 	--datesize=16 \
-	--verif-font="Noto Mono Nerd Font" \
+	--verif-font="Material Design Icons Desktop" \
 	--verifsize=90 \
-	--veriftext="羽" \
-	--wrong-font="Noto Mono Nerd Font" \
+	--veriftext="󰔟" \
+	--wrong-font="Material Design Icons Desktop" \
 	--wrongsize=90 \
-	--wrongtext="" \
-	--noinputtext="寧" \
+	--wrongtext="󰌾" \
+	--noinputtext="󰁮" \
 	--radius=130 \
 	--ring-width=14
+
+# useful material icons:
+# 󰍁 󰌾 
+# 󰒮 󰒫 󰓕 󰓖 
+# 󰁮 󰭜 󰌍 
+# 󱑆 󱑒 󰔚 󱎫 󰔛 󰔟 󰚭 󰞌 
+
+# useful nerd fonts icons:
+#  寧
