@@ -1,7 +1,11 @@
 #!/bin/sh
 
-# see `xinput list`
-TOUCH_SCREEN=12
+if [ -z $MONITOR_L ]; then
+	echo error: '$MONITOR_L' not set
+	exit 1
+fi
+
+TOUCH_SCREEN=$(xinput list | sed -n 's/.*Finger.*id=\([0-9]\+\).*/\1/p')
 
 if [ -f /tmp/inverted-screen ]; then
 	xrandr --output $MONITOR_L --rotate normal
