@@ -25,7 +25,7 @@
 # ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
 # │     │ Q │   │ E │ R │   │ Y │ U │ I │ O │ P │   │   │     │
 # ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
-# │      │   │   │ D │   │   │ H │ J │ K │ L │   │   │ Enter  │
+# │      │   │   │ D │ F │   │ H │ J │ K │ L │   │   │ Enter  │
 # ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
 # │ Shift  │   │   │ C │   │   │   │   │   │   │   │          │
 # ├──────┬─┴───┴┬──┴──┬┴───┴───┴───┴───┴───┴─┬─┴───┴┬──┬──────┤
@@ -73,7 +73,7 @@ font pango:DejaVu Sans Mono 8
 # BASIC KEYBINDINGS {{{
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal -e ~/.scripts/bin/customshell
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal -e ~/.scripts/bin/customshell
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -147,9 +147,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-bindsym $mod+Shift+x exec "~/.config/i3/scripts/lock.sh"
-exec xidlehook --not-when-audio --not-when-fullscreen --timer 300 "~/.config/i3/scripts/lock.sh" ""
-# exec xautolock -time 5 -locker "~/.config/i3/scripts/lock.sh"
+bindsym $mod+Shift+x exec --no-startup-id "~/.config/i3/scripts/lock.sh"
+exec --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 300 "~/.config/i3/scripts/lock.sh" ""
+# exec xautolock --no-startup-id -time 5 -locker "~/.config/i3/scripts/lock.sh"
 
 # }}}
 
@@ -178,10 +178,10 @@ bindsym $mod+Shift+y 	gaps outer current plus 5
 # SPECIFIC KEYBINDINGS {{{
 
 # better resize keybindings (requires the script) (you can also use mod+right-mouse for that)
-bindsym $mod+y		exec --no-startup-id "~/.config/i3/scripts/i3resize.sh left"
-bindsym $mod+u		exec --no-startup-id "~/.config/i3/scripts/i3resize.sh down"
-bindsym $mod+i		exec --no-startup-id "~/.config/i3/scripts/i3resize.sh up"
-bindsym $mod+o		exec --no-startup-id "~/.config/i3/scripts/i3resize.sh right"
+bindsym $mod+y	exec --no-startup-id "~/.config/i3/scripts/i3resize.sh left"
+bindsym $mod+u	exec --no-startup-id "~/.config/i3/scripts/i3resize.sh down"
+bindsym $mod+i	exec --no-startup-id "~/.config/i3/scripts/i3resize.sh up"
+bindsym $mod+o	exec --no-startup-id "~/.config/i3/scripts/i3resize.sh right"
 
 # Pulse Audio controls
 # set this variable to the index of your default Pulse Audio sink (see: pactl list short sinks)
@@ -190,9 +190,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $SINK -5
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $SINK toggle # mute sound
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Brightness controls
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
@@ -206,7 +206,7 @@ bindsym $mod+Shift+b exec $BROWSER
 # screenshot software
 # bindsym --release Print exec scrot -fs $SCROT_PATH/%F_%H-%M-%S.png
 # bindsym shift+Print exec flameshot gui
-bindsym Print exec flameshot gui
+bindsym Print exec --no-startup-id flameshot gui
 
 # }}}
 
@@ -237,25 +237,25 @@ workspace $ws9 output $monl
 # start applications at startup {{{
 
 # notifications
-exec dunst
+exec --no-startup-id dunst
 
 # compositor
 # experimental backends until dual-kawase blur is fully implemented
-exec picom -b --experimental-backends
+exec --no-startup-id picom -b --experimental-backends
 
 # nextcloud
-exec nextcloud --background
+exec --no-startup-id nextcloud --background
 
 # workspace initial layout
-exec ~/.config/i3/scripts/layout.sh
+exec --no-startup-id ~/.config/i3/scripts/layout.sh
 
 # }}}
 
 
 # POLYBAR {{{
-exec polybar $POLYBAR_1
-exec polybar $POLYBAR_2
-bindsym $mod+f exec ~/.config/i3/scripts/immersive.sh
+exec --no-startup-id polybar $POLYBAR_1
+exec --no-startup-id polybar $POLYBAR_2
+bindsym $mod+f exec --no-startup-id ~/.config/i3/scripts/immersive.sh
 # }}}
 
 
@@ -312,7 +312,7 @@ bindsym $mod+x [class="Todoist"] scratchpad show
 # VISUALS {{{
 
 # looking for a wallpaper in ~/.config/wallpaper.* (any file extension that feh can open)
-exec_always feh --bg-scale ~/.config/wallpaper.*
+exec_always feh --no-startup-id --bg-scale ~/.config/wallpaper.*
 
 # Application menu
 bindsym $mod+d exec rofi -show drun
@@ -322,9 +322,7 @@ bindsym $mod+shift+d exec rofi -show window
 bindsym $mod+Shift+p exec "~/.config/rofi/scripts/powermenu.sh"
 
 set $bg-color 			#dddddd
-# set $bg-color 		#800000
 set $inactive-bg-color 		#000000
-# set $text-color 		#f3f4f5
 set $text-color 		#000000
 set $inactive-text-color 	#676E7D
 set $urgent-bg-color 		#E53935
