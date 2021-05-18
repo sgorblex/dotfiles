@@ -1,5 +1,7 @@
-#!/bin/sh
 # Sgorblex's x config
 # ~/.config/xprofile.d/xsettings.xrc
 
 xset r rate 250 50
+
+
+# vim:ft=sh

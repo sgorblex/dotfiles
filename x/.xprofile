@@ -5,6 +5,6 @@
 if [ -d ~/.config/xprofile.d ]; then
 	for f in ~/.config/xprofile.d/*
 	do
-		source $f
+		. $f
 	done
 fi

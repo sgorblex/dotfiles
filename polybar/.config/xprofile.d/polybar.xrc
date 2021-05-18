@@ -1,8 +1,11 @@
-#!/bin/sh
 # Sgorblex's x config
 # ~/.config/xprofile.d/polybar.xrc
+
 
 # POLYBAR ENVIRONMENT VARIABLES
 
 export POLYBAR_1=cute_1
 export POLYBAR_2=cute_2
+
+
+# vim:ft=sh

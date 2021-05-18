@@ -1,4 +1,3 @@
-#!/bin/sh
 # Sgorblex's x config
 # ~/.config/xprofile.d/defaults.xrc
 
@@ -9,3 +8,6 @@ export BROWSER=firefox
 
 # theming
 export QT_STYLE_OVERRIDE=kvantum
+
+
+# vim:ft=sh
