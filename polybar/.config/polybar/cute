@@ -65,6 +65,7 @@ include-file = ~/.config/polybar/cute_modules/pulseaudio
 include-file = ~/.config/polybar/cute_modules/spotify
 include-file = ~/.config/polybar/cute_modules/temperature
 include-file = ~/.config/polybar/cute_modules/time
+include-file = ~/.config/polybar/cute_modules/todoist
 include-file = ~/.config/polybar/cute_modules/xwindow
 
 
@@ -101,7 +102,7 @@ foreground = ${colors.foreground}
 padding-left = 2
 padding-right = 1
 
-modules-left = temperature HDD SSD
+modules-left = temperature HDD SSD brightness todoist
 modules-center = xwindow
 modules-right = network time i3-state
 

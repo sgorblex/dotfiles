@@ -1,0 +1,21 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/todoist
+; bar: cute
+; module: todoist
+
+
+[module/todoist]
+
+type = custom/script
+
+format-prefix = " "
+format = <label>
+format-underline = #de4c4a
+
+exec = python -u ~/.config/polybar/scripts/polybar-todoist.py
+tail = true
+
+click-left = i3-msg [class="Todoist"] scratchpad show
+
+
+; vim:ft=dosini

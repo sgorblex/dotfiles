@@ -1,3 +1,9 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/battery
+; bar: cute
+; module: battery
+
+
 [module/battery]
 type = internal/battery
 

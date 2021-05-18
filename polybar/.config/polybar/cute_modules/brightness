@@ -1,3 +1,9 @@
+; Sgorblex's Polybar config
+; ~/.config/polybar/cute_modules/brightness
+; bar: cute
+; module: brightness
+
+
 [module/brightness]
 type = internal/xbacklight
 
