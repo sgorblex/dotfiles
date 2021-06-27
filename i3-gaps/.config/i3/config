@@ -25,7 +25,7 @@
 # ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
 # │     │ Q │   │ E │ R │   │ Y │ U │ I │ O │ P │   │   │     │
 # ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
-# │      │   │   │ D │ F │   │ H │ J │ K │ L │   │   │ Enter  │
+# │      │   │   │ D │ F │   │ H │ J │ K │ L │   │   │        │
 # ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
 # │ Shift  │   │   │ C │   │   │   │   │   │   │   │          │
 # ├──────┬─┴───┴┬──┴──┬┴───┴───┴───┴───┴───┴─┬─┴───┴┬──┬──────┤
@@ -246,6 +246,12 @@ exec --no-startup-id picom -b --experimental-backends
 # Nextcloud client
 exec --no-startup-id nextcloud --background
 
+# gromit-mpx
+exec --no-startup-id gromit-mpx
+# bindsym XF86Favorites exec --no-startup-id gromit-mpx -t
+# bindsym shift+XF86Favorites exec --no-startup-id gromit-mpx -c
+# bindsym ctrl+XF86Favorites exec --no-startup-id gromit-mpx -v
+
 # workspace initial layout
 exec --no-startup-id ~/.config/i3/scripts/layout.sh
 
@@ -267,22 +273,22 @@ set $scr_show ~/.config/i3/scripts/scratchpad_show.py
 # (requires telegram-desktop)
 exec --no-startup-id telegram-desktop
 for_window [class="TelegramDesktop" title="Telegram"] move scratchpad, sticky enable
-bindsym $mod+g exec $scr_show TelegramDesktop 60 70
+bindsym $mod+g exec --no-startup-id $scr_show TelegramDesktop 60 70
 # }}}
 
 # Discord {{{
 # (requires discord)
 set $discord discord
-exec --no-startup-id $discord
+# exec --no-startup-id $discord
 for_window [class="$discord"] move scratchpad, sticky enable
-bindsym $mod+z exec $scr_show $discord 85 85
+bindsym $mod+z exec --no-startup-id $scr_show $discord 85 85
 # }}}
 
 # Terminal {{{
 # sleeping 2 to avoid race condition issues; only works with terminals whose windows can be titled with the -t option (substitute -c with -t and class with title) or whose class can be chosen with the -c option
 exec --no-startup-id sleep 2 && i3-sensible-terminal -c dropdown -e ~/.scripts/bin/customshell
 for_window [class="dropdown"] move scratchpad, sticky enable
-bindsym $mod+t exec $scr_show dropdown 85 70
+bindsym $mod+t exec --no-startup-id $scr_show dropdown 85 70
 # }}}
 
 # Calculator {{{
@@ -296,7 +302,7 @@ bindsym $mod+c [title="Qalc"] scratchpad show
 # (requires spotify)
 exec --no-startup-id spotify
 for_window [class="Spotify"] move scratchpad, sticky enable
-bindsym $mod+m exec $scr_show Spotify 85 80
+bindsym $mod+m exec --no-startup-id $scr_show Spotify 85 80
 # }}}
 
 # Todoist {{{
