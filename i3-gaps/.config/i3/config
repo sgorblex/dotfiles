@@ -243,7 +243,7 @@ exec --no-startup-id dunst
 # experimental backends until dual-kawase blur is fully implemented
 exec --no-startup-id picom -b --experimental-backends
 
-# nextcloud
+# Nextcloud client
 exec --no-startup-id nextcloud --background
 
 # workspace initial layout
