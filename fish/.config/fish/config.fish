@@ -29,7 +29,7 @@ set fish_cursor_replace_one underscore
 
 # Installing Fisher plugin manager if not present
 if not functions --query fisher
-	if command -v curl > /dev/null
+	if command -v curl &> /dev/null
 		curl --silent --location https://git.io/fisher | source && fisher update
 	end
 else if test -f ~/.config/fish/fish_plugins -a (fisher list | wc -l) -ne (cat ~/.config/fish/fish_plugins | wc -l)

@@ -6,7 +6,7 @@
 alias fzf 'fzf --ansi --preview="__fzf_preview_file $expanded_token{}"'
 
 # fzf configuration with fd (requires fd)
-if command -v fd > /dev/null
+if command -v fd &> /dev/null
 	# default command
 	set -x FZF_DEFAULT_COMMAND "fd -HLt f -c always"
 

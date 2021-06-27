@@ -4,11 +4,11 @@
 
 # which package owns this command?
 function pacwho
-	if not command -v which > /dev/null
+	if not command -v which &> /dev/null
 		echo "missing which"
 		return 1
 	end
-	if not command -v pacman > /dev/null
+	if not command -v pacman &> /dev/null
 		echo "missing pacman"
 		return 1
 	end
