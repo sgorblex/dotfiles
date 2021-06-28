@@ -32,7 +32,9 @@ neovim
             └── it.utf-8.add
 ```
 
-Stow will create symbolic links in the directories `~/.config/nvim`, which contains the main configurations, `~/.config/bash`, and `~/.config/fish`, both containing neovim shell integrations, as well as a file named `.clang-format` in the user HOME. Of course, it will manage eventual conflits: for example, the module `bash` uses `~/.config/bash`, but stow will put in a newly created directory both modules' symlinks. This system allows to divide the configs in packages and, at the same time, to manage integrations between modules.
+Stow will create symbolic links in the directories `~/.config/nvim`, which contains the main configurations, `~/.config/bash`, and `~/.config/fish`, both containing neovim shell integrations, as well as a file named `.clang-format` in the user's HOME. Of course, it will manage eventual conflits: for example, the module `bash` uses `~/.config/bash`, but stow will put in a newly created directory both modules' symlinks. This system allows to divide the configs in packages and, at the same time, to manage integrations between modules.
+
+See [modules](modules/) for a list of available modules.
 
 
 ### Install a module
@@ -61,9 +63,9 @@ stow -t $HOME -D <module's name>
 
 
 
-## Dependencies
-Once installed, each module has a dependency file stored in `~/.config/rice_dependencies/module-name`. These files are organized to give a basic idea of what each software provides, including both mandatory and additional dependencies.
+## Module info and dependencies
+Each module has an information file stored in [modules](modules/). These files are organized to give a basic idea of what each software provides, including both mandatory and additional dependencies.
 
 The software is referred to as Arch packages from official repositories or AUR, although it's not hard to find the respective packages in any distro or in the various GitHub repositories.
 
-**NOTE**: dependency files are still a WIP: they may not exit of miss packages. Feel free to report any problem in the repo's issues.
+**NOTE**: information files are still a WIP: they may not exist or miss information. Feel free to report any problem in the repo's issues.
