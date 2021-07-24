@@ -22,3 +22,8 @@ namespace
 regex
 whitespace
 whitespaces
+immersive
+keybinding
+config
+plugins
+plugin
