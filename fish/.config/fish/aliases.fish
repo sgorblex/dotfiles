@@ -31,10 +31,13 @@ function cl --wraps cd
 end
 
 # pacman aliases
-alias ys 'yay -Slq | fzf --multi --preview "yay -Si {1} | grep -v \'Querying AUR...\'" | xargs -ro yay -S'
+alias ys 'yay -Slq | fzf --multi --preview "yay -Si {1} | grep -v \'Querying AUR...\'" | xargs -ro yay -S --needed'
+alias ysr 'yay -Slq --repo | fzf --multi --preview "yay -Si {1} | grep -v \'Querying AUR...\'" | xargs -ro yay -S --needed'
 alias yr 'yay -Qq | fzf --multi --preview "yay -Qi {1}" | xargs -ro yay -Rs'
 
-alias fn "find -name"
+function fn --wraps find
+	find -iname "*$argv*"
+end
 
 # for Nextcloud conflicts
 set DIFF_COMMAND "nvim -d"
