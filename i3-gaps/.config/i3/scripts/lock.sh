@@ -14,32 +14,32 @@ i3lock \
 	--indicator \
 	-k \
 	--pass-media-keys \
-	--insidevercolor=e8c50444 \
-	--insidewrongcolor=b7000044 \
-	--insidecolor=ffffff44 \
-	--ringvercolor=e8c504ff \
-	--ringwrongcolor=b70000ff \
-	--ringcolor=ffffff88 \
+	--insidever-color=e8c50444 \
+	--insidewrong-color=b7000044 \
+	--inside-color=ffffff44 \
+	--ringver-color=e8c504ff \
+	--ringwrong-color=b70000ff \
+	--ring-color=ffffff88 \
 	--line-uses-inside \
-	--keyhlcolor=0245e2ff \
-	--bshlcolor=e85400ff  \
-	--separatorcolor=ffffff77 \
-	--verifcolor=e8c504ff \
-	--wrongcolor=b70000ff \
-	--datestr="%A %d/%m/%Y" \
-	--timecolor=ffffffff \
-	--datecolor=ffffffff \
+	--keyhl-color=0245e2ff \
+	--bshl-color=e85400ff  \
+	--separator-color=ffffff77 \
+	--verif-color=e8c504ff \
+	--wrong-color=b70000ff \
+	--date-str="%A %d/%m/%Y" \
+	--time-color=ffffffff \
+	--date-color=ffffffff \
 	--time-font="Noto Mono Nerd Font" \
-	--timesize=42 \
+	--time-size=42 \
 	--date-font="Noto Mono Nerd Font" \
-	--datesize=16 \
+	--date-size=16 \
 	--verif-font="Material Design Icons Desktop" \
-	--verifsize=90 \
-	--veriftext="󰔟" \
+	--verif-size=90 \
+	--verif-text="󰔟" \
 	--wrong-font="Material Design Icons Desktop" \
-	--wrongsize=90 \
-	--wrongtext="󰌾" \
-	--noinputtext="󰁮" \
+	--wrong-size=90 \
+	--wrong-text="󰌾" \
+	--noinput-text="󰁮" \
 	--radius=130 \
 	--ring-width=14
 
