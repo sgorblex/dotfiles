@@ -63,9 +63,9 @@ case $chosen in
 		echo Operation canceled
 		;;
 	$windows)
-		sudo grub-reboot "Windows"
+		# sudo grub-reboot "Windows"
 		before_exiting
-		reboot
+		systemctl reboot --boot-loader-entry=auto-windows
 		;;
 	$macos)
 		sudo grub-reboot "MacOS X"
