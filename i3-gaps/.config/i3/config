@@ -252,6 +252,9 @@ exec --no-startup-id gromit-mpx
 # bindsym shift+XF86Favorites exec --no-startup-id gromit-mpx -c
 # bindsym ctrl+XF86Favorites exec --no-startup-id gromit-mpx -v
 
+# Conky
+exec --no-startup-id conky -d
+
 # workspace initial layout
 exec --no-startup-id ~/.config/i3/scripts/layout.sh
 
