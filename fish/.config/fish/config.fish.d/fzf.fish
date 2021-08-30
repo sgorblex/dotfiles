@@ -3,7 +3,7 @@
 # FZF config
 
 
-alias fzf 'fzf --ansi --preview="__fzf_preview_file $expanded_token{}"'
+alias fzf 'fzf --ansi --preview="_fzf_preview_file $expanded_token{}"'
 
 # fzf configuration with fd (requires fd)
 if command -v fd &> /dev/null

@@ -30,10 +30,23 @@ function cl --wraps cd
 	cd $argv && ls
 end
 
-# pacman aliases
-alias ys 'yay -Slq | fzf --multi --preview "yay -Si {1} | grep -v \'Querying AUR...\'" | xargs -ro yay -S --needed'
-alias ysr 'yay -Slq --repo | fzf --multi --preview "yay -Si {1} | grep -v \'Querying AUR...\'" | xargs -ro yay -S --needed'
-alias yr 'yay -Qq | fzf --multi --preview "yay -Qi {1}" | xargs -ro yay -Rs'
+# pacman aliases (requires yay and fzf)
+if command -v yay > /dev/null && command -v fzf > /dev/null
+	# install with fzf
+	function ys --wraps "yay -S"
+		yay -Slq | fzf --prompt="pkg install > " --multi --preview "yay -Si {1} | grep -v 'Querying AUR...'" -q "$argv" | xargs -ro yay -S --needed
+	end
+
+	# install with fzf (official repos only)
+	function ysr --wraps "yay -S --repo"
+		yay -Slq --repo | fzf --prompt="official pkg install > " --multi --preview "yay -Si {1}" -q "$argv" | xargs -ro yay -S --needed
+	end
+
+	# uninstall with fzf
+	function yr --wraps "yay -Rs"
+		yay -Qq | fzf --prompt="pkg remove > " --multi --preview "yay -Qi {1}" -q "$argv" | xargs -ro yay -Rs
+	end
+end
 
 function fn --wraps find
 	find -iname "*$argv*"
