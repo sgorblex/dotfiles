@@ -27,3 +27,11 @@ keybinding
 config
 plugins
 plugin
+executables
+crossbuild
+crossbuilding
+toolchains
+pre
+toolchain
+x86
+x64
