@@ -17,6 +17,7 @@ format-underline = #b0b
 label = "%temperature-c%糖 "
 
 format-warn = <ramp> <label-warn>
+format-warn-underline = #b0b
 label-warn = %temperature-c%
 label-warn-foreground = #f00
 

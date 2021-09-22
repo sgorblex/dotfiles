@@ -18,7 +18,7 @@
 	/* Spacing and padding */
 	option-6-listview-spacing:	6px;
 	menu-window-padding:		10px 5px;
-	menu-element-padding:		11px 0px 9px -12px;
+	menu-element-padding:		11px 0px 9px -7px;
 }
 
 #window {
@@ -50,6 +50,11 @@
 #element.selected {
 	background-color: @accent;
 	text-color: @foreground-alt;
+}
+
+element-text, element-icon {
+	background-color: inherit;
+	text-color:       inherit;
 }
 
 
