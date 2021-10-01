@@ -282,7 +282,7 @@ bindsym $mod+g exec --no-startup-id $scr_show TelegramDesktop 60 70
 # Discord {{{
 # (requires discord)
 set $discord discord
-# exec --no-startup-id $discord
+# exec --no-startup-id $discord --no-sandbox
 for_window [class="$discord"] move scratchpad, sticky enable
 bindsym $mod+z exec --no-startup-id $scr_show $discord 85 85
 # }}}
@@ -310,7 +310,7 @@ bindsym $mod+m exec --no-startup-id $scr_show Spotify 85 80
 
 # Todoist {{{
 # (requires todoist-electron)
-exec --no-startup-id todoist
+exec --no-startup-id DESKTOPINTEGRATION=false /usr/bin/todoist %u --no-sandbox %U
 for_window [class="Todoist"] move scratchpad, scratchpad show, resize set 1000 700, move position center, scratchpad show, sticky enable
 bindsym $mod+x [class="Todoist"] scratchpad show
 # }}}
