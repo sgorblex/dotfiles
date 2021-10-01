@@ -61,3 +61,5 @@ set DIFF_COMMAND "nvim -d"
 alias solve-conflict	"$DIFF_COMMAND (ls | grep conflicted) (ls | sed -n 's/\(.*\) (conflicted copy.*)\(.*\)/\1\2/p')"
 
 alias tmp		'cd (mktemp -d)'
+
+alias int-ip "ip a | sed -n 's/\s\+inet \([0-9\.]\+\).*global.*/\1/p'"
