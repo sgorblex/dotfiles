@@ -27,6 +27,7 @@ call plug#begin(expand('~/.local/share/nvim/plugged'))
 " Vim Plug entry					Plugin Name			Description
 
 " General "
+Plug 'DanManN/vim-razer'				" Vim Razer			Razer keyboards RGB integration
 Plug 'christoomey/vim-tmux-navigator'			" Tmux Navigator		Fast tmux bindings
 Plug 'junegunn/fzf',					" Fuzzy Finder			Quickly find files
 Plug 'junegunn/fzf.vim'					" Fuzzy Finder			Default FZF integration
@@ -34,15 +35,14 @@ Plug 'lambdalisue/suda.vim'				" Suda				Edit as root
 Plug 'lilydjwg/colorizer'				" Colorizer			Colorize RGB hex codes
 Plug 'mhinz/vim-startify'				" Startify			Start screen
 Plug 'neoclide/coc.nvim', {'branch': 'release'}		" Conquer of Completion		Completion engine
+Plug 'poggeroni/vim-poggers'				" Poggers			Important plugins
 Plug 'preservim/nerdcommenter'				" Nerd Commenter		Auto line commenter
-" Plug 'DanManN/vim-razer'				" Vim Razer			Razer keyboards RGB integration
-Plug 'sgorblex/vim-razer'				" Vim Razer			Razer keyboards RGB integration
 Plug 'tpope/vim-obsession'				" Obsession			Automatic session updater
-Plug 'tpope/vim-repeat'					" Repeat 			. command fix for vim-surround
+Plug 'tpope/vim-repeat'					" Repeat 			. command for vim-surround
 Plug 'tpope/vim-surround'				" Surround			Fast handling of quotes & similar
 Plug 'vim-airline/vim-airline'				" Airline			Status bar
 Plug 'vim-airline/vim-airline-themes'			" Airline themes		Themes for Airline bar
-Plug 'poggeroni/vim-poggers'
+Plug 'vimwiki/vimwiki'					" VimWiki			Note taking & co.
 
 " Languages support "
 Plug 'iamcco/markdown-preview.nvim'			" Markdown			Markdown in-browser preview
