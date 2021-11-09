@@ -20,8 +20,8 @@ export SINK=${SINK:="alsa_output.pci-0000_00_1f.3.analog-stereo"}
 export NETWORK_INTERFACE=${NETWORK_INTERFACE:-wlan0}
 
 # making some env variables also accessible from x resources database
-echo -e "x.Monitor.left:\t$MONITOR_L" | xrdb -merge
-echo -e "x.Monitor.right:\t$MONITOR_R" | xrdb -merge
+printf "x.Monitor.left:\t$MONITOR_L\n" | xrdb -merge
+printf "x.Monitor.right:\t$MONITOR_R\n" | xrdb -merge
 
 
 # vim:ft=sh
