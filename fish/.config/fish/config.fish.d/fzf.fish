@@ -8,7 +8,7 @@ alias fzf 'fzf --ansi --preview="_fzf_preview_file $expanded_token{}"'
 # fzf configuration with fd (requires fd)
 if command -v fd &> /dev/null
 	# default command
-	set -x FZF_DEFAULT_COMMAND "fd -HLt f -c always"
+	# set -x FZF_DEFAULT_COMMAND "fd -HLt f -c always"
 
 	# Search in non-hidden files
 	alias nfzf 'FZF_DEFAULT_COMMAND="fd -Lt f -c always" fzf'
