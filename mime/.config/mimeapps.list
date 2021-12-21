@@ -1,6 +1,8 @@
 [Default Applications]
+application/pdf=org.pwmt.zathura.desktop
 image/jpeg=org.gnome.eog.desktop
 image/png=org.gnome.eog.desktop
 text/plain=nvim.desktop
+video/mp4=vlc.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
