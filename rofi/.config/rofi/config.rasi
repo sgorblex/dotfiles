@@ -10,7 +10,7 @@ configuration {
 	display-window: "  ";
 	/* display-drun: "  "; */
 	display-drun: "  ";
-	theme: "blur_white.rasi";
 }
+@theme "blur_white.rasi"
 
 // vim:ft=css
