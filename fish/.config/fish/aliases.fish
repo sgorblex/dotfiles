@@ -9,12 +9,11 @@ end
 alias l			"ls"
 alias ll		"ls -l"
 alias la		"ls -A"
+alias lal		"ls -Al"
 
 # other
 alias cls		"clear"
 alias :q		"exit" 			# too much vim lol
-alias pu		"pushd ."
-alias po		"popd"
 alias gs		"git status"
 
 if command -v ranger &>/dev/null
@@ -30,28 +29,6 @@ function cl --wraps cd
 	cd $argv && ls
 end
 
-# pacman aliases (requires yay and fzf)
-if command -v yay > /dev/null && command -v fzf > /dev/null
-	# install with fzf
-	function gimme --wraps "yay -S"
-		argparse r/repo -- $argv
-		or return
-
-		# -r | --repo flag (official repos only)
-		if set -q _flag_repo
-			set repo --repo
-		end
-
-		yay -Slq $repo | fzf --prompt="pkg install > " --multi --preview "yay -Si {1} | grep -v 'Querying AUR...'" -q "$argv" | xargs -ro yay -S --needed
-	end
-
-	# uninstall with fzf
-	function yeet --wraps "yay -Rs"
-		string match -re -- '^-+' $argv >/dev/null && echo "yeet takes no options" 1>&2 && return
-		yay -Qq | fzf --prompt="pkg remove > " --multi --preview "yay -Qi {1}" -q "$argv" | xargs -ro yay -Rs
-	end
-end
-
 function fn --wraps find
 	find -iname "*$argv*"
 end
@@ -63,3 +40,7 @@ alias solve-conflict	"$DIFF_COMMAND (ls | grep conflicted) (ls | sed -n 's/\(.*\
 alias tmp		'cd (mktemp -d)'
 
 alias int-ip "ip a | sed -n 's/\s\+inet \([0-9\.]\+\).*global.*/\1/p'"
+
+alias o xdg-open
+
+alias bd "bd -si"
