@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Sgorblex's rofi (@polybar @i3) config
 # ~/.config/i3/scripts/powermenu.sh
 
@@ -33,7 +33,7 @@ xmodmap -e "keycode 44 = Down"
 xmodmap -e "keycode 45 = Up"
 
 # call Rofi
-chosen="$(echo -e "$menu_entries" | $rofi_command -dmenu -window-title 'powermenu')"
+chosen="$(printf "$menu_entries\n" | $rofi_command -dmenu -window-title 'powermenu')"
 
 # reset mapping
 xmodmap -e "keycode 44 = j"
@@ -60,7 +60,7 @@ case $chosen in
 		poweroff
 		;;
 	$cancel)
-		echo Operation canceled
+		printf "Operation canceled\n"
 		;;
 	$windows)
 		# sudo grub-reboot "Windows"
