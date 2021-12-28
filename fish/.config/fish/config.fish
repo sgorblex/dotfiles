@@ -36,13 +36,13 @@ else if test -f ~/.config/fish/fish_plugins -a (fisher list | wc -l) -ne (cat ~/
 	fisher update
 end
 
+if command -v zoxide &>/dev/null
+	zoxide init fish | source
+end
+
 # Sourcing various configuration files
 if test -d ~/.config/fish/config.fish.d 
 	for f in ~/.config/fish/config.fish.d/*.fish
 		source $f
 	end
-end
-
-if command -v zoxide &>/dev/null
-	zoxide init fish | source
 end
