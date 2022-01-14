@@ -1,24 +1,22 @@
 #!/bin/sh
 
-PLUGIN_DIR=$HOME/.config/ranger/plugins
-PLUGINS="ranger_devicons ranger_zoxide"
+PLUGIN_DIR="$HOME/.config/ranger/plugins"
+GH_PLUGINS="alexanderjeurissen/ranger_devicons jchook/ranger-zoxide sgorblex/ranger_mktemp"
 
-ranger_devicons() {
-	command -v git >/dev/null && git clone https://github.com/alexanderjeurissen/ranger_devicons "$PLUGIN_DIR/ranger_devicons" >/dev/null 2>&1
+# $1: base URL
+# $2: plugin directory
+install_with_git() {
+	command -v git >/dev/null && git clone "$1/$2" "$PLUGIN_DIR/${2##*/}" >/dev/null 2>&1
 }
 
-ranger_zoxide() {
-	command -v git >/dev/null && git clone https://github.com/jchook/ranger-zoxide "$PLUGIN_DIR/ranger_zoxide" >/dev/null 2>&1
+# $1: owner/repo
+install_from_github() {
+	install_with_git "https://github.com" "$1"
 }
 
-
-plugin_check() {
-	if [ ! -d "$PLUGIN_DIR/$1" ]; then
-		$1 &
+mkdir -p "$PLUGIN_DIR"
+for plugin in $GH_PLUGINS; do
+	if [ ! -d "$PLUGIN_DIR/${plugin##*/}" ]; then
+		install_from_github "$plugin"
 	fi
-}
-
-mkdir -p $PLUGIN_DIR
-for plugin in $PLUGINS; do
-	plugin_check $plugin
 done
