@@ -42,5 +42,3 @@ alias tmp		'cd (mktemp -d)'
 alias int-ip "ip a | sed -n 's/\s\+inet \([0-9\.]\+\).*global.*/\1/p'"
 
 alias o xdg-open
-
-alias bd "bd -si"
