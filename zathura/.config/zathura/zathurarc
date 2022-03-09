@@ -32,5 +32,6 @@ set statusbar-h-padding  	20
 set guioptions			""
 
 # mappings
-map U zoom in 			# these two are swapped for some reason
-map I zoom out
+map i zoom in 			# these two are swapped for some reason
+map o zoom out
+map <C-o> open
