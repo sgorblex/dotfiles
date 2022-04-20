@@ -1,9 +1,11 @@
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop
+application/x-xopp=com.github.xournalpp.xournalpp.desktop
 image/jpeg=qimgv.desktop
 image/png=qimgv.desktop
 text/plain=nvim.desktop
 video/mp4=vlc.desktop
 video/mpeg=vlc.desktop
+video/x-matroska=vlc.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
