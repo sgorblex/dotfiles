@@ -46,3 +46,5 @@ if test -d ~/.config/fish/config.fish.d
 		source $f
 	end
 end
+
+set -x PATH $PATH ~/.local/bin
