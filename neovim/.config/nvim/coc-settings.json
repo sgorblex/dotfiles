@@ -14,5 +14,6 @@
 	// snippets
 	"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 	"coc.preferences.extensionUpdateCheck": "never",
-	"git.enableGutters": true
+	"git.enableGutters": true,
+	"java.format.settings.url": "/home/sgorblex/.config/nvim/coc-java-formatter.xml"
 }
