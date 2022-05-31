@@ -43,6 +43,7 @@ nnoremap <silent> <M-l> :vertical resize +2<CR>
 vnoremap <c-c> "+y
 nnoremap <c-c> "+yy
 nnoremap <leader><space> xi  <esc>P
+vnoremap <leader><space> di  <esc>P
 
 
 " Persistent undo "

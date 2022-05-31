@@ -15,5 +15,9 @@
 	"snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 	"coc.preferences.extensionUpdateCheck": "never",
 	"git.enableGutters": true,
-	"java.format.settings.url": "/home/sgorblex/.config/nvim/coc-java-formatter.xml"
+	"java.format.settings.url": "/home/sgorblex/.config/nvim/coc-java-formatter.xml",
+	"python.formatting.autopep8Args": [
+		"--max-line-length",
+		"999"
+	]
 }
