@@ -39,6 +39,9 @@ end
 if command -v zoxide &>/dev/null
 	zoxide init fish | source
 end
+if command -v direnv &>/dev/null
+	direnv hook fish | source
+end
 
 # Sourcing various configuration files
 if test -d ~/.config/fish/config.fish.d 
