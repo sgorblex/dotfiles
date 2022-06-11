@@ -190,12 +190,13 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $SINK -5
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $SINK toggle # mute sound
 
 # Media player controls
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-bindsym $mod+r exec --no-startup-id playerctl play-pause
-bindsym $mod+n exec --no-startup-id playerctl next
-bindsym $mod+p exec --no-startup-id playerctl previous
+bindsym XF86AudioPlay	exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPause	exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext	exec --no-startup-id playerctl next
+bindsym XF86AudioPrev	exec --no-startup-id playerctl previous
+bindsym $mod+r		exec --no-startup-id playerctl play-pause
+bindsym $mod+n		exec --no-startup-id playerctl next
+bindsym $mod+p		exec --no-startup-id playerctl previous
 
 # Brightness controls
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
