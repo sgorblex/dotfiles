@@ -4,7 +4,7 @@
 
 
 " Open in new firefox window "
-let g:mkdp_browser = expand("~/.scripts/bin/nfirefox")
+let g:mkdp_browser = expand("~/.scripts/nfirefox.sh")
 " let g:mkdp_browser = 'firefox'
 
 " Auto start/close "

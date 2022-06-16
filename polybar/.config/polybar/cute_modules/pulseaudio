@@ -2,12 +2,15 @@
 ; ~/.config/polybar/cute_modules/pulseaudio
 ; bar: cute
 ; module: pulseaudio
+;
+; Compatible with PipeWire-Pulse
 
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-sink = ${io.sink}
+; if commented, use default
+; sink = ${io.sink}
 
 format-volume = <ramp-volume> <label-volume>
 format-volume-underline = #1db954
@@ -21,9 +24,8 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
-; Right and Middle click (unreleased)
-; click-right = pavucontrol &
-; click-middle =
+click-right = pactl set-sink-mute $SINK 1
+click-middle = pavucontrol
 
 
 ; vim:ft=dosini

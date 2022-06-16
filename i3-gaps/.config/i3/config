@@ -73,7 +73,7 @@ font pango:DejaVu Sans Mono 8
 # BASIC KEYBINDINGS {{{
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal -e ~/.scripts/bin/customshell
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal -e ~/.scripts/customshell.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -185,9 +185,9 @@ bindsym $mod+o	exec --no-startup-id "~/.config/i3/scripts/i3resize.sh right"
 
 # Pulse Audio controls
 # set this variable to the index of your default Pulse Audio sink (see: pactl list short sinks)
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $SINK +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $SINK -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $SINK toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 # Media player controls
 bindsym XF86AudioPlay	exec --no-startup-id playerctl play-pause
@@ -296,7 +296,7 @@ bindsym $mod+z exec --no-startup-id $scr_show $discord 85 85
 
 # Terminal {{{
 # sleeping 2 to avoid race condition issues; only works with terminals whose windows can be titled with the -t option (substitute -c with -t and class with title) or whose class can be chosen with the -c option
-exec --no-startup-id sleep 2 && i3-sensible-terminal -c dropdown -e ~/.scripts/bin/customshell
+exec --no-startup-id i3-sensible-terminal -c dropdown -e ~/.scripts/customshell.sh
 for_window [class="dropdown"] move scratchpad, sticky enable
 bindsym $mod+t exec --no-startup-id $scr_show dropdown 85 70
 # }}}

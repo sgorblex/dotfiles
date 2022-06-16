@@ -8,7 +8,7 @@
 type = custom/text
 content =  
 
-click-left = ~/.scripts/bin/invert-screen
+click-left = ~/.scripts/invert-screen.sh
 
 
 ; vim:ft=dosini

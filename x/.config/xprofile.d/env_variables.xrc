@@ -14,10 +14,14 @@ export BAR1_MONITOR=${BAR1_MONITOR:-$MONITOR_R}
 export BAR2_MONITOR=${BAR2_MONITOR:-$MONITOR_L}
 
 # default sound output (sink)
-export SINK=${SINK:="alsa_output.pci-0000_00_1f.3.analog-stereo"}
+export SINK=${SINK:=$(pactl get-default-sink)}
 
 # default network interface card (nic)
 export NETWORK_INTERFACE=${NETWORK_INTERFACE:-wlan0}
+
+# touch screen and pen (if present)
+export TOUCH_SCREEN=${TOUCH_SCREEN:-$(xinput list | sed -n 's/.*Finger.*id=\([0-9]\+\).*/\1/p')}
+export PEN=${PEN:-$(xinput list | sed -n 's/.*Pen Pen.*id=\([0-9]\+\).*/\1/p')} # doesn't work until the pen is used
 
 # making some env variables also accessible from x resources database
 printf "x.Monitor.left:\t$MONITOR_L\n" | xrdb -merge
