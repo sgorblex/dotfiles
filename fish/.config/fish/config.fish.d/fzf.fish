@@ -15,7 +15,4 @@ end
 
 
 # PatrickF1/fzf.fish options
-set FZF_LEGACY_KEYBINDINGS 0
 set fzf_fd_opts -LHE .git
-# unless pr #138 is accepted
-set fzf_git_status_opts --preview='git diff --color=always {2}'
