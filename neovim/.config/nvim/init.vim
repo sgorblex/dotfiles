@@ -44,6 +44,7 @@ vnoremap <c-c> "+y
 nnoremap <c-c> "+yy
 nnoremap <leader><space> xi  <esc>P
 vnoremap <leader><space> di  <esc>P
+nnoremap z\| zezL
 
 
 " Persistent undo "

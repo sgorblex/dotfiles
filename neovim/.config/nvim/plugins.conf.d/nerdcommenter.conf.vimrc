@@ -24,3 +24,5 @@ let g:NERDToggleCheckAllLines = 1
 let g:NERDAltDelims_c = 1
 let g:NERDAltDelims_asm = 1
 let g:NERDAltDelims_fsharp = 1
+
+let g:NERDCustomDelimiters = { 'gmpl': { 'left': '#' } }
