@@ -1,3 +1,8 @@
+" Sgorblex's Neovim config "
+" ~/.config/nvim/plugins.conf.d/vimwiki.conf.vimrc "
+" VimWiki config "
+
+
 let g:vimwiki_hl_headers=1
 let g:vimwiki_markdown_link_ext=1
 let g:vimwiki_toc_header="Table of Contents"

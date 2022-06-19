@@ -1,4 +1,4 @@
-# Sgorblex's Neovim config @ Fish Shell config
+# Sgorblex's Neovim @ Fish shell config
 # ~/.config/fish/config.fish.d/fzf.fish
 # FZF config
 

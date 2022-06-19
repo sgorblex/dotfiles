@@ -1,5 +1,6 @@
-# Sgorblex's Fish Shell config
+# Sgorblex's Fish shell config
 # ~/.config/fish/config.fish
+
 
 # If not running interactively, don't do anything
 if not status is-interactive

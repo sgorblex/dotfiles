@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 # Sgorblex's i3 config
 # ~/.config/i3/scripts/scratchpad_show.py
 

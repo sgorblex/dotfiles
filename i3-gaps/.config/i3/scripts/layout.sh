@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # Sgorblex's i3 config
 # ~/.config/i3/scripts/layout.sh
 

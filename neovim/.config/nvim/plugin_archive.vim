@@ -1,4 +1,4 @@
-" Sgorblex's NeoVim config "
+" Sgorblex's Neovim config "
 " ~/.config/nvim/plugin_archive.vim
 " Plugin Archive - my known plugins (for reference, just in case)
 " Don't source this

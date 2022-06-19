@@ -1,4 +1,4 @@
-# Sgorblex's Fish Shell config
+# Sgorblex's Fish shell config
 # ~/.config/fish/config.fish.d/fzf.fish
 # FZF config
 

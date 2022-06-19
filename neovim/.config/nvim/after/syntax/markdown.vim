@@ -1,4 +1,4 @@
-" Sgorblex's NeoVim config "
+" Sgorblex's Neovim config "
 " ~/.config/nvim/after/syntax/markdown.vim "
 " Custom syntax for markdown "
 

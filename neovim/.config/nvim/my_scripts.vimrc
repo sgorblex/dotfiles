@@ -1,4 +1,4 @@
-" Sgorblex's NeoVim config "
+" Sgorblex's Neovim config "
 " ~/.config/nvim/my_scripts.conf.vimrc "
 " sourcing my scripts "
 

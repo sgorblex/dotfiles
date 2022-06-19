@@ -1,4 +1,7 @@
 #!/bin/sh
+# Sgorblex's Ranger config
+# ~/.config/ranger/plugin_check.sh
+
 
 PLUGIN_DIR="$HOME/.config/ranger/plugins"
 GH_PLUGINS="alexanderjeurissen/ranger_devicons jchook/ranger-zoxide sgorblex/ranger_mktemp"

@@ -1,6 +1,7 @@
 # Sgorblex's Fish shell config
 # ~/.config/fish/aliases.fish
 
+
 # ls aliases
 if command -v lsd > /dev/null
 	alias ls	"lsd" 			# requires lsd

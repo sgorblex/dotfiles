@@ -1,6 +1,6 @@
-#  Sgorblex's powerline-shell config
-#  ~/.config/powerline-shell/sgorblex_red.py
-#  Sgorblex red theme
+# Sgorblex's powerline-shell config
+# ~/.config/powerline-shell/sgorblex_red.py
+# Sgorblex red theme
 
 class DefaultColor(object):
     """

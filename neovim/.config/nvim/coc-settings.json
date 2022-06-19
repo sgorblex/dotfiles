@@ -1,3 +1,7 @@
+// Sgorblex's Neovim config
+// ~/.config/nvim/coc-settings.json
+
+
 {
 	// explorer
 	"explorer.icon.enableNerdfont": true,

@@ -1,6 +1,6 @@
 #!/bin/env python3
-#  Sgorblex's Polybar config
-#  ~/.config/polybar/scripts/polybar-todoist.py
+# Sgorblex's Polybar config
+# ~/.config/polybar/scripts/polybar-todoist.py
 # Script for the todoist polybar module
 
 import datetime

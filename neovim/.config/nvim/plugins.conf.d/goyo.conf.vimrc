@@ -1,4 +1,4 @@
-" Sgorblex's NeoVim config "
+" Sgorblex's Neovim config "
 " ~/.config/nvim/plugins.conf.d/goyo.conf.vimrc "
 " Goyo config "
 
