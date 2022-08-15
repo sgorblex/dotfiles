@@ -45,6 +45,7 @@ nnoremap <c-c> "+yy
 nnoremap <leader><space> xi  <esc>P
 vnoremap <leader><space> di  <esc>P
 nnoremap z\| zezL
+nnoremap <leader>h :nohlsearch<CR>
 
 
 " Persistent undo "
