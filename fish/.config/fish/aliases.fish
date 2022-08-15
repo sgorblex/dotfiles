@@ -15,7 +15,7 @@ alias lal		"ls -Al"
 # other
 alias cls		"clear"
 alias :q		"exit" 			# too much vim lol
-alias gs		"git status"
+abbr -ag g		"git"
 
 if command -v ranger &>/dev/null
 	alias r		"ranger" 		# requires ranger
