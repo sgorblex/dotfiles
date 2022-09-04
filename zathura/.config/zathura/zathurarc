@@ -34,3 +34,4 @@ set guioptions			""
 # mappings
 map i zoom in
 map o zoom out
+map z adjust_window width
