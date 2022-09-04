@@ -141,6 +141,9 @@ handle_image() {
         #           - "${IMAGE_CACHE_PATH}" < "${FILE_PATH}" \
         #           && exit 6 || exit 1;;
 
+	image/vnd.djvu)
+		;;
+
         ## Image
         image/*)
             local orientation
