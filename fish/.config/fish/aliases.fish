@@ -42,4 +42,8 @@ alias tmp		'cd (mktemp -d)'
 
 alias int-ip "ip a | sed -n 's/\s\+inet \([0-9\.]\+\).*global.*/\1/p'"
 
-alias o xdg-open
+if command -v handlr &>/dev/null
+	alias o "handlr open"
+else
+	alias o "xdg-open"
+end
