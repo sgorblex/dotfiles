@@ -242,6 +242,7 @@ workspace $ws9 output $monl
 
 # notifications
 exec --no-startup-id dunst
+exec --no-startup-id batify -i 30 -l 30 -c 20 -f 80
 
 # compositor
 # experimental backends until dual-kawase blur is fully implemented

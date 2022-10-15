@@ -17,5 +17,6 @@ tail = true
 
 click-left = i3-msg [class="Todoist"] scratchpad show
 
+interval = 180
 
 ; vim:ft=dosini

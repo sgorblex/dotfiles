@@ -3,6 +3,7 @@
 
 
 # CUSTOM ENV VARIABLES
+BLOB=/blob
 
 # scrot path (do not end with a '/')
 export SCROT_PATH=${SCROT_PATH:-$HOME/media/screenshots}
@@ -27,5 +28,8 @@ export PEN=${PEN:-$(xinput list | sed -n 's/.*Pen Pen.*id=\([0-9]\+\).*/\1/p')} 
 printf "x.Monitor.left:\t$MONITOR_L\n" | xrdb -merge
 printf "x.Monitor.right:\t$MONITOR_R\n" | xrdb -merge
 
+
+# SOFTWARE CONFIGURATION
+[ -n "$BLOB" ] && export WINEPREFIX="$BLOB/wine"
 
 # vim:ft=sh
