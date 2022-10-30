@@ -1,0 +1,73 @@
+# Sgorblex's Neovim config
+# ~/.config/nvim/snips/tex.snippets
+
+
+snippet begin "LaTeX environment" b
+\begin{${1:env}}
+	${2}
+\end{${1}}
+endsnippet
+
+snippet usepackage "LaTeX package" b
+\usepackage{${1:package}}
+endsnippet
+
+snippet section "Section" b
+\section{${1:section name}}
+endsnippet
+
+snippet subsection "Subsection" b
+\subsection{${1:subsection name}}
+endsnippet
+
+snippet subsubsection "Subsubsection" b
+\subsubsection{${1:subsubsection name}}
+endsnippet
+
+snippet equation* "Equation* environment" b
+\begin{equation*}
+	${1}
+\end{equation*}
+endsnippet
+
+snippet align* "Align* environment" b
+\begin{align*}
+	${1}
+\end{align*}
+endsnippet
+
+snippet gather* "Gather* environment" b
+\begin{gather*}
+	${1}
+\end{gather*}
+endsnippet
+
+snippet teor "Theorem environment" b
+\begin{teor}
+	${1}
+\end{teor}
+endsnippet
+
+snippet prop "Property environment" b
+\begin{prop}
+	${1}
+\end{prop}
+endsnippet
+
+snippet proof "Proof environment" b
+\begin{proof}
+	${1}
+\end{proof}
+endsnippet
+
+snippet defin "Definition environment" b
+\begin{defin}
+	${1}
+\end{defin}
+endsnippet
+
+snippet frame "Beamer frame" b
+\begin{frame}{${1}}
+	${2}
+\end{frame}
+endsnippet
