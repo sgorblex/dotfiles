@@ -47,3 +47,5 @@ if command -v handlr &>/dev/null
 else
 	alias o "xdg-open"
 end
+
+alias se sudoedit
