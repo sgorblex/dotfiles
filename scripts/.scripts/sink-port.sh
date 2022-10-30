@@ -3,7 +3,7 @@
 # ~/.scripts/sink-port.sh
 # Switches to the next available port for the current audio sink.
 
-set -e
+# set -e
 
 amixer -c 1 sset 'Auto-Mute Mode' Disabled
 DEFSINK=$(pactl get-default-sink)
