@@ -18,7 +18,7 @@
 	/* Spacing and padding */
 	option-6-listview-spacing:	6px;
 	menu-window-padding:		10px 5px;
-	menu-element-padding:		11px 0px 9px -7px;
+	menu-element-padding:		11px 0px 0px -7px;
 }
 
 #window {
