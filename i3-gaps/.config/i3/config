@@ -264,7 +264,10 @@ exec --no-startup-id conky -d
 exec --no-startup-id ~/.config/i3/scripts/layout.sh
 
 # virtual keyboard
-#exec --no-startup-id qtvkbd -m
+# exec --no-startup-id qtvkbd -m
+
+# keyboard LEDs
+# exec --no-startup-id polychromatic-cli -o wave -p right
 
 # }}}
 

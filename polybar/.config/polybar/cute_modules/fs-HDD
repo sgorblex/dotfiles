@@ -7,7 +7,7 @@
 [module/HDD]
 type = internal/fs
 
-mount-0 = /home
+mount-0 = /blob
 
 format-mounted =   <label-mounted>
 format-mounted-underline = #00e
