@@ -12,7 +12,7 @@ termL () {
 }
 
 termR () {
-	i3-sensible-terminal
+	i3-sensible-terminal -e ~/.scripts/customshell.sh
 }
 
 terminals () {
