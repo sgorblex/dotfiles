@@ -50,14 +50,9 @@ Plug 'lervag/vimtex'					" VimTex			LaTeX integration
 Plug 'sheerun/vim-polyglot'				" Polyglot			Format and syntax support
 
 " Themes "
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim'				" Goyo				Zen mode
 Plug 'morhetz/gruvbox'					" Gruvbox			Theme
 
-" Plug 'chrisbra/unicode.vim'				" Unicode.vim			Get Unicode characters' information
-" Plug 'dikiaap/minimalist'				" Minimalist			Theme
-" Plug 'honza/vim-snippets'				" Honza's snippets		Collection of snippets
-" Plug 'puremourning/vimspector'			" Vimspector			Debugger
-" Plug 'wellle/context.vim'				" Context			Show view's context
 
 " Bulky Plug options
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}

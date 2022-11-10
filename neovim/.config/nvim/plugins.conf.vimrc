@@ -5,6 +5,7 @@
 
 source ~/.config/nvim/plugins.conf.d/airline.conf.vimrc				" Airline
 source ~/.config/nvim/plugins.conf.d/coc-explorer.conf.vimrc			" Coc-explorer
+source ~/.config/nvim/plugins.conf.d/coc-git.conf.vimrc				" Coc-git
 source ~/.config/nvim/plugins.conf.d/coc.conf.vimrc				" Coc
 source ~/.config/nvim/plugins.conf.d/colorizer.conf.vimrc 			" Colorizer
 source ~/.config/nvim/plugins.conf.d/fzf.conf.vimrc				" Fuzzy Finder 

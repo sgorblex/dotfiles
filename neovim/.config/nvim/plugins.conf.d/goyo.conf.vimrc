@@ -4,7 +4,7 @@
 
 
 " Mappings "
-nnoremap <leader>g :Goyo<CR>
+nnoremap <leader>gy :Goyo<CR>
 
 
 function! s:goyo_enter()

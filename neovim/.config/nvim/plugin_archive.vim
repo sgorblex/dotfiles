@@ -13,19 +13,20 @@ Plug 'cespare/vim-toml'					" Vim-Toml			Tom Language support
 Plug 'chrisbra/unicode.vim'				" Unicode.vim			Get Unicode characters' information
 Plug 'christoomey/vim-tmux-navigator'			" Tmux Navigator		Fast tmux bindings
 Plug 'dag/vim-fish'					" Vim-Fish			Fish shell scripting support
-Plug 'danmann/vim-razer'				" Vim Razer			Razer keyboards RGB integration				Has a bug, see issue #6
+Plug 'danmann/vim-razer'				" Vim Razer			Razer keyboards RGB integration
 Plug 'dikiaap/minimalist'				" Minimalist			Theme
 Plug 'floobits/floobits-neovim'				" Floobits			Real time co-editing
 Plug 'honza/vim-snippets'				" Honza's snippets		Collection of snippets
 Plug 'iamcco/markdown-preview.nvim'			" Markdown			Markdown in-browser preview
 Plug 'junegunn/fzf',					" Fuzzy Finder			Quickly find files
 Plug 'junegunn/fzf.vim'					" Fuzzy Finder			Default FZF integration
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim'				" Goyo				Zen mode
 Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}		" Ranger on nvim		TUI file manager directly in vim
 Plug 'lambdalisue/suda.vim'				" Suda				Edit as root
 Plug 'lervag/vimtex'					" VimTex			LaTeX integration
 Plug 'lilydjwg/colorizer'				" Colorizer			Colorize RGB hex codes					Watch out, it scans every entire file
 Plug 'liuchengxu/vista.vim'				" Vista				LSP object navigation (requires ctags)
+Plug 'lpinilla/vim-codepainter'				" Codepainter			Highlight text
 Plug 'luochen1990/rainbow'				" Rainbow			Parenthesis highlighter
 Plug 'metakirby5/codi.vim'				" Codi				Interactive scratchpad					Works for a few languages
 Plug 'mhinz/vim-signify'				" Signify			Git wrapper
@@ -33,6 +34,7 @@ Plug 'mhinz/vim-startify'				" Startify			Start screen
 Plug 'morhetz/gruvbox'					" Gruvbox			Theme
 Plug 'neoclide/coc.nvim', {'branch': 'release'}		" Conquer of Completion		Completion engine
 Plug 'preservim/nerdcommenter'				" Nerd Commenter		Auto line commenter
+Plug 'puremourning/vimspector'				" Vimspector			Debugger
 Plug 'sheerun/vim-polyglot'				" Polyglot			Format and syntax support
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}	" Markdown			Markdown in-browser preview
 Plug 'tpope/vim-fugitive'				" Fugitive			Git wrapper
