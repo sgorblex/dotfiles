@@ -49,3 +49,5 @@ else
 end
 
 alias se sudoedit
+
+alias latexdoc texdoc

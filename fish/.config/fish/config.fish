@@ -1,6 +1,8 @@
 # Sgorblex's Fish shell config
 # ~/.config/fish/config.fish
 
+set -x PATH $PATH ~/.local/bin
+set -x BLOB /blob
 
 # If not running interactively, don't do anything
 if not status is-interactive
@@ -50,5 +52,3 @@ if test -d ~/.config/fish/config.fish.d
 		source $f
 	end
 end
-
-set -x PATH $PATH ~/.local/bin
