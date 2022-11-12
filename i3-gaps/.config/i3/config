@@ -212,6 +212,13 @@ bindsym $mod+Shift+b exec $BROWSER
 # bindsym shift+Print exec flameshot gui
 bindsym Print exec --no-startup-id flameshot gui
 
+# convenient macro for Enter
+# exec --no-startup-id xmodmap -e "keycode 193 = KP_Enter"
+
+# other macros
+# bindsym --release XF86Launch7 exec --no-startup-id ~/.scripts/input.sh run
+# bindsym --release XF86Launch8 exec --no-startup-id ~/.scripts/input.sh repeat toggle
+
 # }}}
 
 
