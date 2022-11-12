@@ -10,9 +10,12 @@ if not status is-interactive
 end
 
 
-# Importing aliases
+# Importing aliases and bindings
 if [ -f ~/.config/fish/aliases.fish ]
 	source ~/.config/fish/aliases.fish
+end
+if [ -f ~/.config/fish/bindings.fish ]
+	source ~/.config/fish/bindings.fish
 end
 
 # Deactivate welcome message
