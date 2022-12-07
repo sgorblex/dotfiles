@@ -28,12 +28,20 @@ if command -v yay > /dev/null && command -v fzf > /dev/null
 			set repo --repo
 		end
 
-		yay -Slq $repo | fzf --prompt="pkg install > " --multi --preview "yay -Si {1} | grep -v 'Querying AUR...'" -q "$argv" | xargs -ro yay -S --needed
+		set pkgs (yay -Slq $repo | fzf --prompt="pkg install > " --multi --preview "yay -Si {1} | grep -v 'Querying AUR...'" -q "$argv")
+		if test -n "$pkgs"
+			echo yay -S --needed $pkgs
+			yay -S --needed $pkgs
+		end
 	end
 
 	# uninstall with fzf
 	function yeet --wraps "yay -Rs"
 		string match -re -- '^-+' $argv >/dev/null && echo "yeet takes no options" 1>&2 && return
-		yay -Qq | fzf --prompt="pkg remove > " --multi --preview "yay -Qi {1}" -q "$argv" | xargs -ro yay -Rns
+		set pkgs (yay -Qq | fzf --prompt="pkg remove > " --multi --preview "yay -Qi {1}" -q "$argv")
+		if test -n "$pkgs"
+			echo yay -Rns $pkgs
+			yay -Rns $pkgs
+		end
 	end
 end
