@@ -5,7 +5,7 @@
 
 from datetime import date
 from subprocess import run
-from sys import stderr
+from sys import argv
 
 from todoist_api_python.api import TodoistAPI
 
@@ -15,19 +15,20 @@ def api_token():
 
 
 def main():
+    debug = "--debug" in argv
+
     token = api_token()
     if not token:
-        print("Can't find token")
+        print("Can't find token" if debug else "Error")
         exit(1)
     api = TodoistAPI(token)
     try:
         tasks = api.get_tasks()
-        filtered = [t for t in tasks if not t.completed and t.due and t.due.date <= date.today().strftime("%Y-%m-%d")]
+        filtered = [t for t in tasks if not t.is_completed and t.due and t.due.date <= date.today().strftime("%Y-%m-%d")]
         res = len(filtered)
         print(res if res else " ")
     except Exception as error:
-        print("Error")
-        #  print(error)
+        print(error if debug else "Error")
         exit(1)
 
 
