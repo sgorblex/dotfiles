@@ -149,7 +149,7 @@ bindsym $mod+Shift+r restart
 
 bindsym $mod+Shift+x exec --no-startup-id "~/.config/i3/scripts/lock.sh"
 exec --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 300 "~/.config/i3/scripts/lock.sh" ""
-# exec xautolock --no-startup-id -time 5 -locker "~/.config/i3/scripts/lock.sh"
+# exec --no-startup-id xautolock -time 5 -locker "~/.config/i3/scripts/lock.sh"
 
 # }}}
 
@@ -223,6 +223,8 @@ bindsym Print exec --no-startup-id flameshot gui
 
 
 # MONITOR SETUP {{{
+set $display_script ~/.config/i3/scripts/display.sh
+exec --no-startup-id [ -x $display_script ] && $display_script
 
 # loading monitor names from x resources database
 set_from_resource $monl x.Monitor.left DVI-I-1
@@ -252,8 +254,7 @@ exec --no-startup-id dunst
 exec --no-startup-id batify -i 30 -l 30 -c 20 -f 80
 
 # compositor
-# experimental backends until dual-kawase blur is fully implemented
-exec --no-startup-id picom -b --experimental-backends
+exec --no-startup-id picom -b
 
 # Nextcloud client
 exec --no-startup-id nextcloud --background
