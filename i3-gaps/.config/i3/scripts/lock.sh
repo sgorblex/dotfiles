@@ -27,8 +27,8 @@ i3lock \
 	--verif-color=e8c504ff \
 	--wrong-color=b70000ff \
 	--date-str="%A %d/%m/%Y" \
-	--time-color=ffffffff \
-	--date-color=ffffffff \
+	--time-color=555555ff \
+	--date-color=555555ff \
 	--time-font="Noto Mono Nerd Font" \
 	--time-size=42 \
 	--date-font="Noto Mono Nerd Font" \
