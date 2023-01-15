@@ -26,7 +26,9 @@ set selection-clipboard clipboard
 
 # status bar
 set font			"Cozette 10"
-set statusbar-basename          true
+set window-title-basename	true
+set window-title-home-tilde	true
+set statusbar-home-tilde	true
 set statusbar-v-padding  	10
 set statusbar-h-padding  	20
 set guioptions			""
