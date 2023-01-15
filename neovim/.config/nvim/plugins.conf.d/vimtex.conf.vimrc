@@ -26,4 +26,5 @@ let g:vimtex_toc_config = {
 	\ },
 	\ 'show_help' : 0,
 	\ 'todo_sorted' : 0,
+	\ 'tocdepth' : 2,
 \ }
