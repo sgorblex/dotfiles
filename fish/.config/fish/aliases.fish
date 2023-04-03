@@ -23,6 +23,9 @@ end
 
 if command -v xclip &>/dev/null
 	alias xc	"xclip -sel clip" 	# requires xclip
+	function clip
+		echo -n $argv | xc
+	end
 end
 
 # cd+ls
