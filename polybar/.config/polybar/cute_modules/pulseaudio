@@ -24,7 +24,7 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
-click-right = pactl set-sink-mute $SINK 1
+click-right = ~/.scripts/sink-port.sh
 click-middle = pavucontrol
 
 
