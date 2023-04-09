@@ -16,32 +16,35 @@ function pacwho
 	end
 end
 
-# fuzzy pacman (requires yay and fzf)
-if command -v yay > /dev/null && command -v fzf > /dev/null
+# fuzzy pacman (requires paru and fzf)
+if command -v paru > /dev/null && command -v fzf > /dev/null
 	# install with fzf
-	function gimme --wraps "yay -S"
-		argparse r/repo -- $argv
+	function gimme --wraps "paru -S"
+		argparse r/repo a/aur -- $argv
 		or return
 
-		# -r | --repo flag (official repos only)
+		# -r | --repo flag (official repos only, overrides --aur)
+		# -a | --aur flag (AUR only)
 		if set -q _flag_repo
 			set repo --repo
+		else if set -q _flag_aur
+			set aur --aur
 		end
 
-		set pkgs (yay -Slq $repo | fzf --prompt="pkg install > " --multi --preview "yay -Si {1} | grep -v 'Querying AUR...'" -q "$argv")
+		set pkgs (paru -Slq $repo $aur | fzf --prompt="pkg install > " --multi --preview "paru -Si {1}" -q "$argv")
 		if test -n "$pkgs"
-			echo yay -S --needed $pkgs
-			yay -S --needed $pkgs
+			echo paru -S --needed $pkgs
+			paru -S --needed $pkgs
 		end
 	end
 
 	# uninstall with fzf
-	function yeet --wraps "yay -Rs"
+	function yeet --wraps "paru -Rs"
 		string match -re -- '^-+' $argv >/dev/null && echo "yeet takes no options" 1>&2 && return
-		set pkgs (yay -Qq | fzf --prompt="pkg remove > " --multi --preview "yay -Qi {1}" -q "$argv")
+		set pkgs (paru -Qq | fzf --prompt="pkg remove > " --multi --preview "paru -Qi {1}" -q "$argv")
 		if test -n "$pkgs"
-			echo yay -Rns $pkgs
-			yay -Rns $pkgs
+			echo paru -Rns $pkgs
+			paru -Rns $pkgs
 		end
 	end
 end
