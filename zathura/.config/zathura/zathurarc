@@ -37,3 +37,9 @@ set guioptions			""
 map i zoom in
 map o zoom out
 map z adjust_window width
+map F toggle_fullscreen
+
+map [fullscreen] i zoom in
+map [fullscreen] o zoom out
+map [fullscreen] z adjust_window width
+map [fullscreen] F toggle_fullscreen
