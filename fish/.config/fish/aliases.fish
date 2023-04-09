@@ -54,3 +54,7 @@ end
 alias se sudoedit
 
 alias latexdoc texdoc
+
+abbr --add t tea
+
+alias mux tmuxinator
