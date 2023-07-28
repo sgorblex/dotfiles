@@ -12,6 +12,7 @@
 	font:			"Iosevka 12";
 }
 
+/*****----- Window -----*****/
 window {
 	height:			45%;
 	width:			45%;
@@ -20,7 +21,7 @@ window {
 
 mainbox {
 	background-color: @bg;
-	border-radius: 8;
+	border-radius: 20;
 }
 
 listview {
@@ -32,6 +33,7 @@ scrollbar {
 	background-color: @bg-sel;
 }
 
+/*****----- Element -----*****/
 element {
 	text-color: @fg;
 	padding: 12 12 12 12;
@@ -46,6 +48,7 @@ element selected {
 	text-color: @fg;
 }
 
+/*****----- Input -----*****/
 inputbar {
 	padding: 4 4 4 4;
 	background-color: @acc;
@@ -60,6 +63,21 @@ prompt {
 entry {
 	padding: 8 12 8 8;
 	text-color: @fg;
+}
+
+/*****----- Message -----*****/
+textbox {
+	background-color:            @bg-sel;
+	text-color:                  @fg;
+	vertical-align:              0.5;
+	horizontal-align:            0.5;
+}
+
+error-message {
+	border:                      7px;
+	border-radius:               20px;
+	border-color:                #cc0000;
+	background-color:            #ff333350;
 }
 
 
