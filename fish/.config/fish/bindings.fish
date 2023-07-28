@@ -1,1 +1,2 @@
-../../dotfiles/fish/.config/fish/bindings.fish
+bind -M insert \em rtfm
+bind -M default \em rtfm

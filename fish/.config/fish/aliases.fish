@@ -58,3 +58,12 @@ alias latexdoc texdoc
 abbr --add t tea
 
 alias mux tmuxinator
+
+function rtfm -d "Open the manual for the current command, or the last one if the command line is empty"
+	if not commandline | string length -q
+		set cmd $history[1]
+	else
+		set cmd (commandline -p)
+	end
+	man (string split ' ' $cmd)[1]
+end
