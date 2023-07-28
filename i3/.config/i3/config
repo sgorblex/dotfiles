@@ -25,9 +25,9 @@
 # ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
 # │     │ Q │   │ E │ R │   │ Y │ U │ I │ O │ P │   │   │     │
 # ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
-# │      │   │   │ D │ F │   │ H │ J │ K │ L │   │   │        │
+# │      │   │   │ D │ F │   │ H │ J │ K │ L │ ; │   │        │
 # ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
-# │ Shift  │   │   │ C │   │   │   │   │   │   │   │          │
+# │ Shift  │   │ X │ C │   │ B │   │ M │   │   │   │          │
 # ├──────┬─┴───┴┬──┴──┬┴───┴───┴───┴───┴───┴─┬─┴───┴┬──┬──────┤
 # │      │ mod4 │     │                      │      │  │      │
 # └──────┴──────┴─────┴──────────────────────┴──────┴──┴──────┘
@@ -156,7 +156,7 @@ exec --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --timer 30
 # if this is uncommented, mouse doesn't warp when switching workspaces
 # mouse_warping none
 
-# Gaps configuration (i3-gaps only) {{{
+# Gaps configuration {{{
 
 for_window [class=".*"] border pixel 1
 
@@ -182,6 +182,10 @@ bindsym $mod+y	exec --no-startup-id "~/.config/i3/scripts/i3resize.sh left"
 bindsym $mod+u	exec --no-startup-id "~/.config/i3/scripts/i3resize.sh down"
 bindsym $mod+i	exec --no-startup-id "~/.config/i3/scripts/i3resize.sh up"
 bindsym $mod+o	exec --no-startup-id "~/.config/i3/scripts/i3resize.sh right"
+
+# Vim-like marks
+bindsym $mod+Shift+semicolon exec i3-input -F 'mark %s' -l 1 -P 'Mark: '
+bindsym $mod+semicolon exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
 
 # Pulse Audio controls
 # set this variable to the index of your default Pulse Audio sink (see: pactl list short sinks)
@@ -336,7 +340,7 @@ bindsym $mod+x exec --no-startup-id $scr_show Todoist 52 70
 # Solanum Pomodoro Timer {{{
 exec --no-startup-id solanum
 for_window [class="solanum"] move scratchpad, sticky enable
-bindsym $mod+semicolon exec --no-startup-id $scr_show solanum 30 50
+# bindsym $mod+q exec --no-startup-id $scr_show solanum 30 50
 # }}}
 
 # }}}
