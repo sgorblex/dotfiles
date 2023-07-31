@@ -1,5 +1,6 @@
 # Sgorblex's dotfiles
 These are the dotfiles for my current config/rice.
+![screenshot](screenshot.png)
 
 
 
