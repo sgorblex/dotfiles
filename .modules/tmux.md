@@ -4,6 +4,7 @@
 My configuration includes plugins and keybindings.
 
 
+
 ## Dependencies
 - git for plugin installation
 - tmux

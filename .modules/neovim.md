@@ -5,8 +5,11 @@ Since Vim and Neovim are very customizable editors, lots of plugins can be used,
 
 All plugins are installed by the vim-plug package manager, which in turn is automatically downloaded if not present.
 
+
+
 ## Dependencies
 - neovim
+
 
 ### Plugin dependencies
 - curl for vim-plug

@@ -3,7 +3,9 @@
 
 My configuration includes plugins and keybindings.
 
+
+
 ## Dependencies
+- ranger
 - git for plugin installation
 - python (3)
-- ranger

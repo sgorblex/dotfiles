@@ -5,12 +5,16 @@ I use Polybar for its modules structure, easy to use and powerful, and for its a
 
 Multiple bars are present in my configuration. At the moment I use two bars contained in the `cute` config file.
 
+
+
 ## Dependencies
 - polybar
+
 
 ### Fonts
 - Noto Mono Nerd Font for the `cute` bar
 - Caskaydia Cove Nerd Font for the `nerdy` bar
+
 
 ### Additional Integrations
 - a battery for the battery module (lol)

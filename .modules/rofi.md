@@ -4,5 +4,7 @@
 I use rofi as dmenu replacement (launching applications) and for my custom powermenu.
 
 
+
 ## Dependencies
 - rofi
+- the [fonts module](fonts.md)

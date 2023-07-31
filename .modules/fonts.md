@@ -4,9 +4,4 @@ At the moment my dotfiles include these fonts:
 - MaterialDesignIconsDesktop
 - Noto Mono Nerd Font
 
-
 [Nerd Fonts](https://www.nerdfonts.com) are patched fonts with new glyphs useful in ricing.
-
-
-## Dependencies
-None.

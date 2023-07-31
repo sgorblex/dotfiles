@@ -3,6 +3,8 @@
 
 In my rice, I use BetterDiscord for functionality and aesthetic improvements.
 
+
+
 ## Dependencies
 - discord
 - betterdiscord
