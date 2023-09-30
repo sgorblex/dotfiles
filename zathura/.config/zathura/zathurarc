@@ -43,3 +43,5 @@ map [fullscreen] i zoom in
 map [fullscreen] o zoom out
 map [fullscreen] z adjust_window width
 map [fullscreen] F toggle_fullscreen
+
+map [presentation] ^n toggle_statusbar
