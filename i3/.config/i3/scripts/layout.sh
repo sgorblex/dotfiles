@@ -7,22 +7,20 @@ browser() {
 	firefox &
 }
 
-termL () {
-	i3-sensible-terminal -e tmuxinator def2
-}
-
-termR () {
-	i3-sensible-terminal -e ~/.scripts/customshell.sh
+mail() {
+	i3-msg "workspace 9; append_layout ~/.config/i3/layouts/thunderbird.json"
+	thunderbird &
 }
 
 terminals () {
 	i3-msg "workspace 1"
-	termL &
+	i3-sensible-terminal -e tmuxinator def2
 	sleep 1
 	i3-msg "workspace 2"
-	termR &
+	i3-sensible-terminal -e ~/.scripts/customshell.sh
 }
 
 
 browser
+mail
 terminals

@@ -5,6 +5,7 @@
 
 export TERMINAL=st
 export BROWSER=firefox
+export MUA=thunderbird
 
 # theming
 export QT_STYLE_OVERRIDE=kvantum

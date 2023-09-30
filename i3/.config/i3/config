@@ -1,6 +1,5 @@
 # Sgorblex's i3 config
 # ~/.config/i3/config
-# note: some features are only available on i3-gaps
 
 
 # MAP OF USED KEYS {{{
@@ -211,8 +210,11 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 # default browser (assumes $BROWSER variable set)
 bindsym $mod+Shift+b exec $BROWSER
 
+# default mail client (assumes $MUA variable set)
+bindsym $mod+Shift+m exec $MUA
+
 # screenshot software
-# bindsym --release Print exec scrot -fs $SCROT_PATH/%F_%H-%M-%S.png
+# bindsym --release shift+Print exec scrot -fs $SCROT_PATH/%F_%H-%M-%S.png
 bindsym shift+Print exec --no-startup-id flameshot full
 bindsym Print exec --no-startup-id flameshot gui
 
