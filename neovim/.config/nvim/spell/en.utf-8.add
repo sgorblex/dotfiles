@@ -8,6 +8,10 @@ config
 configs
 crossbuild
 crossbuilding
+dataframe
+datapoint
+datapoints
+discretization
 dotfiles
 executables
 filesystem
@@ -21,11 +25,13 @@ mailserver
 namespace
 nondeterministic
 ok
+overfitting
 plugin
 plugins
 pre
 regex
 repo
+semidefinite
 symlinks
 syscall
 syscalls
