@@ -12,7 +12,7 @@ export SCROT_PATH=${SCROT_PATH:-$HOME/media/screenshots}
 export MONITOR_L=${MONITOR_L:-eDP1}
 export MONITOR_R=${MONITOR_R:-eDP1}
 export BAR1_MONITOR=${BAR1_MONITOR:-$MONITOR_R}
-export BAR2_MONITOR=${BAR2_MONITOR:-$MONITOR_L}
+export BAR2_MONITOR=${BAR2_MONITOR:-$MONITOR_R}
 
 # default sound output (sink)
 export SINK=${SINK:=$(pactl get-default-sink)}
@@ -23,6 +23,7 @@ export NETWORK_INTERFACE=${NETWORK_INTERFACE:-wlan0}
 # touch screen and pen (if present)
 export TOUCH_SCREEN=${TOUCH_SCREEN:-$(xinput list | sed -n 's/.*Finger.*id=\([0-9]\+\).*/\1/p')}
 export PEN=${PEN:-$(xinput list | sed -n 's/.*Pen Pen.*id=\([0-9]\+\).*/\1/p')} # doesn't work until the pen is used
+export ERASER=${ERASER:-$(xinput list | sed -n 's/.*Pen Eraser.*id=\([0-9]\+\).*/\1/p')}
 
 # making some env variables also accessible from x resources database
 printf "x.Monitor.left:\t$MONITOR_L\n" | xrdb -merge
