@@ -31,6 +31,7 @@ plugins
 pre
 regex
 repo
+se
 semidefinite
 symlinks
 syscall
