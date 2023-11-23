@@ -12,7 +12,7 @@
 # ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
 # │      │ A │ S │ D │ F │ G │ H │ J │ K │ L │ ; │   │ Enter  │
 # ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
-# │        │ Z │ X │ C │ V │ B │ N │ M │   │   │   │          │
+# │        │ Z │ X │ C │ V │ B │ N │ M │ , │   │   │          │
 # ├──────┬─┴───┴┬──┴──┬┴───┴───┴───┴───┴───┴─┬─┴───┴┬──┬──────┤
 # │      │ mod4 │     │                      │      │  │      │
 # └──────┴──────┴─────┴──────────────────────┴──────┴──┴──────┘
@@ -343,6 +343,13 @@ bindsym $mod+x exec --no-startup-id $scr_show Todoist 52 70
 exec --no-startup-id solanum
 for_window [class="solanum"] move scratchpad, sticky enable
 # bindsym $mod+q exec --no-startup-id $scr_show solanum 30 50
+# }}}
+
+# blueman {{{
+# (requires blueman)
+exec --no-startup-id blueman-manager
+for_window [class="Blueman-manager"] move scratchpad, sticky enable
+bindsym $mod+comma exec --no-startup-id $scr_show Blueman-manager 50 50
 # }}}
 
 # }}}
