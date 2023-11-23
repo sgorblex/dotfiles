@@ -52,6 +52,7 @@ if [ -n "$directory" ] && [ -n "$1" ]; then
 fi
 
 rename() {
+  file="$1"
 	if [[ "$file" == *" "* ]]; then
 			new_name=$(echo "$file" | sed -e "s/ - /-/g" -e "s/ /${CHAR}/g")
 			while [ -e "$new_name" ]; do
@@ -75,7 +76,7 @@ rename_files() {
 
 [ "$dryrun" = true ] && echo DRY RUN MODE
 directory="${directory:-.}"
-if [ -n "$directory" ]; then
+if [ -z "$1" ]; then
 	rename_files "$directory"
 else
 	while [ -n "$1" ]; do
