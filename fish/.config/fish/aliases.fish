@@ -3,29 +3,27 @@
 
 
 # ls aliases
-if command -v lsd > /dev/null
-	alias ls	"lsd" 			# requires lsd
-	alias tree	"lsd --tree"
-end
 alias l			"ls"
 alias ll		"ls -l"
 alias la		"ls -A"
 alias lal		"ls -Al"
+if command -v lsd > /dev/null
+	alias ls	"lsd" 			# requires lsd
+	alias tree	"lsd --tree"
+	alias ll	"lsd -Alg"
+end
 
 # other
 alias cls		"clear"
 alias :q		"exit" 			# too much vim lol
+alias q			"exit"
 abbr -ag g		"git"
 
-if command -v ranger &>/dev/null
-	alias r		"ranger" 		# requires ranger
-end
+alias r		"ranger" 		# requires ranger
 
-if command -v xclip &>/dev/null
-	alias xc	"xclip -sel clip" 	# requires xclip
-	function clip
-		echo -n $argv | xc
-	end
+alias xc	"xclip -sel clip" 	# requires xclip
+function clip
+	echo -n $argv | xc
 end
 
 # cd+ls
