@@ -265,9 +265,6 @@ exec --no-startup-id batify -i 30 -l 30 -c 20 -f 80
 # compositor
 exec --no-startup-id picom -b
 
-# Nextcloud client
-exec --no-startup-id nextcloud --background
-
 # gromit-mpx
 exec --no-startup-id gromit-mpx
 # bindsym XF86Favorites exec --no-startup-id gromit-mpx -t
