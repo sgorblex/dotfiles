@@ -12,15 +12,21 @@ mail() {
 	thunderbird &
 }
 
+notes() {
+	i3-msg "workspace 6; append_layout ~/.config/i3/layouts/obsidian.json"
+	obsidian &
+}
+
 terminals () {
-	i3-msg "workspace 1"
-	i3-sensible-terminal -e tmuxinator def2
-	sleep 1
+	# i3-msg "workspace 1"
+	# i3-sensible-terminal -e tmuxinator def2
+	# sleep 1
 	i3-msg "workspace 2"
 	i3-sensible-terminal -e ~/.scripts/customshell.sh
 }
 
 
-browser
 mail
+notes
+browser
 terminals

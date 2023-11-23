@@ -26,7 +26,7 @@
 # ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
 # │      │   │   │ D │ F │   │ H │ J │ K │ L │ ; │   │        │
 # ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
-# │ Shift  │   │ X │ C │   │ B │   │ M │   │   │   │          │
+# │ Shift  │   │ X │ C │   │ B │ N │ M │   │   │   │          │
 # ├──────┬─┴───┴┬──┴──┬┴───┴───┴───┴───┴───┴─┬─┴───┴┬──┬──────┤
 # │      │ mod4 │     │                      │      │  │      │
 # └──────┴──────┴─────┴──────────────────────┴──────┴──┴──────┘
@@ -212,6 +212,9 @@ bindsym $mod+Shift+b exec $BROWSER
 
 # default mail client (assumes $MUA variable set)
 bindsym $mod+Shift+m exec $MUA
+
+# note taking: Obsidian
+bindsym $mod+Shift+n exec obsidian
 
 # screenshot software
 # bindsym --release shift+Print exec scrot -fs $SCROT_PATH/%F_%H-%M-%S.png
