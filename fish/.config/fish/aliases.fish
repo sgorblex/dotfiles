@@ -49,7 +49,7 @@ else
 	alias o "xdg-open"
 end
 
-alias se sudoedit
+alias se "sudo -E $EDITOR"
 
 alias latexdoc texdoc
 
