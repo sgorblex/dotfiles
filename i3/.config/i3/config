@@ -221,7 +221,8 @@ bindsym $mod+Shift+n exec obsidian
 bindsym shift+Print exec --no-startup-id flameshot full
 bindsym Print exec --no-startup-id flameshot gui
 
-# convenient macro for Enter
+# keyboard configuration
+exec --no-startup-id fcitx5
 # exec --no-startup-id xmodmap -e "keycode 193 = KP_Enter"
 
 # other macros
