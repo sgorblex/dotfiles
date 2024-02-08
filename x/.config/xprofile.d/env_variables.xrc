@@ -12,7 +12,7 @@ export SCROT_PATH=${SCROT_PATH:-$HOME/media/screenshots}
 export MONITOR_L=${MONITOR_L:-eDP1}
 export MONITOR_R=${MONITOR_R:-eDP1}
 export BAR1_MONITOR=${BAR1_MONITOR:-$MONITOR_R}
-export BAR2_MONITOR=${BAR2_MONITOR:-$MONITOR_R}
+export BAR2_MONITOR=${BAR2_MONITOR:-$MONITOR_L}
 
 # default sound output (sink)
 export SINK=${SINK:=$(pactl get-default-sink)}

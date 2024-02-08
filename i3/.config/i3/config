@@ -352,7 +352,7 @@ bindsym $mod+comma exec --no-startup-id $scr_show Blueman-manager 50 50
 # VISUALS {{{
 
 # looking for a wallpaper in ~/.config/wallpaper.* (any file extension that feh can open)
-exec_always feh --no-startup-id --bg-scale ~/.config/wallpaper.*
+exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper.*
 
 # Application menu
 bindsym $mod+d exec rofi -show drun
