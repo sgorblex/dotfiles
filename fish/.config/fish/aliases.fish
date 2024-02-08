@@ -37,7 +37,12 @@ end
 
 # for Nextcloud conflicts
 set DIFF_COMMAND "nvim -d"
-alias solve-conflict	"$DIFF_COMMAND (ls | grep conflicted) (ls | sed -n 's/\(.*\) (conflicted copy.*)\(.*\)/\1\2/p')"
+function solve-conflict
+	for f in *.sync-conflict-*
+		eval $DIFF_COMMAND "$f" (string replace -r 'sync-conflict-.*\.' '' $f)
+	end
+end
+
 
 alias tmp		'cd (mktemp -d)'
 
