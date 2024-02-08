@@ -333,13 +333,6 @@ for_window [class="Spotify"] move scratchpad, sticky enable
 bindsym $mod+m exec --no-startup-id $scr_show Spotify 85 80
 # }}}
 
-# Todoist {{{
-# (requires todoist-appimage)
-exec --no-startup-id DESKTOPINTEGRATION=false /usr/bin/todoist %u --no-sandbox %U
-for_window [class="Todoist"] move scratchpad, sticky enable
-bindsym $mod+x exec --no-startup-id $scr_show Todoist 52 70
-# }}}
-
 # Solanum Pomodoro Timer {{{
 exec --no-startup-id solanum
 for_window [class="solanum"] move scratchpad, sticky enable
