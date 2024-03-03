@@ -35,11 +35,10 @@ function fn --wraps find
 	find -iname "*$argv*"
 end
 
-# for Nextcloud conflicts
-set DIFF_COMMAND "nvim -d"
+# for cloud conflicts
 function solve-conflict
 	for f in *.sync-conflict-*
-		eval $DIFF_COMMAND "$f" (string replace -r 'sync-conflict-.*\.' '' $f)
+		nvim -d "$f" (string replace -r 'sync-conflict-.*\.' '' $f)
 	end
 end
 
