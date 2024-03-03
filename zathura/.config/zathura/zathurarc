@@ -5,6 +5,7 @@
 set default-bg 			rgba(0,0,0,0.75)
 set recolor-darkcolor 		white
 set recolor-lightcolor 		rgba(0,0,0,0)
+# set recolor-lightcolor 		#111111
 set recolor-keephue 		true
 # set recolor 			true
 # set statusbar-bg 		rgba(3,3,3,0.2)		# not supported yet
