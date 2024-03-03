@@ -288,8 +288,8 @@ exec --no-startup-id ~/.config/i3/scripts/layout.sh
 
 
 # POLYBAR {{{
-exec --no-startup-id polybar $POLYBAR_1
-exec --no-startup-id polybar $POLYBAR_2
+exec --no-startup-id polybar $POLYBAR_1 > /tmp/poly1.log
+exec --no-startup-id polybar $POLYBAR_2 > /tmp/poly2.log
 bindsym $mod+f exec --no-startup-id ~/.config/i3/scripts/immersive.sh
 # }}}
 
