@@ -1,8 +1,10 @@
+CNF
 Debian
 Qemu
 README
 TODO
 VM
+biunivocal
 btw
 config
 configs
@@ -36,11 +38,13 @@ regex
 repo
 se
 semidefinite
+subgraphs
 symlinks
 syscall
 syscalls
 toolchain
 toolchains
+unsatisfiable
 whitespace
 whitespaces
 wiki
