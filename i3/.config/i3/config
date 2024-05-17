@@ -299,51 +299,59 @@ bindsym $mod+f exec --no-startup-id ~/.config/i3/scripts/immersive.sh
 set $scr_show ~/.config/i3/scripts/scratchpad_show.py
 
 # Telegram {{{
-# (requires telegram-desktop)
-exec --no-startup-id telegram-desktop
-for_window [class="TelegramDesktop" title="Telegram"] move scratchpad, sticky enable
-bindsym $mod+g exec --no-startup-id $scr_show TelegramDesktop 60 70
+set $cmd_telegram telegram-desktop
+set $cls_telegram TelegramDesktop
+exec --no-startup-id $cmd_telegram
+for_window [class="$cls_telegram" title="Telegram"] move scratchpad, sticky enable
+bindsym $mod+g exec --no-startup-id $scr_show --lazy $cmd_telegram $cls_telegram 60 70
 # }}}
 
 # Discord {{{
-# (requires discord)
-set $discord discord
-# exec --no-startup-id $discord --no-sandbox
-for_window [class="$discord"] move scratchpad, sticky enable
-bindsym $mod+z exec --no-startup-id $scr_show $discord 85 85
+set $cmd_discord "discord --no-sandbox"
+set $cls_discord discord
+# exec --no-startup-id $cmd_discord
+for_window [class="$cls_discord"] move scratchpad, sticky enable
+bindsym $mod+z exec --no-startup-id $scr_show --lazy $cmd_discord $cls_discord 85 85
 # }}}
 
 # Terminal {{{
-exec --no-startup-id i3-sensible-terminal -c dropdown -e ~/.scripts/customshell.sh
-for_window [class="dropdown"] move scratchpad, sticky enable
-bindsym $mod+t exec --no-startup-id $scr_show dropdown 85 70
+set $cmd_terminal "i3-sensible-terminal -c dropdown -e ~/.scripts/customshell.sh Dropdown"
+set $cls_terminal dropdown
+# exec --no-startup-id $cmd_terminal
+for_window [class="$cls_terminal"] move scratchpad, sticky enable
+bindsym $mod+t exec --no-startup-id $scr_show --lazy $cmd_terminal $cls_terminal 85 70
 # }}}
 
 # Calculator {{{
-# (requires qalculate-gtk)
-exec --no-startup-id qalculate-gtk --title=Qalc
-for_window [title="Qalc"] move scratchpad, scratchpad show, resize set 300 200, move position center, scratchpad show, sticky enable
-bindsym $mod+c [title="Qalc"] scratchpad show
+set $cmd_qalc "qalculate-gtk --title=Qalc"
+set $cls_qalc Qalculate-gtk
+# exec --no-startup-id $cmd_qalc
+for_window [class="$cls_qalc" title="Qalc"] move scratchpad, sticky enable
+bindsym $mod+c exec --no-startup-id $scr_show --lazy $cmd_qalc $cls_qalc 30 20
 # }}}
 
 # Spotify {{{
-# (requires spotify)
-exec --no-startup-id spotify
-for_window [class="Spotify"] move scratchpad, sticky enable
-bindsym $mod+m exec --no-startup-id $scr_show Spotify 85 80
-# }}}
-
-# Solanum Pomodoro Timer {{{
-exec --no-startup-id solanum
-for_window [class="solanum"] move scratchpad, sticky enable
-# bindsym $mod+q exec --no-startup-id $scr_show solanum 30 50
+set $cmd_spotify spotify
+set $cls_spotify Spotify
+# exec --no-startup-id $cmd_spotify
+for_window [class="$cls_spotify"] move scratchpad, sticky enable
+bindsym $mod+m exec --no-startup-id $scr_show --lazy $cmd_spotify $cls_spotify 85 80
 # }}}
 
 # blueman {{{
-# (requires blueman)
-exec --no-startup-id blueman-manager
-for_window [class="Blueman-manager"] move scratchpad, sticky enable
-bindsym $mod+comma exec --no-startup-id $scr_show Blueman-manager 50 50
+set $cmd_blueman blueman-manager
+set $cls_blueman Blueman-manager
+# exec --no-startup-id $cmd_blueman
+for_window [class="$cls_blueman"] move scratchpad, sticky enable
+bindsym $mod+comma exec --no-startup-id $scr_show --lazy $cmd_blueman $cls_blueman 50 50
+# }}}
+
+# pavucontrol {{{
+set $cmd_pavucontrol pavucontrol
+set $cls_pavucontrol Pavucontrol
+# exec --no-startup-id $cmd_pavucontrol
+for_window [class="$cls_pavucontrol"] move scratchpad, sticky enable
+bindsym $mod+period exec --no-startup-id $scr_show --lazy $cmd_pavucontrol $cls_pavucontrol 60 80
 # }}}
 
 # }}}
