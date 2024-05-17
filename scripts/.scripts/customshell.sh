@@ -3,4 +3,5 @@
 # ~/.scripts/customshell.sh
 # Used as shell launched from a terminal
 
-tmuxinator def 2>/dev/null || tmux new -As default || $SHELL
+sess=${1:-def}
+tmuxinator "$sess" 2>/dev/null || tmux new -As "$sess" || $SHELL

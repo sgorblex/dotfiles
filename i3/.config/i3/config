@@ -385,3 +385,5 @@ client.urgent 		$urgent-bg-color 	$urgent-bg-color 	$text-color 		$urgent-bg-col
 hide_edge_borders both
 
 # }}}
+
+for_window [class="Zotero" title="Quick Format Citation"] floating enable
