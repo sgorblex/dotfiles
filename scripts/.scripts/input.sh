@@ -7,11 +7,7 @@ set -e
 
 # insert the script in this function
 input(){
-	xdotool mousedown 1
-}
-
-sleeptime(){
-	sleep 1
+	xdotool click 1
 }
 
 repeat_toggle(){
@@ -27,7 +23,7 @@ repeat_toggle(){
 		notify-send -u critical "Repeating script"
 		while true; do
 			input
-			$sleeptime
+			sleep $sleeptime
 		done
 	fi
 }
